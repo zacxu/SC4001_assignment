@@ -1,0 +1,4 @@
+architecture,module,output_shape,flops
+b3,features.block16,"[1, 16, 32, 32]",16384
+b3,features.block32,"[1, 32, 16, 16]",8192
+b3,features.block64,"[1, 64, 8, 8]",4096

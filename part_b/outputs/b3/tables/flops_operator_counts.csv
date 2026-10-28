@@ -1,0 +1,8 @@
+architecture,operator,flops,calls
+b1,aten::conv2d,38928384,3
+b1,aten::addmm,135232,3
+b2,aten::conv2d,19464192,6
+b2,aten::addmm,64,1
+b3,aten::conv2d,25296896,9
+b3,aten::add,28672,3
+b3,aten::addmm,128,1

@@ -1,0 +1,88 @@
+{
+  "records": {
+    "b1": {
+      "learning_rate": 0.001,
+      "batch_size": 128,
+      "checkpoint_epoch": 9,
+      "seed": 42,
+      "metrics": {
+        "loss": 0.3556382480340126,
+        "count": 624,
+        "accuracy": 0.907051282051282,
+        "classification_error": 0.09294871794871795,
+        "sensitivity": 0.9769230769230769,
+        "specificity": 0.7905982905982906,
+        "tp": 381,
+        "tn": 185,
+        "fp": 49,
+        "fn": 9
+      },
+      "test_evaluations": 1,
+      "checkpoint_sha256": "8d9aec883331c64122f74c69c48a51c1457f2eafcc36eb661533bd94c3b4d5da"
+    },
+    "b2": {
+      "learning_rate": 0.001,
+      "batch_size": 16,
+      "checkpoint_epoch": 13,
+      "seed": 42,
+      "metrics": {
+        "loss": 0.5401553111389662,
+        "count": 624,
+        "accuracy": 0.8525641025641025,
+        "classification_error": 0.14743589743589747,
+        "sensitivity": 1.0,
+        "specificity": 0.6068376068376068,
+        "tp": 390,
+        "tn": 142,
+        "fp": 92,
+        "fn": 0
+      },
+      "test_evaluations": 1,
+      "checkpoint_sha256": "4aff841d7de79c114f83e205cd02e63d9b4fb90ecb96856f395a9d7ec39d1715"
+    },
+    "b3": {
+      "learning_rate": 0.001,
+      "batch_size": 16,
+      "checkpoint_epoch": 9,
+      "seed": 42,
+      "metrics": {
+        "loss": 0.8239933579969101,
+        "count": 624,
+        "accuracy": 0.8108974358974359,
+        "classification_error": 0.1891025641025641,
+        "sensitivity": 1.0,
+        "specificity": 0.49572649572649574,
+        "tp": 390,
+        "tn": 116,
+        "fp": 118,
+        "fn": 0
+      },
+      "test_evaluations": 1,
+      "checkpoint_sha256": "7d2567d04391fe1032f24b964133826791480c2d1d0590e2d26a955b5d265ec1"
+    }
+  },
+  "lineage": {
+    "b1": {
+      "directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_b\\outputs\\b1",
+      "final_test_sha256": "c83ee4d56e64a7763ba411fa1e01211194febdc8856aa093cfe6c6e906fe09e2",
+      "frozen_settings_sha256": "662183eb43ec3bed9bcd976371c89716b6a7af7d5fdd1c5df25cbe0db109e46a",
+      "checkpoint": "refit/best_model.pt",
+      "checkpoint_sha256": "8d9aec883331c64122f74c69c48a51c1457f2eafcc36eb661533bd94c3b4d5da"
+    },
+    "b2": {
+      "directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_b\\outputs\\b2",
+      "final_test_sha256": "947c8a12c0a0ff872c1cae03754adb8b54780c9dfac5b8d1d00944807a2e1b58",
+      "frozen_settings_sha256": "92ab50f0e35b288f1ded04ee66cfb0ae90ebb9595f6866d71eea0069f377b626",
+      "checkpoint": "refit/best_model.pt",
+      "checkpoint_sha256": "4aff841d7de79c114f83e205cd02e63d9b4fb90ecb96856f395a9d7ec39d1715"
+    },
+    "b3": {
+      "directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_b\\outputs\\b3",
+      "final_test_sha256": "fafc276d36ba3af4263887c8e751d8f697520b3a2048f416527e6b6893fe4391",
+      "frozen_settings_sha256": "0f03d1c26a78c0a6cf7a37ed8bfb65b0d9eeb2b3f972d25f8461dba5004495ce",
+      "checkpoint": "refit/best_model.pt",
+      "checkpoint_sha256": "7d2567d04391fe1032f24b964133826791480c2d1d0590e2d26a955b5d265ec1"
+    }
+  },
+  "b1_b2_test_results_reused_without_inference": true
+}

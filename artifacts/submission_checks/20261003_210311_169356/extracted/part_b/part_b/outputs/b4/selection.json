@@ -1,0 +1,38 @@
+{
+  "seed": 42,
+  "rng": "numpy.random.default_rng / PCG64",
+  "sample_count": 5,
+  "eligible_positive_rows": 390,
+  "sampling": "uniform without replacement among label-1 test rows",
+  "positions": [
+    486,
+    279,
+    413,
+    53,
+    276
+  ],
+  "row_ids": [
+    486,
+    279,
+    413,
+    53,
+    276
+  ],
+  "labels": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "display_order": "random draw order, shared by all models",
+  "representative_interpretation": "random examples of the supplied positive-class partition; no visual, prediction, or map filtering",
+  "source_sha256": "55ab6e2c7167c451c3bbaa47727ecf810fc2d6285e0d8090a1078c67cbfa3cd8",
+  "partition": "test",
+  "class_mapping": {
+    "0": "healthy",
+    "1": "pneumonia"
+  },
+  "class_mapping_status": "assumed_not_archive_metadata",
+  "selection_frozen_before_explanations": true
+}

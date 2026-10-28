@@ -1,0 +1,33 @@
+{
+  "format_version": 1,
+  "architecture": "b3",
+  "selected_learning_rate": 0.001,
+  "selected_batch_size": 16,
+  "selection_seed": 42,
+  "probability_threshold": 0.5,
+  "optimizer": "Adam",
+  "max_epochs": 20,
+  "patience": 4,
+  "min_delta": 0.0001,
+  "selected_epoch": 9,
+  "selection_rule": "lowest validation classification error, then lower validation loss, then earlier epoch",
+  "trainable_parameters": 77169,
+  "checkpoint": "run/best_model.pt",
+  "checkpoint_sha256": "31b2526cc06c899829e8f2fb73d67eed99206fbd20132076fe7644920402a1de",
+  "validation_loss": 0.06198846864272336,
+  "validation_classification_error": 0.024809160305343525,
+  "source_sha256": "55ab6e2c7167c451c3bbaa47727ecf810fc2d6285e0d8090a1078c67cbfa3cd8",
+  "prepared_dataset_sha256": "ba88233ec11c55f03859387595bcd32be95f3057403dd714ddfc1506e9a9ae45",
+  "prepared_preprocessing_sha256": "be23927bee20bfbf37f30be7674cc591b2409a4e7a04a73f3526b69a477c5e15",
+  "b1_frozen_settings_sha256": "5b2826338c81a8497ed3374f40010376114a8af70a87125884aa391f11fe2a69",
+  "b2_frozen_settings_sha256": "e717dac25f33512de7a04f094995c9660214d17cac7bade50e170d7bfdd190a6",
+  "class_mapping": {
+    "0": "healthy",
+    "1": "pneumonia"
+  },
+  "class_mapping_status": "assumed_not_archive_metadata",
+  "training_validation_overlap_unique_images": 8,
+  "refit": false,
+  "last_convolution": "features.block64.conv2.conv",
+  "handoff": "B4 uses this exact selected checkpoint alongside saved B1/B2 checkpoints"
+}

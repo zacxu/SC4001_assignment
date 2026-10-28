@@ -1,0 +1,122 @@
+{
+  "categorical": [
+    [
+      7,
+      21,
+      19,
+      2
+    ]
+  ],
+  "continuous": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "feature_names": [
+    "month",
+    "town",
+    "flat_model_type",
+    "storey_range",
+    "dist_to_nearest_stn",
+    "dist_to_dhoby",
+    "degree_centrality",
+    "eigenvector_centrality",
+    "remaining_lease_years",
+    "floor_area_sqm"
+  ],
+  "fit_years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "fit_row_count": 116427,
+  "details": [
+    {
+      "feature": "month",
+      "kind": "categorical",
+      "reference_raw": 7,
+      "reference_encoded": 7,
+      "training_mode_count": 11520,
+      "rule": "2017-2021 training mode; smallest encoded ID breaks ties"
+    },
+    {
+      "feature": "town",
+      "kind": "categorical",
+      "reference_raw": "SENGKANG",
+      "reference_encoded": 21,
+      "training_mode_count": 9853,
+      "rule": "2017-2021 training mode; smallest encoded ID breaks ties"
+    },
+    {
+      "feature": "flat_model_type",
+      "kind": "categorical",
+      "reference_raw": "4 ROOM, Model A",
+      "reference_encoded": 19,
+      "training_mode_count": 28725,
+      "rule": "2017-2021 training mode; smallest encoded ID breaks ties"
+    },
+    {
+      "feature": "storey_range",
+      "kind": "categorical",
+      "reference_raw": "04 TO 06",
+      "reference_encoded": 2,
+      "training_mode_count": 26932,
+      "rule": "2017-2021 training mode; smallest encoded ID breaks ties"
+    },
+    {
+      "feature": "dist_to_nearest_stn",
+      "kind": "continuous",
+      "reference_raw": 0.8154776096343994,
+      "reference_encoded": 0.0,
+      "training_mode_count": null,
+      "rule": "saved 2017-2021 training mean (standardized zero)"
+    },
+    {
+      "feature": "dist_to_dhoby",
+      "kind": "continuous",
+      "reference_raw": 11.163990020751953,
+      "reference_encoded": 0.0,
+      "training_mode_count": null,
+      "rule": "saved 2017-2021 training mean (standardized zero)"
+    },
+    {
+      "feature": "degree_centrality",
+      "kind": "continuous",
+      "reference_raw": 0.0174986831843853,
+      "reference_encoded": 0.0,
+      "training_mode_count": null,
+      "rule": "saved 2017-2021 training mean (standardized zero)"
+    },
+    {
+      "feature": "eigenvector_centrality",
+      "kind": "continuous",
+      "reference_raw": 0.00660629291087389,
+      "reference_encoded": 0.0,
+      "training_mode_count": null,
+      "rule": "saved 2017-2021 training mean (standardized zero)"
+    },
+    {
+      "feature": "remaining_lease_years",
+      "kind": "continuous",
+      "reference_raw": 74.89581298828125,
+      "reference_encoded": 0.0,
+      "training_mode_count": null,
+      "rule": "saved 2017-2021 training mean (standardized zero)"
+    },
+    {
+      "feature": "floor_area_sqm",
+      "kind": "continuous",
+      "reference_raw": 97.8547134399414,
+      "reference_encoded": 0.0,
+      "training_mode_count": null,
+      "rule": "saved 2017-2021 training mean (standardized zero)"
+    }
+  ]
+}

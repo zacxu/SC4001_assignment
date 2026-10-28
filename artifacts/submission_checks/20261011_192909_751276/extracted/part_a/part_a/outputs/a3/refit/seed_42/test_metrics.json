@@ -1,0 +1,11 @@
+{
+  "checkpoint_epoch": 4,
+  "seed": 42,
+  "test_assisted_stopping": false,
+  "metrics": {
+    "loss": 0.36688262804573674,
+    "count": 26702,
+    "rmse": 96419.00808827252,
+    "r2": 0.6793007623974245
+  }
+}

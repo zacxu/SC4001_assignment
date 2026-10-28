@@ -1,0 +1,1134 @@
+{
+  "format_version": 1,
+  "source": {
+    "path": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261004_023854_958905\\extracted\\part_a\\housing_baseline_data\\hdb-price-prediction-assignment-main\\hdb_price_prediction.csv",
+    "sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+    "rows": 159553,
+    "columns": [
+      "month",
+      "year",
+      "town",
+      "full_address",
+      "nearest_stn",
+      "dist_to_nearest_stn",
+      "dist_to_dhoby",
+      "degree_centrality",
+      "eigenvector_centrality",
+      "flat_model_type",
+      "remaining_lease_years",
+      "floor_area_sqm",
+      "storey_range",
+      "resale_price"
+    ]
+  },
+  "data_quality": {
+    "missing_counts_all_source_columns": {
+      "month": 0,
+      "year": 0,
+      "town": 0,
+      "full_address": 0,
+      "nearest_stn": 0,
+      "dist_to_nearest_stn": 0,
+      "dist_to_dhoby": 0,
+      "degree_centrality": 0,
+      "eigenvector_centrality": 0,
+      "flat_model_type": 0,
+      "remaining_lease_years": 0,
+      "floor_area_sqm": 0,
+      "storey_range": 0,
+      "resale_price": 0
+    },
+    "exact_duplicate_rows": 0,
+    "required_numeric_values_finite": true,
+    "required_categories_nonempty": true,
+    "rows_dropped_or_imputed": 0,
+    "handling": "Reject invalid required values; preserve duplicates and original row order."
+  },
+  "year_counts": {
+    "2017": 20337,
+    "2018": 21552,
+    "2019": 22168,
+    "2020": 23313,
+    "2021": 29057,
+    "2022": 26702,
+    "2023": 16424
+  },
+  "excluded_years": [
+    2023
+  ],
+  "excluded_rows": 16424,
+  "input_features": [
+    "month",
+    "town",
+    "flat_model_type",
+    "storey_range",
+    "dist_to_nearest_stn",
+    "dist_to_dhoby",
+    "degree_centrality",
+    "eigenvector_centrality",
+    "remaining_lease_years",
+    "floor_area_sqm"
+  ],
+  "not_model_inputs": [
+    "year",
+    "full_address",
+    "nearest_stn"
+  ],
+  "row_id_definition": "Zero-based data row in the original CSV, excluding its header.",
+  "selection": {
+    "preprocessing": {
+      "format_version": 1,
+      "categorical_features": [
+        "month",
+        "town",
+        "flat_model_type",
+        "storey_range"
+      ],
+      "continuous_features": [
+        "dist_to_nearest_stn",
+        "dist_to_dhoby",
+        "degree_centrality",
+        "eigenvector_centrality",
+        "remaining_lease_years",
+        "floor_area_sqm"
+      ],
+      "target": "resale_price",
+      "target_units": "SGD",
+      "stored_targets": "raw_sgd",
+      "category_maps": {
+        "month": [
+          {
+            "value": 1,
+            "id": 1
+          },
+          {
+            "value": 2,
+            "id": 2
+          },
+          {
+            "value": 3,
+            "id": 3
+          },
+          {
+            "value": 4,
+            "id": 4
+          },
+          {
+            "value": 5,
+            "id": 5
+          },
+          {
+            "value": 6,
+            "id": 6
+          },
+          {
+            "value": 7,
+            "id": 7
+          },
+          {
+            "value": 8,
+            "id": 8
+          },
+          {
+            "value": 9,
+            "id": 9
+          },
+          {
+            "value": 10,
+            "id": 10
+          },
+          {
+            "value": 11,
+            "id": 11
+          },
+          {
+            "value": 12,
+            "id": 12
+          }
+        ],
+        "town": [
+          {
+            "value": "ANG MO KIO",
+            "id": 1
+          },
+          {
+            "value": "BEDOK",
+            "id": 2
+          },
+          {
+            "value": "BISHAN",
+            "id": 3
+          },
+          {
+            "value": "BUKIT BATOK",
+            "id": 4
+          },
+          {
+            "value": "BUKIT MERAH",
+            "id": 5
+          },
+          {
+            "value": "BUKIT PANJANG",
+            "id": 6
+          },
+          {
+            "value": "BUKIT TIMAH",
+            "id": 7
+          },
+          {
+            "value": "CENTRAL AREA",
+            "id": 8
+          },
+          {
+            "value": "CHOA CHU KANG",
+            "id": 9
+          },
+          {
+            "value": "CLEMENTI",
+            "id": 10
+          },
+          {
+            "value": "GEYLANG",
+            "id": 11
+          },
+          {
+            "value": "HOUGANG",
+            "id": 12
+          },
+          {
+            "value": "JURONG EAST",
+            "id": 13
+          },
+          {
+            "value": "JURONG WEST",
+            "id": 14
+          },
+          {
+            "value": "KALLANG/WHAMPOA",
+            "id": 15
+          },
+          {
+            "value": "MARINE PARADE",
+            "id": 16
+          },
+          {
+            "value": "PASIR RIS",
+            "id": 17
+          },
+          {
+            "value": "PUNGGOL",
+            "id": 18
+          },
+          {
+            "value": "QUEENSTOWN",
+            "id": 19
+          },
+          {
+            "value": "SEMBAWANG",
+            "id": 20
+          },
+          {
+            "value": "SENGKANG",
+            "id": 21
+          },
+          {
+            "value": "SERANGOON",
+            "id": 22
+          },
+          {
+            "value": "TAMPINES",
+            "id": 23
+          },
+          {
+            "value": "TOA PAYOH",
+            "id": 24
+          },
+          {
+            "value": "WOODLANDS",
+            "id": 25
+          },
+          {
+            "value": "YISHUN",
+            "id": 26
+          }
+        ],
+        "flat_model_type": [
+          {
+            "value": "1 ROOM, Improved",
+            "id": 1
+          },
+          {
+            "value": "2 ROOM, 2-room",
+            "id": 2
+          },
+          {
+            "value": "2 ROOM, DBSS",
+            "id": 3
+          },
+          {
+            "value": "2 ROOM, Improved",
+            "id": 4
+          },
+          {
+            "value": "2 ROOM, Model A",
+            "id": 5
+          },
+          {
+            "value": "2 ROOM, Premium Apartment",
+            "id": 6
+          },
+          {
+            "value": "2 ROOM, Standard",
+            "id": 7
+          },
+          {
+            "value": "3 ROOM, DBSS",
+            "id": 8
+          },
+          {
+            "value": "3 ROOM, Improved",
+            "id": 9
+          },
+          {
+            "value": "3 ROOM, Model A",
+            "id": 10
+          },
+          {
+            "value": "3 ROOM, New Generation",
+            "id": 11
+          },
+          {
+            "value": "3 ROOM, Premium Apartment",
+            "id": 12
+          },
+          {
+            "value": "3 ROOM, Simplified",
+            "id": 13
+          },
+          {
+            "value": "3 ROOM, Standard",
+            "id": 14
+          },
+          {
+            "value": "3 ROOM, Terrace",
+            "id": 15
+          },
+          {
+            "value": "4 ROOM, Adjoined flat",
+            "id": 16
+          },
+          {
+            "value": "4 ROOM, DBSS",
+            "id": 17
+          },
+          {
+            "value": "4 ROOM, Improved",
+            "id": 18
+          },
+          {
+            "value": "4 ROOM, Model A",
+            "id": 19
+          },
+          {
+            "value": "4 ROOM, Model A2",
+            "id": 20
+          },
+          {
+            "value": "4 ROOM, New Generation",
+            "id": 21
+          },
+          {
+            "value": "4 ROOM, Premium Apartment",
+            "id": 22
+          },
+          {
+            "value": "4 ROOM, Premium Apartment Loft",
+            "id": 23
+          },
+          {
+            "value": "4 ROOM, Simplified",
+            "id": 24
+          },
+          {
+            "value": "4 ROOM, Standard",
+            "id": 25
+          },
+          {
+            "value": "4 ROOM, Terrace",
+            "id": 26
+          },
+          {
+            "value": "4 ROOM, Type S1",
+            "id": 27
+          },
+          {
+            "value": "5 ROOM, Adjoined flat",
+            "id": 28
+          },
+          {
+            "value": "5 ROOM, DBSS",
+            "id": 29
+          },
+          {
+            "value": "5 ROOM, Improved",
+            "id": 30
+          },
+          {
+            "value": "5 ROOM, Improved-Maisonette",
+            "id": 31
+          },
+          {
+            "value": "5 ROOM, Model A",
+            "id": 32
+          },
+          {
+            "value": "5 ROOM, Model A-Maisonette",
+            "id": 33
+          },
+          {
+            "value": "5 ROOM, Premium Apartment",
+            "id": 34
+          },
+          {
+            "value": "5 ROOM, Premium Apartment Loft",
+            "id": 35
+          },
+          {
+            "value": "5 ROOM, Standard",
+            "id": 36
+          },
+          {
+            "value": "5 ROOM, Type S2",
+            "id": 37
+          },
+          {
+            "value": "EXECUTIVE, Adjoined flat",
+            "id": 38
+          },
+          {
+            "value": "EXECUTIVE, Apartment",
+            "id": 39
+          },
+          {
+            "value": "EXECUTIVE, Maisonette",
+            "id": 40
+          },
+          {
+            "value": "EXECUTIVE, Premium Apartment",
+            "id": 41
+          },
+          {
+            "value": "EXECUTIVE, Premium Maisonette",
+            "id": 42
+          },
+          {
+            "value": "MULTI-GENERATION, Multi Generation",
+            "id": 43
+          }
+        ],
+        "storey_range": [
+          {
+            "value": "01 TO 03",
+            "id": 1
+          },
+          {
+            "value": "04 TO 06",
+            "id": 2
+          },
+          {
+            "value": "07 TO 09",
+            "id": 3
+          },
+          {
+            "value": "10 TO 12",
+            "id": 4
+          },
+          {
+            "value": "13 TO 15",
+            "id": 5
+          },
+          {
+            "value": "16 TO 18",
+            "id": 6
+          },
+          {
+            "value": "19 TO 21",
+            "id": 7
+          },
+          {
+            "value": "22 TO 24",
+            "id": 8
+          },
+          {
+            "value": "25 TO 27",
+            "id": 9
+          },
+          {
+            "value": "28 TO 30",
+            "id": 10
+          },
+          {
+            "value": "31 TO 33",
+            "id": 11
+          },
+          {
+            "value": "34 TO 36",
+            "id": 12
+          },
+          {
+            "value": "37 TO 39",
+            "id": 13
+          },
+          {
+            "value": "40 TO 42",
+            "id": 14
+          },
+          {
+            "value": "43 TO 45",
+            "id": 15
+          },
+          {
+            "value": "46 TO 48",
+            "id": 16
+          },
+          {
+            "value": "49 TO 51",
+            "id": 17
+          }
+        ]
+      },
+      "unknown_category_id": 0,
+      "cardinalities": [
+        13,
+        27,
+        44,
+        18
+      ],
+      "continuous_mean": [
+        0.8127429485321045,
+        11.223943710327148,
+        0.017468640580773354,
+        0.006544384174048901,
+        74.73931884765625,
+        97.72383880615234
+      ],
+      "continuous_std": [
+        0.466025710105896,
+        4.175538539886475,
+        0.004832229111343622,
+        0.02075844816863537,
+        12.94564437866211,
+        24.28564453125
+      ],
+      "continuous_std_correction": 1,
+      "target_mean": 442495.9375,
+      "target_std": 154220.6875,
+      "target_std_correction": 0,
+      "minimum_std": 1e-08,
+      "fit_years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "fit_row_count": 87370
+    },
+    "partitions": {
+      "train": {
+        "rows": 87370,
+        "year_counts": {
+          "2017": 20337,
+          "2018": 21552,
+          "2019": 22168,
+          "2020": 23313
+        },
+        "unknown_categories": {
+          "month": {
+            "rows": 0,
+            "values": []
+          },
+          "town": {
+            "rows": 0,
+            "values": []
+          },
+          "flat_model_type": {
+            "rows": 0,
+            "values": []
+          },
+          "storey_range": {
+            "rows": 0,
+            "values": []
+          }
+        }
+      },
+      "test": {
+        "rows": 26702,
+        "year_counts": {
+          "2022": 26702
+        },
+        "unknown_categories": {
+          "month": {
+            "rows": 0,
+            "values": []
+          },
+          "town": {
+            "rows": 0,
+            "values": []
+          },
+          "flat_model_type": {
+            "rows": 5,
+            "values": [
+              "5 ROOM, 3Gen"
+            ]
+          },
+          "storey_range": {
+            "rows": 0,
+            "values": []
+          }
+        }
+      },
+      "validation": {
+        "rows": 29057,
+        "year_counts": {
+          "2021": 29057
+        },
+        "unknown_categories": {
+          "month": {
+            "rows": 0,
+            "values": []
+          },
+          "town": {
+            "rows": 0,
+            "values": []
+          },
+          "flat_model_type": {
+            "rows": 0,
+            "values": []
+          },
+          "storey_range": {
+            "rows": 0,
+            "values": []
+          }
+        }
+      }
+    }
+  },
+  "refit": {
+    "preprocessing": {
+      "format_version": 1,
+      "categorical_features": [
+        "month",
+        "town",
+        "flat_model_type",
+        "storey_range"
+      ],
+      "continuous_features": [
+        "dist_to_nearest_stn",
+        "dist_to_dhoby",
+        "degree_centrality",
+        "eigenvector_centrality",
+        "remaining_lease_years",
+        "floor_area_sqm"
+      ],
+      "target": "resale_price",
+      "target_units": "SGD",
+      "stored_targets": "raw_sgd",
+      "category_maps": {
+        "month": [
+          {
+            "value": 1,
+            "id": 1
+          },
+          {
+            "value": 2,
+            "id": 2
+          },
+          {
+            "value": 3,
+            "id": 3
+          },
+          {
+            "value": 4,
+            "id": 4
+          },
+          {
+            "value": 5,
+            "id": 5
+          },
+          {
+            "value": 6,
+            "id": 6
+          },
+          {
+            "value": 7,
+            "id": 7
+          },
+          {
+            "value": 8,
+            "id": 8
+          },
+          {
+            "value": 9,
+            "id": 9
+          },
+          {
+            "value": 10,
+            "id": 10
+          },
+          {
+            "value": 11,
+            "id": 11
+          },
+          {
+            "value": 12,
+            "id": 12
+          }
+        ],
+        "town": [
+          {
+            "value": "ANG MO KIO",
+            "id": 1
+          },
+          {
+            "value": "BEDOK",
+            "id": 2
+          },
+          {
+            "value": "BISHAN",
+            "id": 3
+          },
+          {
+            "value": "BUKIT BATOK",
+            "id": 4
+          },
+          {
+            "value": "BUKIT MERAH",
+            "id": 5
+          },
+          {
+            "value": "BUKIT PANJANG",
+            "id": 6
+          },
+          {
+            "value": "BUKIT TIMAH",
+            "id": 7
+          },
+          {
+            "value": "CENTRAL AREA",
+            "id": 8
+          },
+          {
+            "value": "CHOA CHU KANG",
+            "id": 9
+          },
+          {
+            "value": "CLEMENTI",
+            "id": 10
+          },
+          {
+            "value": "GEYLANG",
+            "id": 11
+          },
+          {
+            "value": "HOUGANG",
+            "id": 12
+          },
+          {
+            "value": "JURONG EAST",
+            "id": 13
+          },
+          {
+            "value": "JURONG WEST",
+            "id": 14
+          },
+          {
+            "value": "KALLANG/WHAMPOA",
+            "id": 15
+          },
+          {
+            "value": "MARINE PARADE",
+            "id": 16
+          },
+          {
+            "value": "PASIR RIS",
+            "id": 17
+          },
+          {
+            "value": "PUNGGOL",
+            "id": 18
+          },
+          {
+            "value": "QUEENSTOWN",
+            "id": 19
+          },
+          {
+            "value": "SEMBAWANG",
+            "id": 20
+          },
+          {
+            "value": "SENGKANG",
+            "id": 21
+          },
+          {
+            "value": "SERANGOON",
+            "id": 22
+          },
+          {
+            "value": "TAMPINES",
+            "id": 23
+          },
+          {
+            "value": "TOA PAYOH",
+            "id": 24
+          },
+          {
+            "value": "WOODLANDS",
+            "id": 25
+          },
+          {
+            "value": "YISHUN",
+            "id": 26
+          }
+        ],
+        "flat_model_type": [
+          {
+            "value": "1 ROOM, Improved",
+            "id": 1
+          },
+          {
+            "value": "2 ROOM, 2-room",
+            "id": 2
+          },
+          {
+            "value": "2 ROOM, DBSS",
+            "id": 3
+          },
+          {
+            "value": "2 ROOM, Improved",
+            "id": 4
+          },
+          {
+            "value": "2 ROOM, Model A",
+            "id": 5
+          },
+          {
+            "value": "2 ROOM, Premium Apartment",
+            "id": 6
+          },
+          {
+            "value": "2 ROOM, Standard",
+            "id": 7
+          },
+          {
+            "value": "3 ROOM, DBSS",
+            "id": 8
+          },
+          {
+            "value": "3 ROOM, Improved",
+            "id": 9
+          },
+          {
+            "value": "3 ROOM, Model A",
+            "id": 10
+          },
+          {
+            "value": "3 ROOM, New Generation",
+            "id": 11
+          },
+          {
+            "value": "3 ROOM, Premium Apartment",
+            "id": 12
+          },
+          {
+            "value": "3 ROOM, Simplified",
+            "id": 13
+          },
+          {
+            "value": "3 ROOM, Standard",
+            "id": 14
+          },
+          {
+            "value": "3 ROOM, Terrace",
+            "id": 15
+          },
+          {
+            "value": "4 ROOM, Adjoined flat",
+            "id": 16
+          },
+          {
+            "value": "4 ROOM, DBSS",
+            "id": 17
+          },
+          {
+            "value": "4 ROOM, Improved",
+            "id": 18
+          },
+          {
+            "value": "4 ROOM, Model A",
+            "id": 19
+          },
+          {
+            "value": "4 ROOM, Model A2",
+            "id": 20
+          },
+          {
+            "value": "4 ROOM, New Generation",
+            "id": 21
+          },
+          {
+            "value": "4 ROOM, Premium Apartment",
+            "id": 22
+          },
+          {
+            "value": "4 ROOM, Premium Apartment Loft",
+            "id": 23
+          },
+          {
+            "value": "4 ROOM, Simplified",
+            "id": 24
+          },
+          {
+            "value": "4 ROOM, Standard",
+            "id": 25
+          },
+          {
+            "value": "4 ROOM, Terrace",
+            "id": 26
+          },
+          {
+            "value": "4 ROOM, Type S1",
+            "id": 27
+          },
+          {
+            "value": "5 ROOM, Adjoined flat",
+            "id": 28
+          },
+          {
+            "value": "5 ROOM, DBSS",
+            "id": 29
+          },
+          {
+            "value": "5 ROOM, Improved",
+            "id": 30
+          },
+          {
+            "value": "5 ROOM, Improved-Maisonette",
+            "id": 31
+          },
+          {
+            "value": "5 ROOM, Model A",
+            "id": 32
+          },
+          {
+            "value": "5 ROOM, Model A-Maisonette",
+            "id": 33
+          },
+          {
+            "value": "5 ROOM, Premium Apartment",
+            "id": 34
+          },
+          {
+            "value": "5 ROOM, Premium Apartment Loft",
+            "id": 35
+          },
+          {
+            "value": "5 ROOM, Standard",
+            "id": 36
+          },
+          {
+            "value": "5 ROOM, Type S2",
+            "id": 37
+          },
+          {
+            "value": "EXECUTIVE, Adjoined flat",
+            "id": 38
+          },
+          {
+            "value": "EXECUTIVE, Apartment",
+            "id": 39
+          },
+          {
+            "value": "EXECUTIVE, Maisonette",
+            "id": 40
+          },
+          {
+            "value": "EXECUTIVE, Premium Apartment",
+            "id": 41
+          },
+          {
+            "value": "EXECUTIVE, Premium Maisonette",
+            "id": 42
+          },
+          {
+            "value": "MULTI-GENERATION, Multi Generation",
+            "id": 43
+          }
+        ],
+        "storey_range": [
+          {
+            "value": "01 TO 03",
+            "id": 1
+          },
+          {
+            "value": "04 TO 06",
+            "id": 2
+          },
+          {
+            "value": "07 TO 09",
+            "id": 3
+          },
+          {
+            "value": "10 TO 12",
+            "id": 4
+          },
+          {
+            "value": "13 TO 15",
+            "id": 5
+          },
+          {
+            "value": "16 TO 18",
+            "id": 6
+          },
+          {
+            "value": "19 TO 21",
+            "id": 7
+          },
+          {
+            "value": "22 TO 24",
+            "id": 8
+          },
+          {
+            "value": "25 TO 27",
+            "id": 9
+          },
+          {
+            "value": "28 TO 30",
+            "id": 10
+          },
+          {
+            "value": "31 TO 33",
+            "id": 11
+          },
+          {
+            "value": "34 TO 36",
+            "id": 12
+          },
+          {
+            "value": "37 TO 39",
+            "id": 13
+          },
+          {
+            "value": "40 TO 42",
+            "id": 14
+          },
+          {
+            "value": "43 TO 45",
+            "id": 15
+          },
+          {
+            "value": "46 TO 48",
+            "id": 16
+          },
+          {
+            "value": "49 TO 51",
+            "id": 17
+          }
+        ]
+      },
+      "unknown_category_id": 0,
+      "cardinalities": [
+        13,
+        27,
+        44,
+        18
+      ],
+      "continuous_mean": [
+        0.8154776096343994,
+        11.163990020751953,
+        0.0174986831843853,
+        0.00660629291087389,
+        74.89581298828125,
+        97.8547134399414
+      ],
+      "continuous_std": [
+        0.4650968611240387,
+        4.15321159362793,
+        0.004874812439084053,
+        0.020749565213918686,
+        13.348194122314453,
+        24.13615608215332
+      ],
+      "continuous_std_correction": 1,
+      "target_mean": 459696.8125,
+      "target_std": 159183.875,
+      "target_std_correction": 0,
+      "minimum_std": 1e-08,
+      "fit_years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "fit_row_count": 116427
+    },
+    "partitions": {
+      "train": {
+        "rows": 116427,
+        "year_counts": {
+          "2017": 20337,
+          "2018": 21552,
+          "2019": 22168,
+          "2020": 23313,
+          "2021": 29057
+        },
+        "unknown_categories": {
+          "month": {
+            "rows": 0,
+            "values": []
+          },
+          "town": {
+            "rows": 0,
+            "values": []
+          },
+          "flat_model_type": {
+            "rows": 0,
+            "values": []
+          },
+          "storey_range": {
+            "rows": 0,
+            "values": []
+          }
+        }
+      },
+      "test": {
+        "rows": 26702,
+        "year_counts": {
+          "2022": 26702
+        },
+        "unknown_categories": {
+          "month": {
+            "rows": 0,
+            "values": []
+          },
+          "town": {
+            "rows": 0,
+            "values": []
+          },
+          "flat_model_type": {
+            "rows": 5,
+            "values": [
+              "5 ROOM, 3Gen"
+            ]
+          },
+          "storey_range": {
+            "rows": 0,
+            "values": []
+          }
+        }
+      }
+    }
+  },
+  "test_fitted_statistics": false,
+  "refit_reuse": "Use the same saved 2017-2021 preprocessing for A1/A2/A3 refits."
+}

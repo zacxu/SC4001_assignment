@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "name_placeholder": true,
+  "files": {
+    "PartA_report_YourName.pdf": {
+      "sha256": "c482136a9d1c3a1a9a7fb08495ab9d67a390eade99046ef598fc4d7324293a5f",
+      "bytes": 402315,
+      "pages": 5
+    },
+    "PartA_codes_YourName.zip": {
+      "sha256": "6750a8b387bce14471404a2181b3a0358a72199f7be7fe1487981883dccf19f2",
+      "bytes": 21327680,
+      "zip_entries": 529
+    },
+    "PartB_report_YourName.pdf": {
+      "sha256": "19105a6dc0bdbf1dc79fa8de59047baf0f7de67c48a914826c1747e3f4a7dcc5",
+      "bytes": 449282,
+      "pages": 5
+    },
+    "PartB_codes_YourName.zip": {
+      "sha256": "1544ca5ba94a7f189aab58f23a0b9964309fbfb62a25540ac17834c83f0beedd",
+      "bytes": 81324346,
+      "zip_entries": 228
+    }
+  },
+  "parts": {
+    "part_a": {
+      "extracted_root": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261012_134746_013780\\extracted\\part_a",
+      "verification": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261012_134746_013780\\extracted\\part_a\\artifacts\\package_checks\\20261012_134753_793197\\verification.json",
+      "package_manifest_sha256": "b29b1f0b40999e90fac81e890ca3e503d7c8ac58bfd40d26dc8e0ce14be25d08",
+      "tests_passed": 60,
+      "exports": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a2_diagnostics"
+      ],
+      "prepared_tensors": [
+        "refit\\datasets.pt",
+        "refit\\preprocessing.pt",
+        "selection\\datasets.pt",
+        "selection\\preprocessing.pt"
+      ],
+      "ray_worker": {
+        "module": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261012_134746_013780\\extracted\\part_a\\part_a\\src\\model.py",
+        "finite": true,
+        "device": "NVIDIA GeForce RTX 3060 Ti"
+      },
+      "synthetic_forward_checkpoints": [
+        "a1/refit/best_model.pt",
+        "a3/refit/seed_42/best_model.pt"
+      ]
+    },
+    "part_b": {
+      "extracted_root": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261012_134746_013780\\extracted\\part_b",
+      "verification": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261012_134746_013780\\extracted\\part_b\\artifacts\\package_checks\\20261012_134837_157891\\verification.json",
+      "package_manifest_sha256": "8489314ac0fa7c86df2e12c9f00d71d4fff7a1e762e9c537e69e2ec9547cc6b4",
+      "tests_passed": 64,
+      "exports": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "prepared_tensors": [
+        "datasets.pt",
+        "preprocessing.pt"
+      ],
+      "ray_worker": null,
+      "synthetic_forward_checkpoints": [
+        "part_b\\outputs\\b1\\refit\\best_model.pt",
+        "part_b\\outputs\\b2\\refit\\best_model.pt",
+        "part_b\\outputs\\b3\\refit\\best_model.pt"
+      ]
+    }
+  },
+  "ntulearn_submitted": false,
+  "submission_receipt": null,
+  "fresh_dependency_installation": false,
+  "verification_venv": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\.venv",
+  "full_experiment_reruns": 0,
+  "controlling_sources": {
+    "assignment.pdf": "2c6b4529d31352b228a0f78c5b354ddd72edb1bed39d9f9461d6499566dad46f",
+    "assignment_slides.pdf": "2a3f78e1a2328dbab8e4c787ce5c321da4a618c219292098ef85543a79b82398",
+    "clarifications.md": "a377cd02dde48d0b41540392880d3b00d51701be457e49b84572560e5fad654a",
+    "Q&A.md": "2fe517870378f29ca4254cf741246121602ff92032de35e6c08008c512b97c4b"
+  }
+}

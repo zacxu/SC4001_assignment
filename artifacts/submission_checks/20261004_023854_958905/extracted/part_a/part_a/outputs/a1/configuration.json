@@ -1,0 +1,39 @@
+{
+  "created_at_singapore": "2026-10-01T17:09:00.238291+08:00",
+  "seed": 42,
+  "learning_rate": 0.01,
+  "batch_size": 512,
+  "max_epochs": 20,
+  "patience": 4,
+  "min_delta": 0.0001,
+  "hidden_width_grid": [
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "embedding_dimension_grid": [
+    2,
+    4,
+    8,
+    12,
+    16
+  ],
+  "selection": "lowest validation RMSE, then fewer parameters, then smaller hidden width, then smaller embedding dimension",
+  "refit": "2017-2021 training; 2022 test-RMSE stopping per professor clarification",
+  "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+  "prepared_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\data",
+  "ray_resources_per_trial": {
+    "cpu": 4,
+    "gpu": 1
+  },
+  "max_concurrent_trials": 1,
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.11.0+cu128",
+    "ray": "2.58.0",
+    "cuda": "12.8",
+    "device": "NVIDIA GeForce RTX 3060 Ti"
+  }
+}

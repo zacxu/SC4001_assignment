@@ -1,0 +1,28 @@
+{
+  "selected": {
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "input_width": 22,
+    "trainable_parameters": 7065,
+    "best_epoch": 6,
+    "epochs_completed": 10,
+    "stopped_early": true,
+    "train_rmse": 34372.576805355966,
+    "train_r2": 0.950324879644564,
+    "validation_rmse": 58627.1026186996,
+    "validation_r2": 0.8700611226499008,
+    "elapsed_seconds": 24.24640349999754,
+    "peak_allocated_gpu_mib": 67.1650390625,
+    "device": "NVIDIA GeForce RTX 3060 Ti",
+    "run_directory": "grid\\h256_d04\\training",
+    "checkpoint": "grid\\h256_d04\\training\\best_model.pt",
+    "ray_checkpoint_registered": true
+  },
+  "tie_break_rule": "lowest validation RMSE, then fewer parameters, then smaller hidden width, then smaller embedding dimension",
+  "E_val": 6,
+  "seed": 42,
+  "learning_rate": 0.01,
+  "batch_size": 512,
+  "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+  "selection_preprocessing": "2017-2020"
+}

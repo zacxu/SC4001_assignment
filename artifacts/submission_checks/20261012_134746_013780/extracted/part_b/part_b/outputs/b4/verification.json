@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "protocol": "current_faq_final_refit_gradcam",
+  "models": {
+    "b1": {
+      "final_checkpoint_sha256": "8d9aec883331c64122f74c69c48a51c1457f2eafcc36eb661533bd94c3b4d5da",
+      "saved_map_arithmetic_exact": true
+    },
+    "b2": {
+      "final_checkpoint_sha256": "4aff841d7de79c114f83e205cd02e63d9b4fb90ecb96856f395a9d7ec39d1715",
+      "saved_map_arithmetic_exact": true
+    },
+    "b3": {
+      "final_checkpoint_sha256": "7d2567d04391fe1032f24b964133826791480c2d1d0590e2d26a955b5d265ec1",
+      "saved_map_arithmetic_exact": true
+    }
+  },
+  "sample_row_ids": [
+    486,
+    279,
+    413,
+    53,
+    276
+  ],
+  "overlays_checked": 15,
+  "new_model_inference": 0,
+  "new_training_runs": 0,
+  "scope": "stored activations/gradients arithmetic and final-checkpoint lineage; no independent new backward pass"
+}

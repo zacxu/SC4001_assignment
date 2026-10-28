@@ -1,0 +1,53 @@
+{
+  "status": "completed",
+  "sample_seed": 42,
+  "sample_row_ids": [
+    486,
+    279,
+    413,
+    53,
+    276
+  ],
+  "sample_count": 5,
+  "models": 3,
+  "overlay_count": 15,
+  "native_grid_sizes": {
+    "b1": 16,
+    "b2": 16,
+    "b3": 8
+  },
+  "target_layers": {
+    "b1": "features.conv3.conv",
+    "b2": "features.conv6.conv",
+    "b3": "features.block64.conv2.conv"
+  },
+  "display": {
+    "colormap": "inferno",
+    "max_opacity": 0.55,
+    "opacity_rule": "0.55 * per-map normalized positive Grad-CAM",
+    "normalization": "divide each nonnegative upsampled map by its own maximum; zero maps remain zero",
+    "grayscale_range": [
+      0,
+      255
+    ],
+    "heatmap_range": [
+      0,
+      1
+    ],
+    "orientation": "original archive orientation; no flips",
+    "interpolation": "bilinear to 64x64; align_corners=False (PyTorch default)",
+    "probability_annotations": "saved final-test-pass probabilities; gradients target the unrestricted logit"
+  },
+  "attribution_artifact": "gradcam.pt",
+  "attribution_sha256": "774e0983b597c6bd23e7d04a858cd0d7c689a2b9b593da6709270899ba2f3c4f",
+  "source_sha256": "55ab6e2c7167c451c3bbaa47727ecf810fc2d6285e0d8090a1078c67cbfa3cd8",
+  "selection_frozen_before_explanations": true,
+  "models_and_source_checkpoints_unchanged": true,
+  "performance_results_reused": true,
+  "full_test_performance_evaluations": 0,
+  "zero_map_counts": {
+    "b1": 0,
+    "b2": 0,
+    "b3": 0
+  }
+}

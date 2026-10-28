@@ -1,0 +1,51 @@
+{
+  "review_date": "2026-10-04",
+  "status": "passed_with_documented_assumptions_and_submission_pending",
+  "brief_pages_reread": 7,
+  "slide_pages_reread": 6,
+  "report_pages_visually_reviewed": 10,
+  "root_behavioral_tests_passed": 96,
+  "extracted_part_a_tests_passed": 57,
+  "extracted_part_b_tests_passed": 62,
+  "training_run_histories_verified": 62,
+  "earlier_experiment_output_hashes_unchanged": 938,
+  "reports_pages": [
+    5,
+    5
+  ],
+  "local_document_links_checked": 372,
+  "genai_log_entries": 16,
+  "source_input_hashes_checked": 57,
+  "updated_submission_files": {
+    "PartA_report_YourName.pdf": {
+      "sha256": "6398ede732fa8c1022b10f290c1b66ba90d5967b34eb1c12f37bc57410cfde8a",
+      "bytes": 386854
+    },
+    "PartA_codes_YourName.zip": {
+      "sha256": "7a5d71eafd3471eb29d32ee210e710584ce05003bbd1f532a98912261b252e39",
+      "bytes": 19954815
+    },
+    "PartB_report_YourName.pdf": {
+      "sha256": "c7661fa709e6c6503b16aeebbf9708950459d19a257355df510e4f49156ce2d5",
+      "bytes": 439610
+    },
+    "PartB_codes_YourName.zip": {
+      "sha256": "fbecf71679d9725142d80d88fb7317c35b04bb7e6cf7748c2590cdc9c9adc9c4",
+      "bytes": 78393819
+    }
+  },
+  "changed_upload_file_hashes": [
+    "PartA_report_YourName.pdf",
+    "PartA_codes_YourName.zip",
+    "PartB_report_YourName.pdf",
+    "PartB_codes_YourName.zip"
+  ],
+  "new_full_training_runs": 0,
+  "test_set_model_inference": 0,
+  "package_audit": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261004_023854_958905",
+  "remaining": [
+    "CNN final-logit interpretation is not instructor-confirmed",
+    "actual author name",
+    "NTULearn upload and receipt"
+  ]
+}

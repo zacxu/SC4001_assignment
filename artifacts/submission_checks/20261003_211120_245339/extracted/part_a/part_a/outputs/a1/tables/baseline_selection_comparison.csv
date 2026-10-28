@@ -1,0 +1,3 @@
+name,hidden_width,embedding_dimension,parameters,best_epoch,epochs_completed,train_rmse_sgd,validation_rmse_sgd,validation_r2
+Supplied default,64,8,3505,4,8,34973.84526498537,62109.01420186397,0.8541684408023031
+Validation-selected,256,4,7065,6,10,34372.576805355966,58627.1026186996,0.8700611226499008

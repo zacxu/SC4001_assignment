@@ -1,0 +1,27 @@
+{
+  "status": "passed_axis_coverage_and_numeric_preservation",
+  "final_comparison_y_limits": {
+    "rmse": [
+      90000,
+      120000
+    ],
+    "r2": [
+      0.5,
+      0.725
+    ]
+  },
+  "epoch_y_limits": {
+    "rmse": [
+      29511.446108300817,
+      85151.86454076666
+    ],
+    "r2": [
+      0.7337785603543121,
+      0.9694965779163962
+    ]
+  },
+  "all_points_and_sd_endpoints_visible": true,
+  "protected_numeric_and_model_artifacts_unchanged": 871,
+  "new_training_runs": 0,
+  "new_test_set_model_inference": 0
+}

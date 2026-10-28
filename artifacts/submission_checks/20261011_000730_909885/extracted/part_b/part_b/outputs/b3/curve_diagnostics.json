@@ -1,0 +1,15 @@
+{
+  "best_epoch": 9,
+  "epochs_completed": 13,
+  "stopped_early": true,
+  "minimum_validation_loss": 0.0619884686427233,
+  "minimum_validation_loss_epoch": 9,
+  "first_validation_loss": 0.1629058749678025,
+  "last_validation_loss": 0.0726811554241136,
+  "first_validation_accuracy": 0.9389312977099236,
+  "last_validation_accuracy": 0.9751908396946564,
+  "selected_training_accuracy": 0.9942650807136788,
+  "selected_training_loss": 0.021046333372123704,
+  "selected_validation_accuracy": 0.9751908396946565,
+  "selected_validation_loss": 0.06198846864272336
+}

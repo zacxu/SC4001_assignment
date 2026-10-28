@@ -1,0 +1,12 @@
+Part A
+Question A3 (wide-and-deep architecture)
+•
+output = MLP output + 𝜆 × linear output
+        Find the optimal parameter 𝜆∈0, 0.25, 0.5, 1.2
+•
+Evaluate the optimal network over 5 seeds and compare with the baseline architecture (MLP)
+Question A4 (XAI)
+•
+Use FeatureAblation method on Captum library
+•
+Find feature importance scores in Singapore dollars

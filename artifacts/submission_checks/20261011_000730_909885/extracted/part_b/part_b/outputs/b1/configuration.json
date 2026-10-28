@@ -1,0 +1,49 @@
+{
+  "created_at_singapore": "2026-10-03T16:01:24.284696+08:00",
+  "architecture": "b1",
+  "learning_rate_grid": [
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1
+  ],
+  "batch_size": 128,
+  "seed": 42,
+  "optimizer": "Adam",
+  "max_epochs": 20,
+  "patience": 4,
+  "min_delta": 0.0001,
+  "probability_threshold": 0.5,
+  "stopping_monitor": "validation_loss",
+  "selection_rule": "lowest validation classification error, then lower validation loss, then earlier selected epoch, then smaller learning rate",
+  "within_run_checkpoint_selection": "validation error, loss, earlier epoch",
+  "prepared_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_b\\outputs\\data",
+  "source_sha256": "55ab6e2c7167c451c3bbaa47727ecf810fc2d6285e0d8090a1078c67cbfa3cd8",
+  "prepared_dataset_sha256": "ba88233ec11c55f03859387595bcd32be95f3057403dd714ddfc1506e9a9ae45",
+  "prepared_preprocessing_sha256": "be23927bee20bfbf37f30be7674cc591b2409a4e7a04a73f3526b69a477c5e15",
+  "provided_partitions": {
+    "train": 4708,
+    "validation": 524,
+    "test": 624
+  },
+  "class_mapping": {
+    "0": "healthy",
+    "1": "pneumonia"
+  },
+  "class_mapping_status": "confirmed_by_instructor_QA",
+  "training_validation_overlap_unique_images": 8,
+  "augmentation": null,
+  "class_weighting": null,
+  "fresh_model_and_loader_per_trial": true,
+  "refit": true,
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 3060 Ti"
+  },
+  "final_training_protocol": "fresh_combined_train_validation_fixed_selected_epochs",
+  "final_training_rows": 5232,
+  "final_epoch_count": 9
+}

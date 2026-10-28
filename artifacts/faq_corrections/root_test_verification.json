@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-11",
+  "command": ".\\.venv\\Scripts\\python.exe -B -m unittest discover -s tests -q",
+  "status": "passed",
+  "exit_code": 0,
+  "tests_passed": 101,
+  "scope": "CPU and synthetic behavioral cases; no supplied test-set inference",
+  "python_venv": ".venv",
+  "log": "artifacts/faq_corrections/root_tests.log",
+  "test_source_sha256": {
+    "tests/test_a1.py": "400df8154de0fa498fba61753e66a8a5ebe5f2bbce382a025d6bb7e5232c4569",
+    "tests/test_a2.py": "a9555b47df877b6819dca6e1d11a82928b80f3b06e224ccb0d0e77ea28df32ef",
+    "tests/test_a2_diagnostics.py": "0723404c91b39473873c593eb355794011cd1a45c910ef46d01a8bcb15cc6072",
+    "tests/test_a3.py": "867fc2e8ccd716b684d72a4f4a38144b89a543390cc948d8ca0a579607008a0c",
+    "tests/test_a4.py": "63b24d10dc68de75d4adbbebf5277360bf019d3f686f71b3b7c6ae0136d85558",
+    "tests/test_b1.py": "f0e4f192472668b61526a54210ec3ddbf236705af15263e66207b03643c29835",
+    "tests/test_b2.py": "f04d43d35cdbc7ed4d46738cc1e71ff24fde5b5a3bcbd052202d813899c039ca",
+    "tests/test_b3.py": "353f9413c5e754e089b17244fa08b334ce338d9b735ca4d2a18d5030f17d51f0",
+    "tests/test_b4.py": "79aea99dd21026cc05910907355deda8bca43dddd17c929488ae8451186e4c17",
+    "tests/test_b_refit.py": "9c567500d726a3a7b6f18b5a6885e5f2833e96f75c183c09da886359530338a8",
+    "tests/test_housing_data.py": "9671b8fdb90231455d187282c91ba6c07e3c5550f8136f0f9a8801ff459e7d70",
+    "tests/test_metrics.py": "7e86926f48b4c64ad68bdb152adf0507d0c7b83ff720372c56516ee6d1224aa0",
+    "tests/test_training.py": "df911e9ace2a6647abc6efaee9d856c056c3a27f880eee627560d8a2b26c59b7",
+    "tests/test_xray_data.py": "0b48865d62fa7a24516fa70cfaf5da952095db6b992d549beec50cf5d39ff160",
+    "tests/test_xray_models.py": "f095d9f6f70362ae51c2d5c298d8860e1f0c7ddf830480f168d8d776421af5e0"
+  }
+}

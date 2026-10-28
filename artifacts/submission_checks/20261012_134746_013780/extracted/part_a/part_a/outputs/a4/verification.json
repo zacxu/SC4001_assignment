@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "checked_at_singapore": "2026-10-03T13:38:18.140456+08:00",
+  "run_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\a4",
+  "models": [
+    {
+      "model": "baseline",
+      "rows": 26702,
+      "features": 10,
+      "first_and_last_batches_manual_max_error_sgd": 0.0,
+      "model_state_unchanged": true,
+      "attribution_sha256": "e3b67afc08b8b27012be6a1fc3e8abec2b765b506522d328373db50f0c534e72"
+    },
+    {
+      "model": "wide_deep",
+      "rows": 26702,
+      "features": 10,
+      "first_and_last_batches_manual_max_error_sgd": 0.0,
+      "model_state_unchanged": true,
+      "attribution_sha256": "21f5090742d3a83f27e871d6276beffd26e333359548934071fbec7f384fe5cf"
+    }
+  ],
+  "full_test_rows_per_model": 26702,
+  "features_per_model": 10,
+  "all_signed_attributions_finite_and_row_ids_aligned": true,
+  "shared_training_only_references_verified": true,
+  "same_seed_epoch_and_preprocessing_verified": true,
+  "sgd_manual_first_and_last_batches_verified_on_cuda": true,
+  "full_test_mean_absolute_aggregation_and_rankings_verified": true,
+  "unchanged_reference_values_have_zero_effect": true,
+  "model_weights_unchanged": true,
+  "supplied_files_and_a1_a2_a3_checkpoints_unchanged": true,
+  "separate_descending_plots_and_tables_present": true,
+  "no_new_training_or_test_performance_scoring": true
+}

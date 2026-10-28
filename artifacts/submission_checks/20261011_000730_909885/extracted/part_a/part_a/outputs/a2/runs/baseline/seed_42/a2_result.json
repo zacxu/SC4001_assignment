@@ -1,0 +1,23 @@
+{
+  "variant": "baseline",
+  "label": "Baseline (ReLU)",
+  "seed": 42,
+  "hidden_width": 256,
+  "embedding_dimension": 4,
+  "input_width": 22,
+  "trainable_parameters": 7065,
+  "epochs_completed": 4,
+  "checkpoint_epoch": 4,
+  "stopped_early": false,
+  "initial_model_sha256": "ee733aabffd9983487d0f26bc07fc93147fab694f0201d8003119f8818e30434",
+  "train_loader_generator_sha256": "4a3ff10390d6b047cb11f6a142e2d8d665340e4e1b7c9ed7eb58d99c3e09fe13",
+  "rmse": 96901.63739707983,
+  "r2": 0.6760821807005687,
+  "test_count": 26702,
+  "train_rmse": 41239.37012986117,
+  "train_r2": 0.9328840208468957,
+  "fit_seconds": 10.874754199991003,
+  "run_directory": "runs/baseline/seed_42",
+  "checkpoint": "runs/baseline/seed_42/best_model.pt",
+  "test_metrics_file": "runs/baseline/seed_42/test_metrics.json"
+}

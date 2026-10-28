@@ -1,0 +1,204 @@
+{
+  "status": "completed",
+  "test_rows": 26702,
+  "features": [
+    "month",
+    "town",
+    "flat_model_type",
+    "storey_range",
+    "dist_to_nearest_stn",
+    "dist_to_dhoby",
+    "degree_centrality",
+    "eigenvector_centrality",
+    "remaining_lease_years",
+    "floor_area_sqm"
+  ],
+  "models": {
+    "baseline": {
+      "test_rows": 26702,
+      "features": 10,
+      "seed": 42,
+      "checkpoint_epoch": 4,
+      "ranked_importance": [
+        {
+          "rank": 1,
+          "feature": "floor_area_sqm",
+          "feature_index": 9,
+          "mean_absolute_attribution_sgd": 71537.7223971929
+        },
+        {
+          "rank": 2,
+          "feature": "remaining_lease_years",
+          "feature_index": 8,
+          "mean_absolute_attribution_sgd": 46187.60903401465
+        },
+        {
+          "rank": 3,
+          "feature": "dist_to_dhoby",
+          "feature_index": 5,
+          "mean_absolute_attribution_sgd": 41163.95200438208
+        },
+        {
+          "rank": 4,
+          "feature": "flat_model_type",
+          "feature_index": 2,
+          "mean_absolute_attribution_sgd": 39330.394647771354
+        },
+        {
+          "rank": 5,
+          "feature": "town",
+          "feature_index": 1,
+          "mean_absolute_attribution_sgd": 38117.47765601958
+        },
+        {
+          "rank": 6,
+          "feature": "dist_to_nearest_stn",
+          "feature_index": 4,
+          "mean_absolute_attribution_sgd": 21066.57873611683
+        },
+        {
+          "rank": 7,
+          "feature": "storey_range",
+          "feature_index": 3,
+          "mean_absolute_attribution_sgd": 16839.618876577817
+        },
+        {
+          "rank": 8,
+          "feature": "eigenvector_centrality",
+          "feature_index": 7,
+          "mean_absolute_attribution_sgd": 9071.041384002447
+        },
+        {
+          "rank": 9,
+          "feature": "month",
+          "feature_index": 0,
+          "mean_absolute_attribution_sgd": 4622.199160423422
+        },
+        {
+          "rank": 10,
+          "feature": "degree_centrality",
+          "feature_index": 6,
+          "mean_absolute_attribution_sgd": 4025.4200202335296
+        }
+      ],
+      "top_three": [
+        {
+          "rank": 1,
+          "feature": "floor_area_sqm",
+          "feature_index": 9,
+          "mean_absolute_attribution_sgd": 71537.7223971929
+        },
+        {
+          "rank": 2,
+          "feature": "remaining_lease_years",
+          "feature_index": 8,
+          "mean_absolute_attribution_sgd": 46187.60903401465
+        },
+        {
+          "rank": 3,
+          "feature": "dist_to_dhoby",
+          "feature_index": 5,
+          "mean_absolute_attribution_sgd": 41163.95200438208
+        }
+      ],
+      "model_state_sha256": "ac70696fc513cfac8a871a52e296adae437a25fb191a64bbceec0fda161a4c15",
+      "attributions": "attributions/baseline.pt",
+      "attribution_sha256": "e3b67afc08b8b27012be6a1fc3e8abec2b765b506522d328373db50f0c534e72"
+    },
+    "wide_deep": {
+      "test_rows": 26702,
+      "features": 10,
+      "seed": 42,
+      "checkpoint_epoch": 4,
+      "ranked_importance": [
+        {
+          "rank": 1,
+          "feature": "floor_area_sqm",
+          "feature_index": 9,
+          "mean_absolute_attribution_sgd": 73119.33690238222
+        },
+        {
+          "rank": 2,
+          "feature": "remaining_lease_years",
+          "feature_index": 8,
+          "mean_absolute_attribution_sgd": 48364.21351312894
+        },
+        {
+          "rank": 3,
+          "feature": "flat_model_type",
+          "feature_index": 2,
+          "mean_absolute_attribution_sgd": 42280.278524979396
+        },
+        {
+          "rank": 4,
+          "feature": "dist_to_dhoby",
+          "feature_index": 5,
+          "mean_absolute_attribution_sgd": 40061.6432178744
+        },
+        {
+          "rank": 5,
+          "feature": "town",
+          "feature_index": 1,
+          "mean_absolute_attribution_sgd": 35223.60526187349
+        },
+        {
+          "rank": 6,
+          "feature": "dist_to_nearest_stn",
+          "feature_index": 4,
+          "mean_absolute_attribution_sgd": 20933.733389302797
+        },
+        {
+          "rank": 7,
+          "feature": "storey_range",
+          "feature_index": 3,
+          "mean_absolute_attribution_sgd": 16254.517875506664
+        },
+        {
+          "rank": 8,
+          "feature": "eigenvector_centrality",
+          "feature_index": 7,
+          "mean_absolute_attribution_sgd": 7820.908702881505
+        },
+        {
+          "rank": 9,
+          "feature": "month",
+          "feature_index": 0,
+          "mean_absolute_attribution_sgd": 5086.5950914477
+        },
+        {
+          "rank": 10,
+          "feature": "degree_centrality",
+          "feature_index": 6,
+          "mean_absolute_attribution_sgd": 4045.4395139758626
+        }
+      ],
+      "top_three": [
+        {
+          "rank": 1,
+          "feature": "floor_area_sqm",
+          "feature_index": 9,
+          "mean_absolute_attribution_sgd": 73119.33690238222
+        },
+        {
+          "rank": 2,
+          "feature": "remaining_lease_years",
+          "feature_index": 8,
+          "mean_absolute_attribution_sgd": 48364.21351312894
+        },
+        {
+          "rank": 3,
+          "feature": "flat_model_type",
+          "feature_index": 2,
+          "mean_absolute_attribution_sgd": 42280.278524979396
+        }
+      ],
+      "model_state_sha256": "d8b74fbb1ae56dfd2de18d5425296bf378a2abfda9ee2e8a9a5ace716b93a252",
+      "attributions": "attributions/wide_deep.pt",
+      "attribution_sha256": "21f5090742d3a83f27e871d6276beffd26e333359548934071fbec7f384fe5cf"
+    }
+  },
+  "reference_rule": "shared refit training categorical modes and continuous means",
+  "output_unit": "SGD",
+  "test_assisted_models_or_budget": true,
+  "elapsed_seconds": 1.8315707999863662
+}

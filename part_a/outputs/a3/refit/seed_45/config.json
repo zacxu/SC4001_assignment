@@ -1,0 +1,55 @@
+{
+  "training": {
+    "learning_rate": 0.01,
+    "max_epochs": 4,
+    "patience": 4,
+    "min_delta": 0.0001,
+    "seed": 45,
+    "device": "cuda",
+    "mode": "fixed_refit"
+  },
+  "task": {
+    "target_mean": 459696.8125,
+    "target_std": 159183.875,
+    "kind": "regression"
+  },
+  "model_class": "part_a.src.wide_deep.WideDeepHousingModel",
+  "model_config": {
+    "architecture": "four_embedding_wide_and_deep",
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "cardinalities": [
+      13,
+      27,
+      44,
+      18
+    ],
+    "continuous_features": 6,
+    "input_width": 22,
+    "normalization": "LayerNorm",
+    "activation": "ReLU",
+    "output": "standardized_price",
+    "trainable_parameters": 7088,
+    "lambda": 2.0,
+    "shared_embeddings": true,
+    "wide_branch": "single_linear_output_in_standardized_price_space",
+    "baseline_parameters": 7065,
+    "wide_parameters": 23,
+    "active_parameters": 7088,
+    "prediction": "target_mean + target_std * (MLP(features) + lambda * Linear(features))",
+    "experiment": "A3",
+    "stage": "fixed_refit",
+    "initial_model_sha256": "10c32c85cf922a1410e9bb363188cd7036260978340063a9833cb3a24bf02fe7",
+    "baseline_initial_sha256": "fe87550ec3103df1e043ce610d92faacfb621eb56a4eeee2a6a126cca1b5e15c"
+  },
+  "batch_size": 512,
+  "stopping_metric": null,
+  "checkpoint_selection": "final_epoch",
+  "training_curve_metrics": "evaluation_of_completed_epoch_model_on_all_training_samples",
+  "trainable_parameters": 7088,
+  "test_assisted_stopping": false,
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.11.0+cu128"
+  }
+}

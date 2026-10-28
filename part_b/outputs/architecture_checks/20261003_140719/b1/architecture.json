@@ -1,0 +1,447 @@
+{
+  "architecture": "b1",
+  "model_config": {
+    "format_version": 1,
+    "architecture": "b1",
+    "input_shape": [
+      1,
+      64,
+      64
+    ],
+    "convolution_bias": false,
+    "fully_connected_bias": true,
+    "convolution_postprocessing": [
+      "BatchNorm2d",
+      "ReLU"
+    ],
+    "batchnorm_eps": 1e-05,
+    "batchnorm_momentum": 0.1,
+    "padding": "symmetric_zero_padding_kernel_half_center_aligned_stride_two",
+    "residual_projection_activation": null,
+    "residual_addition_activation": null,
+    "hidden_fc_dropout": 0.5,
+    "average_pool_kernel_and_stride": 2,
+    "average_pool_output": [
+      4,
+      4
+    ],
+    "output": "unrestricted_binary_logit",
+    "output_shape": [
+      "N"
+    ],
+    "trainable_parameters": 99569
+  },
+  "parameters": {
+    "conv": 31632,
+    "batchnorm": 224,
+    "fc": 67713
+  },
+  "trainable_parameters": 99569,
+  "layers": [
+    {
+      "layer": "features.conv1.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        1,
+        64,
+        64
+      ],
+      "output_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "own_trainable_parameters": 400
+    },
+    {
+      "layer": "features.conv1.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "output_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "own_trainable_parameters": 32
+    },
+    {
+      "layer": "features.conv1.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "output_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.conv1",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        1,
+        64,
+        64
+      ],
+      "output_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.pool1",
+      "type": "MaxPool2d",
+      "input_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.conv2.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        32,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 12800
+    },
+    {
+      "layer": "features.conv2.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        32,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        32,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 64
+    },
+    {
+      "layer": "features.conv2.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        32,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        32,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.conv2",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        32,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.pool2",
+      "type": "MaxPool2d",
+      "input_shape": [
+        2,
+        32,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.conv3.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        64,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 18432
+    },
+    {
+      "layer": "features.conv3.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        64,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        64,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 128
+    },
+    {
+      "layer": "features.conv3.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        64,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        64,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.conv3",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        64,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.pool3",
+      "type": "MaxPool2d",
+      "input_shape": [
+        2,
+        64,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.average_pool",
+      "type": "AvgPool2d",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        4,
+        4
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "flatten",
+      "type": "Flatten",
+      "input_shape": [
+        2,
+        64,
+        4,
+        4
+      ],
+      "output_shape": [
+        2,
+        1024
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "classifier.fc1",
+      "type": "Linear",
+      "input_shape": [
+        2,
+        1024
+      ],
+      "output_shape": [
+        2,
+        64
+      ],
+      "own_trainable_parameters": 65600
+    },
+    {
+      "layer": "classifier.relu1",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        64
+      ],
+      "output_shape": [
+        2,
+        64
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "classifier.dropout1",
+      "type": "Dropout",
+      "input_shape": [
+        2,
+        64
+      ],
+      "output_shape": [
+        2,
+        64
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "classifier.fc2",
+      "type": "Linear",
+      "input_shape": [
+        2,
+        64
+      ],
+      "output_shape": [
+        2,
+        32
+      ],
+      "own_trainable_parameters": 2080
+    },
+    {
+      "layer": "classifier.relu2",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        32
+      ],
+      "output_shape": [
+        2,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "classifier.dropout2",
+      "type": "Dropout",
+      "input_shape": [
+        2,
+        32
+      ],
+      "output_shape": [
+        2,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "classifier.output",
+      "type": "Linear",
+      "input_shape": [
+        2,
+        32
+      ],
+      "output_shape": [
+        2,
+        1
+      ],
+      "own_trainable_parameters": 33
+    }
+  ],
+  "residual_additions": [],
+  "all_convolutions_have_bn_relu_and_no_bias": true,
+  "smoke_train_samples": 129,
+  "smoke_validation_samples": 65,
+  "smoke_epochs": 1,
+  "smoke_batch_size": 128,
+  "smoke_learning_rate": 0.001,
+  "smoke_only_not_a_b1_b2_b3_experiment": true,
+  "all_convolution_weights_and_output_weights_updated": true,
+  "convolution_gradient_norms": {
+    "features.conv1.conv.weight": 0.8178700804710388,
+    "features.conv2.conv.weight": 2.4626238346099854,
+    "features.conv3.conv.weight": 1.7800418138504028
+  },
+  "batchnorm_training_batches_per_layer": 2,
+  "evaluation_repeat_predictions_exact": true,
+  "single_image_output_shape": [
+    1
+  ],
+  "restored_validation_probe_metrics_match": true,
+  "validation_probe_loss": 0.6640661487212548,
+  "largest_planned_batch_backward_pass": 128,
+  "all_parameters_receive_finite_gradients": true,
+  "average_pooling": "Fixed AvgPool2d windows equivalent to required output on 64x64 inputs",
+  "peak_allocated_gpu_mib_including_fresh_restored_model": 304.2421875,
+  "checkpoint_sha256": "daccd34fcef357cfe36a95594d74bd3c11b4a7bb7f5b943e37eb31b9d064b7bd",
+  "test_performance_evaluated": false
+}

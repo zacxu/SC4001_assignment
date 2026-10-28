@@ -1,0 +1,28 @@
+{
+  "format_version": 1,
+  "normalization": "training_pixel_mean_and_population_std_after_dividing_by_255",
+  "mean": 0.5716994212632378,
+  "std": 0.17409753982645407,
+  "std_correction": 0,
+  "reduction_dtype": "float64",
+  "transformation_dtype": "float32",
+  "input_dtype": "uint8",
+  "input_shape": [
+    64,
+    64
+  ],
+  "output_shape": [
+    1,
+    64,
+    64
+  ],
+  "pixel_divisor": 255.0,
+  "fit_partition": "train",
+  "fit_row_count": 4708,
+  "fit_pixel_count": 19283968,
+  "class_mapping": {
+    "0": "healthy",
+    "1": "pneumonia"
+  },
+  "class_mapping_status": "assumed_not_archive_metadata"
+}

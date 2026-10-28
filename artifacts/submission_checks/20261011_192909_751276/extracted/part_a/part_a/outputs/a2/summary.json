@@ -1,0 +1,537 @@
+{
+  "status": "completed",
+  "completed_runs": 15,
+  "epoch_budget": 4,
+  "frozen_a1_settings": {
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "learning_rate": 0.01,
+    "batch_size": 512,
+    "E_val": 6,
+    "E_star": 4,
+    "evaluation_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "refit_preprocessing": "refit/preprocessing.pt",
+    "refit_checkpoint": "refit/best_model.pt",
+    "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+    "test_assisted_epoch_budget": true
+  },
+  "variants": {
+    "baseline": {
+      "n_seeds": 5,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "metrics": {
+        "rmse": {
+          "mean": 102427.89592520094,
+          "sample_std": 5289.16917559201
+        },
+        "r2": {
+          "mean": 0.6373108569792936,
+          "sample_std": 0.03742768534137998
+        }
+      },
+      "per_seed": [
+        {
+          "variant": "baseline",
+          "label": "Baseline (ReLU)",
+          "seed": 42,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "ee733aabffd9983487d0f26bc07fc93147fab694f0201d8003119f8818e30434",
+          "train_loader_generator_sha256": "4a3ff10390d6b047cb11f6a142e2d8d665340e4e1b7c9ed7eb58d99c3e09fe13",
+          "rmse": 96901.63739707983,
+          "r2": 0.6760821807005687,
+          "test_count": 26702,
+          "train_rmse": 41239.37012986117,
+          "train_r2": 0.9328840208468957,
+          "fit_seconds": 10.874754199991003,
+          "run_directory": "runs/baseline/seed_42",
+          "checkpoint": "runs/baseline/seed_42/best_model.pt",
+          "test_metrics_file": "runs/baseline/seed_42/test_metrics.json"
+        },
+        {
+          "variant": "baseline",
+          "label": "Baseline (ReLU)",
+          "seed": 43,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "a0fe68139d434c47ef2a1a4d107deb828057760709e139f19a68c3264d4c5393",
+          "train_loader_generator_sha256": "311cfb2ef19fa3802114256cbae07c9e051cb69ced761d1b227d593820d0a22d",
+          "rmse": 102636.98251605647,
+          "r2": 0.6366038183218679,
+          "test_count": 26702,
+          "train_rmse": 41111.916966748984,
+          "train_r2": 0.9332982330533901,
+          "fit_seconds": 11.024217800004408,
+          "run_directory": "runs/baseline/seed_43",
+          "checkpoint": "runs/baseline/seed_43/best_model.pt",
+          "test_metrics_file": "runs/baseline/seed_43/test_metrics.json"
+        },
+        {
+          "variant": "baseline",
+          "label": "Baseline (ReLU)",
+          "seed": 44,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "892004cb2ea4e76c071c7d4c575cbc61f14df7809252e60cdfb2002a021835d1",
+          "train_loader_generator_sha256": "a00e8d0e7e38da675ef74f2d45a952a7cb487e97f8c476ddad288594028171f6",
+          "rmse": 97427.36340748101,
+          "r2": 0.6725579064991521,
+          "test_count": 26702,
+          "train_rmse": 41624.514382815636,
+          "train_r2": 0.931624542823949,
+          "fit_seconds": 11.027123400010169,
+          "run_directory": "runs/baseline/seed_44",
+          "checkpoint": "runs/baseline/seed_44/best_model.pt",
+          "test_metrics_file": "runs/baseline/seed_44/test_metrics.json"
+        },
+        {
+          "variant": "baseline",
+          "label": "Baseline (ReLU)",
+          "seed": 45,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "fe87550ec3103df1e043ce610d92faacfb621eb56a4eeee2a6a126cca1b5e15c",
+          "train_loader_generator_sha256": "8a70ae5671e726737e9cca485356dab51f133d4bba7bd5945e479570bcb2dc26",
+          "rmse": 106344.74298381645,
+          "r2": 0.6098742103570347,
+          "test_count": 26702,
+          "train_rmse": 40923.11344843375,
+          "train_r2": 0.9339094724101746,
+          "fit_seconds": 11.351435899996432,
+          "run_directory": "runs/baseline/seed_45",
+          "checkpoint": "runs/baseline/seed_45/best_model.pt",
+          "test_metrics_file": "runs/baseline/seed_45/test_metrics.json"
+        },
+        {
+          "variant": "baseline",
+          "label": "Baseline (ReLU)",
+          "seed": 46,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "6ba5029ac9f9c3d1e0ef7e443635298acd1e4685a3e79a1250b4042c9b12bffc",
+          "train_loader_generator_sha256": "c57e2c897d4f59f40c94a0b17a377ce11750525600e13c9e675b15437505b289",
+          "rmse": 108828.75332157093,
+          "r2": 0.5914361690178445,
+          "test_count": 26702,
+          "train_rmse": 40878.09502001369,
+          "train_r2": 0.9340548012923321,
+          "fit_seconds": 11.196945700008655,
+          "run_directory": "runs/baseline/seed_46",
+          "checkpoint": "runs/baseline/seed_46/best_model.pt",
+          "test_metrics_file": "runs/baseline/seed_46/test_metrics.json"
+        }
+      ]
+    },
+    "continuous_only": {
+      "n_seeds": 5,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "metrics": {
+        "rmse": {
+          "mean": 108252.68443480777,
+          "sample_std": 9605.813496330915
+        },
+        "r2": {
+          "mean": 0.5932036404445243,
+          "sample_std": 0.0687938823577283
+        }
+      },
+      "per_seed": [
+        {
+          "variant": "continuous_only",
+          "label": "Continuous only",
+          "seed": 42,
+          "hidden_width": 256,
+          "embedding_dimension": null,
+          "input_width": 6,
+          "trainable_parameters": 2561,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "7c7f51b1e24d0d591fbb9f1adb789de7ed5e5ef29dba94da7415beb611cd83c9",
+          "train_loader_generator_sha256": "4a3ff10390d6b047cb11f6a142e2d8d665340e4e1b7c9ed7eb58d99c3e09fe13",
+          "rmse": 115247.06415132013,
+          "r2": 0.5418239852390604,
+          "test_count": 26702,
+          "train_rmse": 57244.36571572924,
+          "train_r2": 0.8706794988904453,
+          "fit_seconds": 9.58941810001852,
+          "run_directory": "runs/continuous_only/seed_42",
+          "checkpoint": "runs/continuous_only/seed_42/best_model.pt",
+          "test_metrics_file": "runs/continuous_only/seed_42/test_metrics.json"
+        },
+        {
+          "variant": "continuous_only",
+          "label": "Continuous only",
+          "seed": 43,
+          "hidden_width": 256,
+          "embedding_dimension": null,
+          "input_width": 6,
+          "trainable_parameters": 2561,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "fb9ed0212ebd6a8ebdf28d7af8a22dab2cc2555b26b854f3655ee4e455ede748",
+          "train_loader_generator_sha256": "311cfb2ef19fa3802114256cbae07c9e051cb69ced761d1b227d593820d0a22d",
+          "rmse": 107185.76825289454,
+          "r2": 0.6036792063270322,
+          "test_count": 26702,
+          "train_rmse": 55774.735938736434,
+          "train_r2": 0.8772343325830422,
+          "fit_seconds": 10.500467700010631,
+          "run_directory": "runs/continuous_only/seed_43",
+          "checkpoint": "runs/continuous_only/seed_43/best_model.pt",
+          "test_metrics_file": "runs/continuous_only/seed_43/test_metrics.json"
+        },
+        {
+          "variant": "continuous_only",
+          "label": "Continuous only",
+          "seed": 44,
+          "hidden_width": 256,
+          "embedding_dimension": null,
+          "input_width": 6,
+          "trainable_parameters": 2561,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "6075229c231955f038094e6b2ff959f350839b815e3078e32709d78d2d87a925",
+          "train_loader_generator_sha256": "a00e8d0e7e38da675ef74f2d45a952a7cb487e97f8c476ddad288594028171f6",
+          "rmse": 92249.34969379535,
+          "r2": 0.7064384072261308,
+          "test_count": 26702,
+          "train_rmse": 60397.180586516144,
+          "train_r2": 0.8560421953810283,
+          "fit_seconds": 10.824176900001476,
+          "run_directory": "runs/continuous_only/seed_44",
+          "checkpoint": "runs/continuous_only/seed_44/best_model.pt",
+          "test_metrics_file": "runs/continuous_only/seed_44/test_metrics.json"
+        },
+        {
+          "variant": "continuous_only",
+          "label": "Continuous only",
+          "seed": 45,
+          "hidden_width": 256,
+          "embedding_dimension": null,
+          "input_width": 6,
+          "trainable_parameters": 2561,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "259435fb0ea7bb202ab6d15874223817008db05d1d21aa3b22ea75a7fd7e8909",
+          "train_loader_generator_sha256": "8a70ae5671e726737e9cca485356dab51f133d4bba7bd5945e479570bcb2dc26",
+          "rmse": 115756.24783131326,
+          "r2": 0.5377664220597757,
+          "test_count": 26702,
+          "train_rmse": 56685.8193077982,
+          "train_r2": 0.8731908067127485,
+          "fit_seconds": 10.72315959999105,
+          "run_directory": "runs/continuous_only/seed_45",
+          "checkpoint": "runs/continuous_only/seed_45/best_model.pt",
+          "test_metrics_file": "runs/continuous_only/seed_45/test_metrics.json"
+        },
+        {
+          "variant": "continuous_only",
+          "label": "Continuous only",
+          "seed": 46,
+          "hidden_width": 256,
+          "embedding_dimension": null,
+          "input_width": 6,
+          "trainable_parameters": 2561,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "5ce38688105f7714fc28216a9522fc5b046f552e66fbb1d53a489b385921449c",
+          "train_loader_generator_sha256": "c57e2c897d4f59f40c94a0b17a377ce11750525600e13c9e675b15437505b289",
+          "rmse": 110824.99224471555,
+          "r2": 0.5763101813706226,
+          "test_count": 26702,
+          "train_rmse": 55385.62495900513,
+          "train_r2": 0.8789413003383064,
+          "fit_seconds": 10.553048800007673,
+          "run_directory": "runs/continuous_only/seed_46",
+          "checkpoint": "runs/continuous_only/seed_46/best_model.pt",
+          "test_metrics_file": "runs/continuous_only/seed_46/test_metrics.json"
+        }
+      ]
+    },
+    "sigmoid": {
+      "n_seeds": 5,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "metrics": {
+        "rmse": {
+          "mean": 101821.95545588978,
+          "sample_std": 4082.2124848150793
+        },
+        "r2": {
+          "mean": 0.6418923782153125,
+          "sample_std": 0.028888604116486444
+        }
+      },
+      "per_seed": [
+        {
+          "variant": "sigmoid",
+          "label": "All inputs (Sigmoid)",
+          "seed": 42,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "ee733aabffd9983487d0f26bc07fc93147fab694f0201d8003119f8818e30434",
+          "train_loader_generator_sha256": "4a3ff10390d6b047cb11f6a142e2d8d665340e4e1b7c9ed7eb58d99c3e09fe13",
+          "rmse": 98343.90237451448,
+          "r2": 0.6663681652932265,
+          "test_count": 26702,
+          "train_rmse": 41676.36188793959,
+          "train_r2": 0.9314540997662635,
+          "fit_seconds": 10.05796810000902,
+          "run_directory": "runs/sigmoid/seed_42",
+          "checkpoint": "runs/sigmoid/seed_42/best_model.pt",
+          "test_metrics_file": "runs/sigmoid/seed_42/test_metrics.json"
+        },
+        {
+          "variant": "sigmoid",
+          "label": "All inputs (Sigmoid)",
+          "seed": 43,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "a0fe68139d434c47ef2a1a4d107deb828057760709e139f19a68c3264d4c5393",
+          "train_loader_generator_sha256": "311cfb2ef19fa3802114256cbae07c9e051cb69ced761d1b227d593820d0a22d",
+          "rmse": 99491.71700056772,
+          "r2": 0.6585347915093265,
+          "test_count": 26702,
+          "train_rmse": 41176.48040175058,
+          "train_r2": 0.9330885674848721,
+          "fit_seconds": 11.254859399981797,
+          "run_directory": "runs/sigmoid/seed_43",
+          "checkpoint": "runs/sigmoid/seed_43/best_model.pt",
+          "test_metrics_file": "runs/sigmoid/seed_43/test_metrics.json"
+        },
+        {
+          "variant": "sigmoid",
+          "label": "All inputs (Sigmoid)",
+          "seed": 44,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "892004cb2ea4e76c071c7d4c575cbc61f14df7809252e60cdfb2002a021835d1",
+          "train_loader_generator_sha256": "a00e8d0e7e38da675ef74f2d45a952a7cb487e97f8c476ddad288594028171f6",
+          "rmse": 98779.3476903464,
+          "r2": 0.6634071265979438,
+          "test_count": 26702,
+          "train_rmse": 42066.52485656542,
+          "train_r2": 0.930164675443493,
+          "fit_seconds": 11.178408600011608,
+          "run_directory": "runs/sigmoid/seed_44",
+          "checkpoint": "runs/sigmoid/seed_44/best_model.pt",
+          "test_metrics_file": "runs/sigmoid/seed_44/test_metrics.json"
+        },
+        {
+          "variant": "sigmoid",
+          "label": "All inputs (Sigmoid)",
+          "seed": 45,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "fe87550ec3103df1e043ce610d92faacfb621eb56a4eeee2a6a126cca1b5e15c",
+          "train_loader_generator_sha256": "8a70ae5671e726737e9cca485356dab51f133d4bba7bd5945e479570bcb2dc26",
+          "rmse": 105653.98310495508,
+          "r2": 0.6149258570016102,
+          "test_count": 26702,
+          "train_rmse": 42170.482742873915,
+          "train_r2": 0.9298190845778403,
+          "fit_seconds": 11.283129700022982,
+          "run_directory": "runs/sigmoid/seed_45",
+          "checkpoint": "runs/sigmoid/seed_45/best_model.pt",
+          "test_metrics_file": "runs/sigmoid/seed_45/test_metrics.json"
+        },
+        {
+          "variant": "sigmoid",
+          "label": "All inputs (Sigmoid)",
+          "seed": 46,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "6ba5029ac9f9c3d1e0ef7e443635298acd1e4685a3e79a1250b4042c9b12bffc",
+          "train_loader_generator_sha256": "c57e2c897d4f59f40c94a0b17a377ce11750525600e13c9e675b15437505b289",
+          "rmse": 106840.82710906529,
+          "r2": 0.6062259506744561,
+          "test_count": 26702,
+          "train_rmse": 41579.55070198852,
+          "train_r2": 0.9317721842682216,
+          "fit_seconds": 11.38889630002086,
+          "run_directory": "runs/sigmoid/seed_46",
+          "checkpoint": "runs/sigmoid/seed_46/best_model.pt",
+          "test_metrics_file": "runs/sigmoid/seed_46/test_metrics.json"
+        }
+      ]
+    }
+  },
+  "paired_differences": {
+    "continuous_only": {
+      "n_seeds": 5,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "metrics": {
+        "rmse_delta": {
+          "mean": 5824.788509606829,
+          "sample_std": 8760.401644880058
+        },
+        "r2_delta": {
+          "mean": -0.044107216534769234,
+          "sample_std": 0.06316303772045598
+        }
+      },
+      "per_seed": [
+        {
+          "seed": 42,
+          "rmse_delta": 18345.426754240296,
+          "r2_delta": -0.1342581954615083
+        },
+        {
+          "seed": 43,
+          "rmse_delta": 4548.785736838079,
+          "r2_delta": -0.03292461199483565
+        },
+        {
+          "seed": 44,
+          "rmse_delta": -5178.013713685665,
+          "r2_delta": 0.03388050072697868
+        },
+        {
+          "seed": 45,
+          "rmse_delta": 9411.504847496806,
+          "r2_delta": -0.07210778829725906
+        },
+        {
+          "seed": 46,
+          "rmse_delta": 1996.2389231446286,
+          "r2_delta": -0.015125987647221839
+        }
+      ]
+    },
+    "sigmoid": {
+      "n_seeds": 5,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "metrics": {
+        "rmse_delta": {
+          "mean": -605.9404693111428,
+          "sample_std": 2024.4669362599425
+        },
+        "r2_delta": {
+          "mean": 0.004581521236019026,
+          "sample_std": 0.014127734639485719
+        }
+      },
+      "per_seed": [
+        {
+          "seed": 42,
+          "rmse_delta": 1442.26497743465,
+          "r2_delta": -0.00971401540734218
+        },
+        {
+          "seed": 43,
+          "rmse_delta": -3145.265515488747,
+          "r2_delta": 0.021930973187458624
+        },
+        {
+          "seed": 44,
+          "rmse_delta": 1351.9842828653927,
+          "r2_delta": -0.009150779901208383
+        },
+        {
+          "seed": 45,
+          "rmse_delta": -690.7598788613686,
+          "r2_delta": 0.005051646644575469
+        },
+        {
+          "seed": 46,
+          "rmse_delta": -1987.9262125056412,
+          "r2_delta": 0.0147897816566116
+        }
+      ]
+    }
+  },
+  "difference_definition": "ablation minus same-seed baseline; lower RMSE and higher R2 are better",
+  "test_assisted_epoch_budget": true,
+  "test_monitoring_during_a2": false,
+  "elapsed_seconds": 168.19273319997592
+}

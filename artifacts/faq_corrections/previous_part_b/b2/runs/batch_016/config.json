@@ -1,0 +1,57 @@
+{
+  "training": {
+    "learning_rate": 0.001,
+    "max_epochs": 20,
+    "patience": 4,
+    "min_delta": 0.0001,
+    "seed": 42,
+    "device": "cuda",
+    "mode": "selection"
+  },
+  "task": {
+    "threshold": 0.5,
+    "kind": "binary_classification"
+  },
+  "model_class": "part_b.src.models.VGGLike",
+  "model_config": {
+    "format_version": 1,
+    "architecture": "b2",
+    "input_shape": [
+      1,
+      64,
+      64
+    ],
+    "convolution_bias": false,
+    "fully_connected_bias": true,
+    "convolution_postprocessing": [
+      "BatchNorm2d",
+      "ReLU"
+    ],
+    "batchnorm_eps": 1e-05,
+    "batchnorm_momentum": 0.1,
+    "padding": "symmetric_zero_padding_kernel_half_center_aligned_stride_two",
+    "residual_projection_activation": null,
+    "residual_addition_activation": null,
+    "hidden_fc_dropout": null,
+    "average_pool_kernel_and_stride": 8,
+    "average_pool_output": [
+      1,
+      1
+    ],
+    "output": "unrestricted_binary_logit",
+    "output_shape": [
+      "N"
+    ],
+    "trainable_parameters": 18185
+  },
+  "batch_size": 16,
+  "stopping_metric": "validation_loss",
+  "checkpoint_selection": "lowest_error_then_loss_then_earlier_epoch",
+  "training_curve_metrics": "evaluation_of_completed_epoch_model_on_all_training_samples",
+  "trainable_parameters": 18185,
+  "test_assisted_stopping": false,
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.11.0+cu128"
+  }
+}

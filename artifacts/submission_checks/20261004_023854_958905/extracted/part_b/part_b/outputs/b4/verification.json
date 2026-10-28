@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "step": 13,
+  "output_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_b\\outputs\\b4",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060 Ti",
+  "sample_seed": 42,
+  "sample_row_ids": [
+    486,
+    279,
+    413,
+    53,
+    276
+  ],
+  "overlay_count": 15,
+  "random_selection_reproduced_independently": true,
+  "original_pixels_and_normalized_inputs_verified": true,
+  "independent_gradient_method": "torch.autograd.grad(logits.sum(), selected convolution output); no Captum calls",
+  "models": {
+    "b1": {
+      "native_grid_size": 16,
+      "target_layer": "features.conv3.conv",
+      "independent_autograd_maximum_differences": {
+        "activations": 0.0,
+        "gradients": 0.0,
+        "channel_weights": 0.0,
+        "signed_coarse_maps": 0.0,
+        "positive_coarse_maps": 0.0,
+        "upsampled_positive_maps": 0.0,
+        "normalized_maps": 0.0,
+        "upsampled_peaks": 0.0,
+        "logits": 0.0,
+        "probabilities": 0.0
+      },
+      "source_inference_batch_sizes": [
+        128
+      ],
+      "discarded_duplicate_padding_rows": 123,
+      "parameter_gradients_unaccumulated": true,
+      "state_and_checkpoint_unchanged": true,
+      "saved_test_logits_and_probabilities_exactly_equal": true,
+      "mean_outer_8_pixel_frame_mass_fraction": 0.0
+    },
+    "b2": {
+      "native_grid_size": 16,
+      "target_layer": "features.conv6.conv",
+      "independent_autograd_maximum_differences": {
+        "activations": 0.0,
+        "gradients": 0.0,
+        "channel_weights": 0.0,
+        "signed_coarse_maps": 0.0,
+        "positive_coarse_maps": 0.0,
+        "upsampled_positive_maps": 0.0,
+        "normalized_maps": 0.0,
+        "upsampled_peaks": 0.0,
+        "logits": 0.0,
+        "probabilities": 0.0
+      },
+      "source_inference_batch_sizes": [
+        16
+      ],
+      "discarded_duplicate_padding_rows": 11,
+      "parameter_gradients_unaccumulated": true,
+      "state_and_checkpoint_unchanged": true,
+      "saved_test_logits_and_probabilities_exactly_equal": true,
+      "mean_outer_8_pixel_frame_mass_fraction": 0.36623629698260424
+    },
+    "b3": {
+      "native_grid_size": 8,
+      "target_layer": "features.block64.conv2.conv",
+      "independent_autograd_maximum_differences": {
+        "activations": 0.0,
+        "gradients": 0.0,
+        "channel_weights": 0.0,
+        "signed_coarse_maps": 0.0,
+        "positive_coarse_maps": 0.0,
+        "upsampled_positive_maps": 0.0,
+        "normalized_maps": 0.0,
+        "upsampled_peaks": 0.0,
+        "logits": 0.0,
+        "probabilities": 0.0
+      },
+      "source_inference_batch_sizes": [
+        16
+      ],
+      "discarded_duplicate_padding_rows": 11,
+      "parameter_gradients_unaccumulated": true,
+      "state_and_checkpoint_unchanged": true,
+      "saved_test_logits_and_probabilities_exactly_equal": true,
+      "mean_outer_8_pixel_frame_mass_fraction": 0.188903959449904
+    }
+  },
+  "attribution_sha256": "a308595c0e3dbb5bfc67cc30ee07d40c16d6ed16802b366eda7aa0b3e67b2195",
+  "full_test_performance_evaluations": 0,
+  "additional_selected_image_attribution_forwards": 3,
+  "all_previous_output_hashes_unchanged": true,
+  "previous_outputs_checked": 922,
+  "all_supplied_file_hashes_unchanged": true,
+  "source_model_and_data_lineage_verified": true,
+  "tables_and_figure_files_checked": true
+}

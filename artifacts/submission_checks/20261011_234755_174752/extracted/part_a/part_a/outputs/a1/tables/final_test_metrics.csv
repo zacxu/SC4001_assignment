@@ -1,0 +1,2 @@
+model,seed,hidden_width,embedding_dimension,trainable_parameters,E_val,E_star,refit_epochs_completed,test_rows,test_rmse_sgd,test_r2,test_assisted_stopping
+A1 selected combined-data refit,42,256,4,7065,6,4,8,26702,96901.63739707983,0.6760821807005687,True

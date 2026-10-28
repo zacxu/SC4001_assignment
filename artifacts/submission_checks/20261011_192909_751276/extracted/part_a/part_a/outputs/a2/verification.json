@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "checked_at_singapore": "2026-10-03T12:32:52.138093+08:00",
+  "run_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\a2",
+  "completed_runs": 15,
+  "epochs_each": 4,
+  "all_15_restored_training_metrics_reproduced_on_cuda": true,
+  "no_additional_test_performance_evaluation": true,
+  "no_test_or_validation_monitoring_during_a2": true,
+  "exact_a1_preprocessing_reused": true,
+  "fresh_seed_initializations_verified": true,
+  "sigmoid_baseline_initial_weights_identical_for_each_seed": true,
+  "matched_seed_loader_generator_states_identical": true,
+  "sample_sd_ddof_1_and_paired_summaries_verified": true,
+  "separate_figures_and_tables_checked": true,
+  "supplied_files_and_a1_checkpoints_unchanged": true,
+  "fresh_baseline_seed42_matches_a1_final_metrics": true,
+  "checkpoints": [
+    {
+      "variant": "baseline",
+      "seed": 42,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "2e377bb442f965bfcef327afd5fce38abd4a3e165a39fb37822e6172f3bfe5d7"
+    },
+    {
+      "variant": "continuous_only",
+      "seed": 42,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "4761ff05977814ebca53c7fb5c200abc29ddf59053c2372d070e4c080ff3c54d"
+    },
+    {
+      "variant": "sigmoid",
+      "seed": 42,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "3f7f096827e588faab9221a9503d85bd63cb568ddecc77b924feb51acfedbfaa"
+    },
+    {
+      "variant": "baseline",
+      "seed": 43,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "4c30e528c9ea03d50331a1a8a66e6d88252fae228a9f9df837ba38d7238cf2e9"
+    },
+    {
+      "variant": "continuous_only",
+      "seed": 43,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "d4e43ab8c0c3a85f5e025fc72b6828e11354bdcce52752aef7bdbb509f5a421f"
+    },
+    {
+      "variant": "sigmoid",
+      "seed": 43,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "1f027ec6352d7e7fda33c7315bcd77434db72ba69d8c6939e712235fa8456d29"
+    },
+    {
+      "variant": "baseline",
+      "seed": 44,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "8638020459571817f594feff11d9ac274c950bb887e8cfe7e5b5bc6d0b21f34c"
+    },
+    {
+      "variant": "continuous_only",
+      "seed": 44,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "f692d00c0971b986f1ad05c52e0f35099a4e0cfd64e234e333db1b50bc5c00ea"
+    },
+    {
+      "variant": "sigmoid",
+      "seed": 44,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "e54652f467707cc2c6e3ef3494e3a4f0acf4bed3c6ef728cb558a7db07111f08"
+    },
+    {
+      "variant": "baseline",
+      "seed": 45,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "a09e1a60c3c62af74edcbf12e7ad2e2439bf2e4ea566f07c24519878b79ba08e"
+    },
+    {
+      "variant": "continuous_only",
+      "seed": 45,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "c866776005bdb8145215521fe223bedc2ae198905ff868518b8ecaa67b7b9bdc"
+    },
+    {
+      "variant": "sigmoid",
+      "seed": 45,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "a1bd1cf366075a90764174299030fd9d7d53b87700b491fdbdce5fa220e71fbc"
+    },
+    {
+      "variant": "baseline",
+      "seed": 46,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "c1450ed15418c3b31b4c25e5fe6de35a9f03457a8f7fab4429e8a808ccd6dcfb"
+    },
+    {
+      "variant": "continuous_only",
+      "seed": 46,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "18cd19c17f7cad8fc5f9b913a986941f672d1220a5b83bcb7b11fd6a5ce033ee"
+    },
+    {
+      "variant": "sigmoid",
+      "seed": 46,
+      "checkpoint_epoch": 4,
+      "training_metrics_reproduced_on_cuda": true,
+      "checkpoint_sha256": "8047b5cb9954372aba74a3faa620c2d8deb9da6229cc8890fa1f811f5e2cc3b4"
+    }
+  ]
+}

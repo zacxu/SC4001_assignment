@@ -1,0 +1,47 @@
+{
+  "training": {
+    "learning_rate": 0.01,
+    "max_epochs": 4,
+    "patience": 4,
+    "min_delta": 0.0001,
+    "seed": 46,
+    "device": "cuda",
+    "mode": "fixed_refit"
+  },
+  "task": {
+    "target_mean": 459696.8125,
+    "target_std": 159183.875,
+    "kind": "regression"
+  },
+  "model_class": "part_a.src.model.HousingMLP",
+  "model_config": {
+    "architecture": "four_embedding_mlp",
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "cardinalities": [
+      13,
+      27,
+      44,
+      18
+    ],
+    "continuous_features": 6,
+    "input_width": 22,
+    "normalization": "LayerNorm",
+    "activation": "ReLU",
+    "output": "standardized_price",
+    "trainable_parameters": 7065,
+    "experiment": "A2",
+    "variant": "baseline",
+    "initial_model_sha256": "6ba5029ac9f9c3d1e0ef7e443635298acd1e4685a3e79a1250b4042c9b12bffc"
+  },
+  "batch_size": 512,
+  "stopping_metric": null,
+  "checkpoint_selection": "final_epoch",
+  "training_curve_metrics": "evaluation_of_completed_epoch_model_on_all_training_samples",
+  "trainable_parameters": 7065,
+  "test_assisted_stopping": false,
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.11.0+cu128"
+  }
+}

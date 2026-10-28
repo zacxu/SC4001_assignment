@@ -1,0 +1,115 @@
+PAGE 1
+SC4001: Neural Networks and Deep Learning
+
+       Programming Assignment
+
+PAGE 2
+Part A: Regression with DNN
+
+  Predict Singapore housing price from both categorical and continuous inputs
+
+  Question A1 (baseline model)
+
+  •   Each categorical feature is first indexed and then converted to an embedding of dimension 8 by using
+     nn.Embedding layer consisting of learnable weights.
+
+  •   Draw a block diagram of the baseline network; compute the number of learnable parameters
+
+  •   Find the optimal parameters: embedding dimension x hidden-layer width by using ray[tune]
+
+  •   Use these parameters for A2 – A4
+
+
+
+  Question A2 (ablation)
+
+  •     (i) Remove categorical variables
+
+         (ii) Replace ReLU layer with sigmoidal layer
+
+  •   Perform experiments on five seeds (torch.manual_seed(seed)), report mean and s.d., and compare
+      with the baseline
+
+PAGE 3
+Part A
+
+
+  Question A3 (wide-and-deep architecture)
+  •   output = MLP output + 𝜆 × linear output
+
+      Find the optimal parameter 𝜆∈0, 0.25, 0.5, 1.2
+
+  •   Evaluate the optimal network over 5 seeds and compare with the baseline architecture (MLP)
+
+
+
+  Question A4 (XAI)
+
+  •   Use FeatureAblation method on Captum library
+
+  •   Find feature importance scores in Singapore dollars
+
+PAGE 4
+Part B: classification with CNN
+
+
+
+
+
+       (B1) AlexNet like architecture, (B2) VGG like architecture, and (B3). ResNet like architecture.
+
+   All the layers use ReLU activation function including after residual addition ⊕. All convolutional layers use BatchNorm and SAME
+  padding. Layers indicating /2 have a stride of two and all other layers have stride of 1. Dropout = 0.5 is applied only in the hidden fully-
+  connected (fc) layers in B1 architecture.
+
+    ).
+
+PAGE 5
+Part B
+
+
+ Question B1 (AlexNet-like architecture)
+ •   Find the optimal learning rate from 10−5, 10−4, 10−3, 10−2, 10−1
+
+ •    Plot learning curves, evaluate, etc.
+
+ Question B2 (VGG-like architecture)
+ •   Find the batch size from 16, 32, 64, 128, 258
+
+ •    Plot learning curves, evaluate, etc.
+
+ Question B3 (ResNet-like architecture)
+
+ •   Use learning rate from B1 and batch size from B2; Plot learning curves, evaluate, etc.
+
+ •   Compare B1-B3 architectures: performances, number of learnable parameters, FLOPs, etc.
+
+ Question B4 (XAI)
+
+ •   Use Grad-CAM method on Captum library
+
+ •   Overlay Grad-CAM heat maps on X-ray images
+
+PAGE 6
+Housekeeping rules
+
+  •   Assessment is based on the report (6 pages each). Codes will be used for checking.
+          PartA_report_YourName.pdf, PartA_codes_YourName.zip
+          PartB_report_YourName.pdf, PartB_codes_YourName.zip
+
+  •   Codes must be in .py and .ipynb, tidied, properly labelled, and ready to run. Include a README file.
+
+  •   Generative AI declaration
+
+  •   Marks: 45 for Part A + 45 for Part B + 10 for presentation. Follow the instructions closely. Any deviations
+    may lead to loss of marks for presentation.
+
+  •   Late submissions: penalized for 5 marks for each day up to 3 days.
+
+  •    This assignment is to be done individually. Absolutely NO copying, duplicating, or plagiarism.
+
+  •   Post your queries on the Discussion Board in NTULearn
+
+  •    Specific questions for help via cx4042@e.ntu.edu.sg
+
+  •   TA: Deepank Girish, Yan Yige, Tiara Natasha, and Ajith Senthisenan.

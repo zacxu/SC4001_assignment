@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "checked_at_singapore": "2026-10-01T16:49:17.130964+08:00",
+  "python_executable": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\.venv\\Scripts\\python.exe",
+  "torch": "2.11.0+cu128",
+  "prepared_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\data",
+  "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+  "selection": {
+    "counts": {
+      "train": 87370,
+      "validation": 29057,
+      "test": 26702
+    },
+    "fit_years": [
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "cardinalities": [
+      13,
+      27,
+      44,
+      18
+    ],
+    "all_tensors_and_statistics_exactly_match_supplied_baseline": true,
+    "row_order_and_split_membership": "passed",
+    "safe_weights_only_artifact_loading": "passed",
+    "integer_month_map_keys_preserved": true
+  },
+  "refit": {
+    "counts": {
+      "train": 116427,
+      "test": 26702
+    },
+    "fit_years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "cardinalities": [
+      13,
+      27,
+      44,
+      18
+    ],
+    "all_tensors_and_statistics_exactly_match_supplied_baseline": true,
+    "row_order_and_split_membership": "passed",
+    "safe_weights_only_artifact_loading": "passed",
+    "integer_month_map_keys_preserved": true
+  },
+  "excluded_2023_rows": 16424,
+  "data_quality": {
+    "missing_counts_all_source_columns": {
+      "month": 0,
+      "year": 0,
+      "town": 0,
+      "full_address": 0,
+      "nearest_stn": 0,
+      "dist_to_nearest_stn": 0,
+      "dist_to_dhoby": 0,
+      "degree_centrality": 0,
+      "eigenvector_centrality": 0,
+      "flat_model_type": 0,
+      "remaining_lease_years": 0,
+      "floor_area_sqm": 0,
+      "storey_range": 0,
+      "resale_price": 0
+    },
+    "exact_duplicate_rows": 0,
+    "required_numeric_values_finite": true,
+    "required_categories_nonempty": true,
+    "rows_dropped_or_imputed": 0,
+    "handling": "Reject invalid required values; preserve duplicates and original row order."
+  },
+  "no_model_training_or_test_performance_evaluation": true,
+  "supplied_files_unchanged": true
+}

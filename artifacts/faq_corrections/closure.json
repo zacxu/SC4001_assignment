@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-10-12T07:56:00.426921+00:00",
+  "status": "verified_current_answers_pending_student_identity_and_portal",
+  "controlling_sources": {
+    "assignment.pdf": "2c6b4529d31352b228a0f78c5b354ddd72edb1bed39d9f9461d6499566dad46f",
+    "assignment_slides.pdf": "2a3f78e1a2328dbab8e4c787ce5c321da4a618c219292098ef85543a79b82398",
+    "clarifications.md": "a377cd02dde48d0b41540392880d3b00d51701be457e49b84572560e5fad654a",
+    "Q&A.md": "2fe517870378f29ca4254cf741246121602ff92032de35e6c08008c512b97c4b"
+  },
+  "report_inputs_verified": 78,
+  "reports": {
+    "A": {
+      "sha256": "37bee3c5f7bd561954977f998325526e58f1888ac0a6b5bc327d201fba7242ff",
+      "pages": 5,
+      "submission_copy_identical": true
+    },
+    "B": {
+      "sha256": "b2e1aa7f83365075c027e673f4d80a3052ea8b8a037a30e7c030cf8b148729b5",
+      "pages": 5,
+      "submission_copy_identical": true
+    }
+  },
+  "code_archives": {
+    "A": {
+      "sha256": "6750a8b387bce14471404a2181b3a0358a72199f7be7fe1487981883dccf19f2",
+      "entries": 529,
+      "integrity": "passed",
+      "all_embedded_hashes": "matched",
+      "current_canonical_evidence": "matched"
+    },
+    "B": {
+      "sha256": "2ee2eea4293de0bd1fb6c604e3762fcf5e07e03e079df264618b8c30d0ad8614",
+      "entries": 228,
+      "integrity": "passed",
+      "all_embedded_hashes": "matched",
+      "current_canonical_evidence": "matched"
+    }
+  },
+  "root_tests_passed": 101,
+  "isolated_package_tests_passed": {
+    "part_a": 60,
+    "part_b": 64
+  },
+  "all_assignment_questions_reviewed": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "semantic_and_visual_review": "Independent actual brief/slides/FAQ and final ten-page review; see docs/FAQ_COMPLIANCE_REVIEW.md and docs/SUBMISSION_VERIFICATION.md",
+  "fresh_part_b_refits_completed": 3,
+  "a2_validation_diagnostics_completed": 3,
+  "this_final_hash_check_new_training_runs": 0,
+  "this_final_hash_check_new_model_inference": 0,
+  "remaining": [
+    "Replace YourName with actual student name",
+    "Upload four final files to NTULearn and retain receipt"
+  ],
+  "latest_package_verification": "artifacts/submission_checks/20261012_155423_205905/verification.json",
+  "date": "2026-10-12",
+  "latest_a1_interpretation_review": "artifacts/a1_interpretation_review/verification.json",
+  "latest_a2_axis_zoom": "artifacts/a2_axis_zoom/verification.json",
+  "latest_a3_axis_zoom": "artifacts/a3_axis_zoom/verification.json",
+  "latest_b1_validation_plots": "artifacts/b1_validation_plots/verification.json",
+  "latest_b2_validation_plots": "artifacts/b2_validation_plots/verification.json"
+}

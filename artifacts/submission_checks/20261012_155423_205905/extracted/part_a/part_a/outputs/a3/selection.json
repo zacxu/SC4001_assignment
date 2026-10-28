@@ -1,0 +1,23 @@
+{
+  "selected": {
+    "lambda": 2.0,
+    "seed": 42,
+    "best_epoch": 3,
+    "epochs_completed": 7,
+    "stopped_early": true,
+    "trainable_parameters": 7088,
+    "active_parameters": 7088,
+    "train_rmse": 36881.170379980176,
+    "train_r2": 0.9428094682316913,
+    "validation_rmse": 57905.64638909026,
+    "validation_r2": 0.8732394617180165,
+    "initial_model_sha256": "075ab637791eb3333c934aa32ea39e454ff9eabb87d1f7e47d50b11b38be513b",
+    "baseline_initial_sha256": "ee733aabffd9983487d0f26bc07fc93147fab694f0201d8003119f8818e30434",
+    "train_loader_generator_sha256": "826e5afb4c98a41158e1d33f05560c0c68aaa41eb14cfccffc588e7a520f5d2b",
+    "run_directory": "search/lambda_2",
+    "checkpoint": "search/lambda_2/best_model.pt"
+  },
+  "tie_break_rule": "lowest best validation RMSE, then smaller lambda",
+  "selection_partition": "2021 validation",
+  "selection_seed": 42
+}

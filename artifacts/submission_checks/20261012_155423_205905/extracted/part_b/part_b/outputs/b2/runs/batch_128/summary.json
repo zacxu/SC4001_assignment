@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "best_epoch": 5,
+  "epochs_completed": 9,
+  "stopped_early": true,
+  "stopping_reference": 0.1353076995556591,
+  "selected_metrics": {
+    "train": {
+      "loss": 0.10330209396811188,
+      "count": 4708,
+      "accuracy": 0.9653780798640612,
+      "classification_error": 0.03462192013593879,
+      "sensitivity": 0.9896966227819118,
+      "specificity": 0.8953871499176277,
+      "tp": 3458,
+      "tn": 1087,
+      "fp": 127,
+      "fn": 36
+    },
+    "validation": {
+      "loss": 0.1353076995556591,
+      "count": 524,
+      "accuracy": 0.9522900763358778,
+      "classification_error": 0.04770992366412219,
+      "sensitivity": 0.987146529562982,
+      "specificity": 0.8518518518518519,
+      "tp": 384,
+      "tn": 115,
+      "fp": 20,
+      "fn": 5
+    }
+  },
+  "elapsed_seconds": 5.102215199993225,
+  "test_assisted_stopping": false
+}

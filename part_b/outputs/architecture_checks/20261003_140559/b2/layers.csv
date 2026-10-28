@@ -1,0 +1,31 @@
+layer,type,input_shape,output_shape,own_trainable_parameters
+features.conv1.conv,Conv2d,"[2, 1, 64, 64]","[2, 8, 64, 64]",72
+features.conv1.bn,BatchNorm2d,"[2, 8, 64, 64]","[2, 8, 64, 64]",16
+features.conv1.relu,ReLU,"[2, 8, 64, 64]","[2, 8, 64, 64]",0
+features.conv1,ConvBNReLU,"[2, 1, 64, 64]","[2, 8, 64, 64]",0
+features.conv2.conv,Conv2d,"[2, 8, 64, 64]","[2, 8, 64, 64]",576
+features.conv2.bn,BatchNorm2d,"[2, 8, 64, 64]","[2, 8, 64, 64]",16
+features.conv2.relu,ReLU,"[2, 8, 64, 64]","[2, 8, 64, 64]",0
+features.conv2,ConvBNReLU,"[2, 8, 64, 64]","[2, 8, 64, 64]",0
+features.pool1,MaxPool2d,"[2, 8, 64, 64]","[2, 8, 32, 32]",0
+features.conv3.conv,Conv2d,"[2, 8, 32, 32]","[2, 16, 32, 32]",1152
+features.conv3.bn,BatchNorm2d,"[2, 16, 32, 32]","[2, 16, 32, 32]",32
+features.conv3.relu,ReLU,"[2, 16, 32, 32]","[2, 16, 32, 32]",0
+features.conv3,ConvBNReLU,"[2, 8, 32, 32]","[2, 16, 32, 32]",0
+features.conv4.conv,Conv2d,"[2, 16, 32, 32]","[2, 16, 32, 32]",2304
+features.conv4.bn,BatchNorm2d,"[2, 16, 32, 32]","[2, 16, 32, 32]",32
+features.conv4.relu,ReLU,"[2, 16, 32, 32]","[2, 16, 32, 32]",0
+features.conv4,ConvBNReLU,"[2, 16, 32, 32]","[2, 16, 32, 32]",0
+features.pool2,MaxPool2d,"[2, 16, 32, 32]","[2, 16, 16, 16]",0
+features.conv5.conv,Conv2d,"[2, 16, 16, 16]","[2, 32, 16, 16]",4608
+features.conv5.bn,BatchNorm2d,"[2, 32, 16, 16]","[2, 32, 16, 16]",64
+features.conv5.relu,ReLU,"[2, 32, 16, 16]","[2, 32, 16, 16]",0
+features.conv5,ConvBNReLU,"[2, 16, 16, 16]","[2, 32, 16, 16]",0
+features.conv6.conv,Conv2d,"[2, 32, 16, 16]","[2, 32, 16, 16]",9216
+features.conv6.bn,BatchNorm2d,"[2, 32, 16, 16]","[2, 32, 16, 16]",64
+features.conv6.relu,ReLU,"[2, 32, 16, 16]","[2, 32, 16, 16]",0
+features.conv6,ConvBNReLU,"[2, 32, 16, 16]","[2, 32, 16, 16]",0
+features.pool3,MaxPool2d,"[2, 32, 16, 16]","[2, 32, 8, 8]",0
+features.average_pool,AdaptiveAvgPool2d,"[2, 32, 8, 8]","[2, 32, 1, 1]",0
+flatten,Flatten,"[2, 32, 1, 1]","[2, 32]",0
+classifier.output,Linear,"[2, 32]","[2, 1]",33

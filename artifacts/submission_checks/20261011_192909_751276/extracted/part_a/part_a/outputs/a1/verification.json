@@ -1,0 +1,206 @@
+{
+  "status": "passed",
+  "checked_at_singapore": "2026-10-01T17:22:42.922170+08:00",
+  "run_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\a1",
+  "all_25_validation_checkpoints_reproduced_on_cuda": true,
+  "epochs_selection_and_stopping_audited": true,
+  "default_parameter_count": 3505,
+  "selection_used_no_test_predictions": true,
+  "public_epoch_histories_contain_no_test_metrics": true,
+  "refit_metrics_match_restored_checkpoint_and_selected_internal_monitor": true,
+  "no_additional_test_performance_evaluation": true,
+  "tables_and_figures_checked": true,
+  "supplied_files_unchanged": true,
+  "E_val": 6,
+  "E_star": 4,
+  "selected": {
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "validation_rmse": 58627.1026186996,
+    "trainable_parameters": 7065
+  },
+  "final_test_metrics": {
+    "loss": 0.3705647119992896,
+    "count": 26702,
+    "rmse": 96901.63739707983,
+    "r2": 0.6760821807005687
+  },
+  "checkpoints": [
+    {
+      "hidden_width": 16,
+      "embedding_dimension": 2,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "63a1dd40fbd010db14e8549ea3fc923a621937c81ab6d83504563c12a493a842"
+    },
+    {
+      "hidden_width": 16,
+      "embedding_dimension": 4,
+      "best_epoch": 10,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "4182284fa97ad4e361f26c75520f2ca52893071f3cd532e317fb8c6c4e031c69"
+    },
+    {
+      "hidden_width": 16,
+      "embedding_dimension": 8,
+      "best_epoch": 10,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "853cf7b02e9cd81d4231ecc05cb1249bd3e182dfb3e5fc2495a195c9f7fcf977"
+    },
+    {
+      "hidden_width": 16,
+      "embedding_dimension": 12,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "cc44f5548d707fd7dc17f50dd90f2574794234f3d1517cbd59d9e12f268a2b74"
+    },
+    {
+      "hidden_width": 16,
+      "embedding_dimension": 16,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "b3e92854a1f5f7934c66b0ff00054b0ecca3b3340e340d8e0a2f300d08b743be"
+    },
+    {
+      "hidden_width": 32,
+      "embedding_dimension": 2,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "9c5afa415f43035a362458070555fd615aebc8f137e8454219fa363a8db2ae1c"
+    },
+    {
+      "hidden_width": 32,
+      "embedding_dimension": 4,
+      "best_epoch": 8,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "644b961fb002bd72e41233b2e4b1237c00357779a0e59c459b7c8b7c6cf97d7d"
+    },
+    {
+      "hidden_width": 32,
+      "embedding_dimension": 8,
+      "best_epoch": 10,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "783a9a1d405d5205f913f1bb63f8a493adc0299dadc4f4caf26e3130b29eafd0"
+    },
+    {
+      "hidden_width": 32,
+      "embedding_dimension": 12,
+      "best_epoch": 8,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "91e2c5916c52e8ed502dec84f3bf381eef17e521405201b805aa59b13b268d39"
+    },
+    {
+      "hidden_width": 32,
+      "embedding_dimension": 16,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "40b3d7a235386df792484e69c0b4c0c680a327c79434dfd133c7ad35c6575b0a"
+    },
+    {
+      "hidden_width": 64,
+      "embedding_dimension": 2,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "ec6108b838c7644003c0663bfd50cfc811aa76c8c29d60f87b345769bc70c767"
+    },
+    {
+      "hidden_width": 64,
+      "embedding_dimension": 4,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "206c4bf502c0d0880ea4b5a378e6b42a8a15ba8bd86dc95ccb49f0c1f5e3d9ad"
+    },
+    {
+      "hidden_width": 64,
+      "embedding_dimension": 8,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "b26ceb4f40efdd7a1e2cf15d8da13ff6208315858c414c17231f52867d2928dd"
+    },
+    {
+      "hidden_width": 64,
+      "embedding_dimension": 12,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "bed05f36993038f9085a7015cc6b8a1c52c06edf5c37c0064661f5c6befcc563"
+    },
+    {
+      "hidden_width": 64,
+      "embedding_dimension": 16,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "b9a212564cc9708041425d2576b336c7e88905ca301ad46ba918343dc09d0047"
+    },
+    {
+      "hidden_width": 128,
+      "embedding_dimension": 2,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "d58850d60e64861a025f82de21bf37ca94abbfdfcd769384c8cd3a940c8c367b"
+    },
+    {
+      "hidden_width": 128,
+      "embedding_dimension": 4,
+      "best_epoch": 6,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "8fffc13900d8fb4e76eb04237cec4e57f7c8b69e22c5796ea008b43d78378cbf"
+    },
+    {
+      "hidden_width": 128,
+      "embedding_dimension": 8,
+      "best_epoch": 6,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "220957869dc63195cd137bfced83cf049b5109264785e3f78b5b91f2b22c7480"
+    },
+    {
+      "hidden_width": 128,
+      "embedding_dimension": 12,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "71afd4a386941e816d01c89a82dbac4d8b837ddb471186b13c7a7371dfb90940"
+    },
+    {
+      "hidden_width": 128,
+      "embedding_dimension": 16,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "e42f1772d915db1635012f99cb97c3b70d3b75744141c3c21cf6b55b7af55c4a"
+    },
+    {
+      "hidden_width": 256,
+      "embedding_dimension": 2,
+      "best_epoch": 4,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "c73106f61b15327b23962612bd7c74506d2c3009d230355b17e120e85ff12bac"
+    },
+    {
+      "hidden_width": 256,
+      "embedding_dimension": 4,
+      "best_epoch": 6,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "057c888cdf3575b581560f66c1956e0647bdc12b86a4534a7f163ca3b6afc366"
+    },
+    {
+      "hidden_width": 256,
+      "embedding_dimension": 8,
+      "best_epoch": 6,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "6e22d27b2ac1cb8bc39bae8a488d9be69249e38f2736c4d4de0355a39536da52"
+    },
+    {
+      "hidden_width": 256,
+      "embedding_dimension": 12,
+      "best_epoch": 6,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "416296eb88d770eab0854a86b79cce450be735973945a643d641793d665a4c1d"
+    },
+    {
+      "hidden_width": 256,
+      "embedding_dimension": 16,
+      "best_epoch": 6,
+      "validation_metrics_reproduced": true,
+      "checkpoint_sha256": "152b7a769c04fa884603bd4dff2c7a00421d28c9302f6860de7e3f4a6a3db173"
+    }
+  ],
+  "refit_checkpoint_sha256": "b12133c68e1c03b6e6c408756679707a8f31e4d4eba8c51957689473d99457d0"
+}

@@ -1,0 +1,48 @@
+{
+  "status": "completed",
+  "completed_runs": 3,
+  "epoch_budget": 4,
+  "seed": 42,
+  "training_rows": 87370,
+  "validation_rows": 29057,
+  "preprocessing_fit_years": [
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "test_evaluated": false,
+  "final_results_changed": false,
+  "records": [
+    {
+      "variant": "baseline",
+      "seed": 42,
+      "epochs_completed": 4,
+      "diagnostic_checkpoint_epoch": 4,
+      "initial_model_sha256": "ee733aabffd9983487d0f26bc07fc93147fab694f0201d8003119f8818e30434",
+      "run_directory": "runs/baseline/seed_42",
+      "last_epoch_train_rmse": 33348.7163450226,
+      "last_epoch_validation_rmse": 63246.90382032726
+    },
+    {
+      "variant": "continuous_only",
+      "seed": 42,
+      "epochs_completed": 4,
+      "diagnostic_checkpoint_epoch": 4,
+      "initial_model_sha256": "7c7f51b1e24d0d591fbb9f1adb789de7ed5e5ef29dba94da7415beb611cd83c9",
+      "run_directory": "runs/continuous_only/seed_42",
+      "last_epoch_train_rmse": 50464.838043473916,
+      "last_epoch_validation_rmse": 72073.20808979556
+    },
+    {
+      "variant": "sigmoid",
+      "seed": 42,
+      "epochs_completed": 4,
+      "diagnostic_checkpoint_epoch": 3,
+      "initial_model_sha256": "ee733aabffd9983487d0f26bc07fc93147fab694f0201d8003119f8818e30434",
+      "run_directory": "runs/sigmoid/seed_42",
+      "last_epoch_train_rmse": 34780.0247084009,
+      "last_epoch_validation_rmse": 68030.75179675239
+    }
+  ]
+}

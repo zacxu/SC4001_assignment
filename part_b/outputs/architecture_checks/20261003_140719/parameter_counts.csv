@@ -1,0 +1,4 @@
+architecture,conv,batchnorm,fc,total_trainable_parameters
+b1,31632,224,67713,99569
+b2,17928,224,33,18185
+b3,76432,672,65,77169

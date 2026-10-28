@@ -1,0 +1,64 @@
+{
+  "experiment": "A2_original_split_diagnostics",
+  "seed": 42,
+  "created_at_singapore": "2026-10-10T23:50:58.652903+08:00",
+  "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+  "faq_sha256": "2fe517870378f29ca4254cf741246121602ff92032de35e6c08008c512b97c4b",
+  "a1_frozen_settings_sha256": "5bf6ae9b5c3d8c93bd747d2318b1b2a04e97f3cf16d24ecf710df8609afcf3ed",
+  "selection_preprocessing_sha256": "cbf236667dc98201a529f75e7266356fc386d36937bf0d06d83e35289caec151",
+  "selection_tensors_sha256": "fe8ee6ded39593841d71437c0823d4f4db8184479b3d671420d75948d9131026",
+  "frozen_settings": {
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "learning_rate": 0.01,
+    "batch_size": 512,
+    "E_val": 6,
+    "E_star": 4,
+    "evaluation_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "refit_preprocessing": "refit/preprocessing.pt",
+    "refit_checkpoint": "refit/best_model.pt",
+    "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+    "test_assisted_epoch_budget": true
+  },
+  "training_years": [
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "validation_years": [
+    2021
+  ],
+  "preprocessing_fit_years": [
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "training_rows": 87370,
+  "validation_rows": 29057,
+  "test_evaluated": false,
+  "training": {
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "batch_size": 512,
+    "epochs": 4,
+    "patience": 4,
+    "min_delta": 0.0001
+  },
+  "purpose": "Held-out train/validation curves only; completed combined-data five-seed final results are unchanged.",
+  "checkpoint_policy": "Shared selection trainer records a validation-best diagnostic checkpoint; it is never tested or used for final-model selection.",
+  "epoch_budget_policy": "Frozen E*=4, with patience=4 so early stopping cannot shorten these four-epoch diagnostics; no retuning.",
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "device": "NVIDIA GeForce RTX 3060 Ti"
+  }
+}

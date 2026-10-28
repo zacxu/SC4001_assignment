@@ -1,0 +1,30 @@
+{
+  "architecture": "b3",
+  "learning_rate": 0.001,
+  "batch_size": 16,
+  "checkpoint": "refit/best_model.pt",
+  "checkpoint_sha256": "7d2567d04391fe1032f24b964133826791480c2d1d0590e2d26a955b5d265ec1",
+  "checkpoint_epoch": 9,
+  "seed": 42,
+  "metrics": {
+    "loss": 0.8239933579969101,
+    "count": 624,
+    "accuracy": 0.8108974358974359,
+    "classification_error": 0.1891025641025641,
+    "sensitivity": 1.0,
+    "specificity": 0.49572649572649574,
+    "tp": 390,
+    "tn": 116,
+    "fp": 118,
+    "fn": 0
+  },
+  "test_evaluations": 1,
+  "test_assisted_stopping": false,
+  "refit": true,
+  "combined_training_rows": 5232,
+  "refit_protocol": "refit_protocol.json",
+  "selection_checkpoint": "run/best_model.pt",
+  "selection_checkpoint_sha256": "31b2526cc06c899829e8f2fb73d67eed99206fbd20132076fe7644920402a1de",
+  "class_mapping_status": "confirmed_by_instructor_QA",
+  "prediction_artifact": "final_test_predictions.pt"
+}

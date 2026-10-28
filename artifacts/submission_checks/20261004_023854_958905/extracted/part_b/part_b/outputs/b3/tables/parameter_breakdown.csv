@@ -1,0 +1,4 @@
+architecture,convolution,batchnorm_affine,linear,other,total
+b1,31632,224,67713,0,99569
+b2,17928,224,33,0,18185
+b3,76432,672,65,0,77169

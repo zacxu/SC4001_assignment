@@ -1,0 +1,115 @@
+{
+  "status": "passed",
+  "step": 10,
+  "output_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_b\\outputs\\b1",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060 Ti",
+  "trials_audited": 5,
+  "selected_learning_rate": 0.001,
+  "selected_epoch": 9,
+  "checkpoints": [
+    {
+      "learning_rate": 1e-05,
+      "checkpoint": "runs\\lr_1e-05\\best_model.pt",
+      "checkpoint_sha256": "1af6b2ca8c007b646a51b0bd436f21bd2b121ecb23f85417d81c42118fd1c8e7",
+      "history": {
+        "epochs_completed": 20,
+        "selected_epoch": 18,
+        "minimum_loss_epoch": 20,
+        "patience_exhausted": false,
+        "stopping_and_selection_audited": true
+      },
+      "maximum_restored_metric_differences": {
+        "train": 0.0,
+        "validation": 0.0
+      },
+      "full_train_and_validation_reproduced": true,
+      "initialization_and_first_epoch_order_match": true
+    },
+    {
+      "learning_rate": 0.0001,
+      "checkpoint": "runs\\lr_1e-04\\best_model.pt",
+      "checkpoint_sha256": "aaf34b52dd251b814996e73bfe52198d0de9856b83e295b46cd626048179cd4d",
+      "history": {
+        "epochs_completed": 20,
+        "selected_epoch": 19,
+        "minimum_loss_epoch": 19,
+        "patience_exhausted": false,
+        "stopping_and_selection_audited": true
+      },
+      "maximum_restored_metric_differences": {
+        "train": 0.0,
+        "validation": 0.0
+      },
+      "full_train_and_validation_reproduced": true,
+      "initialization_and_first_epoch_order_match": true
+    },
+    {
+      "learning_rate": 0.001,
+      "checkpoint": "runs\\lr_1e-03\\best_model.pt",
+      "checkpoint_sha256": "d263b26896db01340079373a7062dfcbf43fa72bffcbf127f17be1d0c2aeb7a9",
+      "history": {
+        "epochs_completed": 12,
+        "selected_epoch": 9,
+        "minimum_loss_epoch": 8,
+        "patience_exhausted": true,
+        "stopping_and_selection_audited": true
+      },
+      "maximum_restored_metric_differences": {
+        "train": 0.0,
+        "validation": 0.0
+      },
+      "full_train_and_validation_reproduced": true,
+      "initialization_and_first_epoch_order_match": true
+    },
+    {
+      "learning_rate": 0.01,
+      "checkpoint": "runs\\lr_1e-02\\best_model.pt",
+      "checkpoint_sha256": "b0d184cccb0383c48dc0727ea87a8e618b3a1a2393c0bc9f3aecf6bc9871339c",
+      "history": {
+        "epochs_completed": 5,
+        "selected_epoch": 5,
+        "minimum_loss_epoch": 1,
+        "patience_exhausted": true,
+        "stopping_and_selection_audited": true
+      },
+      "maximum_restored_metric_differences": {
+        "train": 0.0,
+        "validation": 0.0
+      },
+      "full_train_and_validation_reproduced": true,
+      "initialization_and_first_epoch_order_match": true
+    },
+    {
+      "learning_rate": 0.1,
+      "checkpoint": "runs\\lr_1e-01\\best_model.pt",
+      "checkpoint_sha256": "c4bc34090bdb1598bc6fb9108c4565669dab06bc22e2670bf28dbaa07ea59a02",
+      "history": {
+        "epochs_completed": 20,
+        "selected_epoch": 17,
+        "minimum_loss_epoch": 17,
+        "patience_exhausted": false,
+        "stopping_and_selection_audited": true
+      },
+      "maximum_restored_metric_differences": {
+        "train": 0.0,
+        "validation": 0.0
+      },
+      "full_train_and_validation_reproduced": true,
+      "initialization_and_first_epoch_order_match": true
+    }
+  ],
+  "full_training_validation_restoration": true,
+  "test_metrics_recomputed_from_same_pass_saved_predictions": true,
+  "independent_test_bce_loss": 0.7487294093763156,
+  "independent_test_bce_absolute_difference": 1.4676558857118494e-09,
+  "test_prediction_sha256": "2ebb688bd9d8850b828c412148b66c4b2d36192da19a4be040ed5066c90ac982",
+  "additional_test_model_evaluations": 0,
+  "selected_run_test_records": 1,
+  "validation_selection_frozen_before_test": true,
+  "all_previous_output_hashes_unchanged": true,
+  "previous_outputs_checked": 782,
+  "all_supplied_file_hashes_unchanged": true,
+  "data_and_preprocessing_hashes_match": true,
+  "tables_and_figure_files_checked": true
+}

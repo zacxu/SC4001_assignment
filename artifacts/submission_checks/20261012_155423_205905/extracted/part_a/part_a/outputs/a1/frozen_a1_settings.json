@@ -1,0 +1,19 @@
+{
+  "hidden_width": 256,
+  "embedding_dimension": 4,
+  "learning_rate": 0.01,
+  "batch_size": 512,
+  "E_val": 6,
+  "E_star": 4,
+  "evaluation_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "refit_preprocessing": "refit/preprocessing.pt",
+  "refit_checkpoint": "refit/best_model.pt",
+  "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+  "test_assisted_epoch_budget": true
+}

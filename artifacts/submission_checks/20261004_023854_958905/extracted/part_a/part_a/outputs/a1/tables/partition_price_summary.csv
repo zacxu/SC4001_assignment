@@ -1,0 +1,5 @@
+partition,years,rows,observed_mean_price_sgd,observed_population_std_sgd,purpose
+selection_train,2017-2020,87370,442495.90947693714,154220.68473940418,post-fit interpretation only
+validation,2021,29057,511417.39377129433,162640.56583024783,post-fit interpretation only
+refit_train,2017-2021,116427,459696.82996051176,159183.86976934786,post-fit interpretation only
+test,2022,26702,549701.0679607333,170260.41813369753,post-fit interpretation only

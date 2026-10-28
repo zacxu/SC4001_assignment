@@ -1,0 +1,49 @@
+No broken requirements found.
+.........................................................
+----------------------------------------------------------------------
+Ran 57 tests in 2.170s
+
+OK
+Saved housing data: C:\Users\Admin\Desktop\SC4001 assignment\artifacts\submission_checks\20261003_210311_169356\extracted\part_a\artifacts\package_checks\20261003_210317_019728\prepared
+selection: {'train': 87370, 'test': 26702, 'validation': 29057}; fit years=(2017, 2018, 2019, 2020); cardinalities=[13, 27, 44, 18]
+refit: {'train': 116427, 'test': 26702}; fit years=(2017, 2018, 2019, 2020, 2021); cardinalities=[13, 27, 44, 18]
+Excluded 2023 rows: 16424; no test-fitted statistics.
+2026-10-03 21:03:29,698	INFO worker.py:2024 -- Started a local Ray instance.
+Regenerated A1 assets from C:\Users\Admin\Desktop\SC4001 assignment\artifacts\submission_checks\20261003_210311_169356\extracted\part_a\part_a\outputs\a1
+Regenerated A2 assets from C:\Users\Admin\Desktop\SC4001 assignment\artifacts\submission_checks\20261003_210311_169356\extracted\part_a\part_a\outputs\a2
+Regenerated A3 assets from C:\Users\Admin\Desktop\SC4001 assignment\artifacts\submission_checks\20261003_210311_169356\extracted\part_a\part_a\outputs\a3
+Regenerated A4 assets from C:\Users\Admin\Desktop\SC4001 assignment\artifacts\submission_checks\20261003_210311_169356\extracted\part_a\part_a\outputs\a4
+{
+  "part": "part_a",
+  "status": "passed",
+  "package_files_verified": 493,
+  "dependency_pins_verified": 71,
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "venv": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\.venv",
+  "fresh_dependency_installation": false,
+  "tests_passed": 57,
+  "device": "cuda",
+  "prepared_tensors_compared": [
+    "refit\\datasets.pt",
+    "refit\\preprocessing.pt",
+    "selection\\datasets.pt",
+    "selection\\preprocessing.pt"
+  ],
+  "synthetic_forward_checkpoints": [
+    "a1/refit/best_model.pt",
+    "a3/refit/seed_42/best_model.pt"
+  ],
+  "exports_regenerated": [
+    "a1",
+    "a2",
+    "a3",
+    "a4"
+  ],
+  "ray_worker": {
+    "module": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261003_210311_169356\\extracted\\part_a\\part_a\\src\\model.py",
+    "finite": true,
+    "device": "NVIDIA GeForce RTX 3060 Ti"
+  },
+  "full_experiment_training_runs": 0,
+  "test_set_model_inference": 0
+}

@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "best_epoch": 9,
+  "epochs_completed": 9,
+  "stopped_early": false,
+  "stopping_reference": null,
+  "selected_metrics": {
+    "train": {
+      "loss": 0.04508617403979316,
+      "count": 5232,
+      "accuracy": 0.9837538226299695,
+      "classification_error": 0.016246177370030535,
+      "sensitivity": 0.9992274014936905,
+      "specificity": 0.9392142327650111,
+      "tp": 3880,
+      "tn": 1267,
+      "fp": 82,
+      "fn": 3
+    }
+  },
+  "elapsed_seconds": 30.60102969998843,
+  "test_assisted_stopping": false
+}

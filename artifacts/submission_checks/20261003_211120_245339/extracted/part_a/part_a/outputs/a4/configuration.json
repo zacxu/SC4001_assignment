@@ -1,0 +1,109 @@
+{
+  "created_at_singapore": "2026-10-03T13:35:55.653279+08:00",
+  "prepared_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\data",
+  "a1_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\a1",
+  "a3_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\a3",
+  "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+  "seed": 42,
+  "checkpoint_epoch": 4,
+  "a1_frozen_settings": {
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "learning_rate": 0.01,
+    "batch_size": 512,
+    "E_val": 6,
+    "E_star": 4,
+    "evaluation_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "refit_preprocessing": "refit/preprocessing.pt",
+    "refit_checkpoint": "refit/best_model.pt",
+    "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+    "test_assisted_epoch_budget": true
+  },
+  "a3_frozen_settings": {
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "learning_rate": 0.01,
+    "batch_size": 512,
+    "E_val": 6,
+    "E_star": 4,
+    "evaluation_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "refit_preprocessing": "refit/preprocessing.pt",
+    "refit_checkpoint": "refit/best_model.pt",
+    "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+    "test_assisted_epoch_budget": true,
+    "lambda": 2.0,
+    "lambda_selection_best_epoch": 3,
+    "lambda_selection_partition": "validation_2021",
+    "trainable_parameters": 7088,
+    "seed42_checkpoint": "refit/seed_42/best_model.pt",
+    "preprocessing": "refit_preprocessing.pt"
+  },
+  "checkpoints": {
+    "baseline": {
+      "path": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\a1\\refit\\best_model.pt",
+      "sha256": "b12133c68e1c03b6e6c408756679707a8f31e4d4eba8c51957689473d99457d0"
+    },
+    "wide_deep": {
+      "path": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\a3\\refit\\seed_42\\best_model.pt",
+      "sha256": "7ea0cb0343d236d993bf5ad9fcbc266ef13e3062f068d7588a04cf8bf2475916"
+    }
+  },
+  "prepared_refit_tensors_sha256": "1f14d421c16051b010c354cd7525a933a39713529e350b4fc63bd0b29f0f9903",
+  "method": "Captum FeatureAblation",
+  "feature_names": [
+    "month",
+    "town",
+    "flat_model_type",
+    "storey_range",
+    "dist_to_nearest_stn",
+    "dist_to_dhoby",
+    "degree_centrality",
+    "eigenvector_centrality",
+    "remaining_lease_years",
+    "floor_area_sqm"
+  ],
+  "test_rows": 26702,
+  "reference_fit_rows": 116427,
+  "batch_size": 512,
+  "perturbations_per_eval": 1,
+  "feature_masks": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  ],
+  "output_unit": "SGD",
+  "inverse_transform_precision": "float64 after the saved float32 network output",
+  "global_score": "mean(abs(per-sample signed attribution)) over all test rows",
+  "device": "cuda",
+  "torch_cpu_threads": 4,
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.11.0+cu128",
+    "captum": "0.9.0",
+    "cuda": "12.8",
+    "device": "NVIDIA GeForce RTX 3060 Ti"
+  }
+}

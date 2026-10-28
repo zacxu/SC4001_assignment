@@ -1,0 +1,22 @@
+{
+  "selected_learning_rate": 0.001,
+  "checkpoint": "runs\\lr_1e-03\\best_model.pt",
+  "checkpoint_sha256": "d263b26896db01340079373a7062dfcbf43fa72bffcbf127f17be1d0c2aeb7a9",
+  "checkpoint_epoch": 9,
+  "seed": 42,
+  "metrics": {
+    "loss": 0.7487294108439715,
+    "count": 624,
+    "accuracy": 0.8541666666666666,
+    "classification_error": 0.14583333333333337,
+    "sensitivity": 0.9974358974358974,
+    "specificity": 0.6153846153846154,
+    "tp": 389,
+    "tn": 144,
+    "fp": 90,
+    "fn": 1
+  },
+  "test_evaluations": 1,
+  "test_assisted_stopping": false,
+  "prediction_artifact": "final_test_predictions.pt"
+}

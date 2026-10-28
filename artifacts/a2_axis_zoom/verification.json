@@ -1,0 +1,69 @@
+{
+  "status": "passed_current_report_and_submission",
+  "final_comparison_y_limits": {
+    "rmse": [
+      90000,
+      120000
+    ],
+    "r2": [
+      0.5,
+      0.725
+    ]
+  },
+  "epoch_y_limits": {
+    "rmse": [
+      29511.446108300817,
+      85151.86454076666
+    ],
+    "r2": [
+      0.7337785603543121,
+      0.9694965779163962
+    ]
+  },
+  "all_points_and_sd_endpoints_visible": true,
+  "protected_numeric_and_model_artifacts_unchanged": 871,
+  "new_training_runs": 0,
+  "new_test_set_model_inference": 0,
+  "date": "2026-10-11",
+  "figure_hashes": {
+    "part_a/outputs/a2/figures/categorical_ablation.png": "04b195ea2a676c032ef0d709ee37da03e00a328f6133c2a2556b05c7e685545e",
+    "part_a/outputs/a2/figures/categorical_ablation.pdf": "6edd907dc4666955e4e602e7c4cf4f87e56a84a331fd334702258ae5b00a6331",
+    "part_a/outputs/a2/figures/activation_ablation.png": "5a4248398395e2f78b701135e8c8ad8f166b92026ad4af1d4dd68d1034999554",
+    "part_a/outputs/a2/figures/activation_ablation.pdf": "c48ebf1df86b332eb546597171f8614da456999fb32f454c5ce347eda33b0771",
+    "part_a/outputs/a2/diagnostics/figures/categorical_epoch_curves.png": "749f413a3833977befcb48158b33b27cd640484aa051c3997e41cf9814c81c5e",
+    "part_a/outputs/a2/diagnostics/figures/categorical_epoch_curves.pdf": "1c173a21c862660db654c1922d67d34b6185eb8919a5c51d45d13fdb5f640974",
+    "part_a/outputs/a2/diagnostics/figures/activation_epoch_curves.png": "2ad40c4878948982cad07cb9d7b5eb3c463311651793dcf21cfd73c7aca33963",
+    "part_a/outputs/a2/diagnostics/figures/activation_epoch_curves.pdf": "d291b3e497f01dafc763ec8ed4192388a64f49f9334f7090530b72282e90a9e4"
+  },
+  "reports_byte_identical_to_submission": true,
+  "pages": {
+    "part_a": 5,
+    "part_b": 5
+  },
+  "current_report_inputs_checked": 78,
+  "protected_pre_FAQ_files_unchanged": 877,
+  "fresh_extracted_package_tests": {
+    "part_a": 60,
+    "part_b": 64
+  },
+  "package_audit": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261011_221855_619297",
+  "visual_review": "All four standalone A2 PNGs and final report A2 page reviewed; axes/common ranges, legends and all points/error endpoints visible",
+  "submission_files": {
+    "PartA_report_YourName.pdf": {
+      "sha256": "08a85e55923347e60fd5f8027dc1672a5c61e40e413789cdc0092d60ad39b8fe",
+      "bytes": 401947
+    },
+    "PartA_codes_YourName.zip": {
+      "sha256": "b359e4eb8429a813716488298e81f2c60f3a20cf2e5f5b3a64cf594155bdc9ed",
+      "bytes": 21294336
+    },
+    "PartB_report_YourName.pdf": {
+      "sha256": "eb99733c29f15ff142a9429e9489413780a2c58b956b5238da78aaec9a11f47d",
+      "bytes": 448545
+    },
+    "PartB_codes_YourName.zip": {
+      "sha256": "52342ccbc32547dfffdaa17510b1f84c2b980830630249fd5c1e4e06b2e39184",
+      "bytes": 81495230
+    }
+  }
+}

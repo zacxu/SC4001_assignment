@@ -1,0 +1,184 @@
+{
+  "checked_at_singapore": "2026-10-01T15:06:26.594085+08:00",
+  "status": "passed",
+  "python": "3.12.0",
+  "python_executable": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\.venv\\Scripts\\python.exe",
+  "venv_prefix": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\.venv",
+  "system_site_packages": false,
+  "package_versions": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1",
+    "ray": "2.58.0",
+    "captum": "0.9.0",
+    "ipykernel": "7.3.0",
+    "pip": "23.2.1"
+  },
+  "pip_check": "No broken requirements found.",
+  "cuda": {
+    "available": true,
+    "runtime": "12.8",
+    "device": "NVIDIA GeForce RTX 3060 Ti",
+    "compute_capability": [
+      8,
+      6
+    ],
+    "total_memory_mib": 8191.5
+  },
+  "seed": 42,
+  "housing": {
+    "kind": "setup_only_supplied_baseline_probe",
+    "split_sizes": {
+      "train": 87370,
+      "validation": 29057,
+      "test": 26702
+    },
+    "cardinalities": [
+      13,
+      27,
+      44,
+      18
+    ],
+    "trainable_parameters": 3505,
+    "training_samples": 4096,
+    "training_batches": 8,
+    "epochs": 1,
+    "epoch_seconds_including_first_cuda_use": 0.21507449999990058,
+    "standardized_mse_first_batch": 1.2758644819259644,
+    "standardized_mse_last_batch": 0.30818313360214233,
+    "peak_allocated_gpu_mib": 65.6708984375,
+    "optimizer_updated_weights": true,
+    "feature_ablation_shapes": [
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "feature_ablation_manual_difference_check": "passed",
+    "test_performance_evaluated": false
+  },
+  "xray": {
+    "kind": "setup_only_one_convolution_probe_not_B1_B2_B3",
+    "partitions": {
+      "train": {
+        "images": [
+          4708,
+          64,
+          64
+        ],
+        "dtype": "uint8",
+        "label_counts": {
+          "0": 1214,
+          "1": 3494
+        }
+      },
+      "validation": {
+        "images": [
+          524,
+          64,
+          64
+        ],
+        "dtype": "uint8",
+        "label_counts": {
+          "0": 135,
+          "1": 389
+        }
+      },
+      "test": {
+        "images": [
+          624,
+          64,
+          64
+        ],
+        "dtype": "uint8",
+        "label_counts": {
+          "0": 234,
+          "1": 390
+        }
+      }
+    },
+    "class_mapping": {
+      "0": "healthy",
+      "1": "pneumonia"
+    },
+    "class_mapping_status": "assumed_not_archive_metadata",
+    "training_pixel_mean_after_divide_255": 0.5716994212632378,
+    "training_pixel_population_std_after_divide_255": 0.17409753982645407,
+    "training_samples": 512,
+    "training_batches": 4,
+    "epochs": 1,
+    "epoch_seconds_including_initial_convolution_setup": 0.12723749999895517,
+    "bce_first_batch": 0.6873262524604797,
+    "bce_last_batch": 0.6780449151992798,
+    "peak_allocated_gpu_mib": 131.0126953125,
+    "optimizer_updated_weights": true,
+    "gradcam_shape": [
+      1,
+      1,
+      64,
+      64
+    ],
+    "test_performance_evaluated": false
+  },
+  "ray_tune_grid_api": {
+    "grid_search": [
+      16,
+      32
+    ]
+  },
+  "files": {
+    "assignment.pdf": {
+      "bytes": 213750,
+      "sha256": "2c6b4529d31352b228a0f78c5b354ddd72edb1bed39d9f9461d6499566dad46f"
+    },
+    "assignment_slides.pdf": {
+      "bytes": 634952,
+      "sha256": "2a3f78e1a2328dbab8e4c787ce5c321da4a618c219292098ef85543a79b82398"
+    },
+    "clarifications.md": {
+      "bytes": 842,
+      "sha256": "a377cd02dde48d0b41540392880d3b00d51701be457e49b84572560e5fad654a"
+    },
+    "housing_baseline_data\\hdb-price-prediction-assignment-main\\hdb_price_prediction.csv": {
+      "bytes": 29300672,
+      "sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c"
+    },
+    "chestxray_binary_64.npz": {
+      "bytes": 20607748,
+      "sha256": "55ab6e2c7167c451c3bbaa47727ecf810fc2d6285e0d8090a1078c67cbfa3cd8"
+    },
+    "housing_baseline_data\\hdb-price-prediction-assignment-main\\README.md": {
+      "bytes": 658,
+      "sha256": "2b23e6c1057a0ac0e36dfaf48aaaf84becaf023c235afde20d3c926c1e41b9ca"
+    },
+    "housing_baseline_data\\hdb-price-prediction-assignment-main\\pyproject.toml": {
+      "bytes": 348,
+      "sha256": "9e08d36695a0552ca7640f8aca02b971e758745aae2f58f00d4d50c6c0c95682"
+    },
+    "housing_baseline_data\\hdb-price-prediction-assignment-main\\uv.lock": {
+      "bytes": 449526,
+      "sha256": "6e10852c4d15a878706f4f000fa50da139605d2abe3dcead0770aaa80195293f"
+    },
+    "housing_baseline_data\\hdb-price-prediction-assignment-main\\src\\baseline.py": {
+      "bytes": 3588,
+      "sha256": "d558680d3104b237e02bf062360a8d51535df71ec8fab3425d0dc7c4e42b5a68"
+    },
+    "housing_baseline_data\\hdb-price-prediction-assignment-main\\src\\config.py": {
+      "bytes": 807,
+      "sha256": "3d9d639d86522917d9ff4d42b71ac5da5356e8a3cc800886689d9cae3135ca34"
+    },
+    "housing_baseline_data\\hdb-price-prediction-assignment-main\\src\\data.py": {
+      "bytes": 2464,
+      "sha256": "aa1dc074ab382064348f03022d283e34c12f73aab328c520224155f45355beae"
+    },
+    "housing_baseline_data\\hdb-price-prediction-assignment-main\\src\\model.py": {
+      "bytes": 1381,
+      "sha256": "78d9023e84c9582258dec96fd0d33e06e362d03ca28ba6a6add024a9d48fb199"
+    }
+  }
+}

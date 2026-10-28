@@ -1,0 +1,23 @@
+{
+  "variant": "continuous_only",
+  "label": "Continuous only",
+  "seed": 45,
+  "hidden_width": 256,
+  "embedding_dimension": null,
+  "input_width": 6,
+  "trainable_parameters": 2561,
+  "epochs_completed": 4,
+  "checkpoint_epoch": 4,
+  "stopped_early": false,
+  "initial_model_sha256": "259435fb0ea7bb202ab6d15874223817008db05d1d21aa3b22ea75a7fd7e8909",
+  "train_loader_generator_sha256": "8a70ae5671e726737e9cca485356dab51f133d4bba7bd5945e479570bcb2dc26",
+  "rmse": 115756.24783131326,
+  "r2": 0.5377664220597757,
+  "test_count": 26702,
+  "train_rmse": 56685.8193077982,
+  "train_r2": 0.8731908067127485,
+  "fit_seconds": 10.72315959999105,
+  "run_directory": "runs/continuous_only/seed_45",
+  "checkpoint": "runs/continuous_only/seed_45/best_model.pt",
+  "test_metrics_file": "runs/continuous_only/seed_45/test_metrics.json"
+}

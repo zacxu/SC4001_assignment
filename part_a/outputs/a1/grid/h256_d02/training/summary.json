@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "best_epoch": 4,
+  "epochs_completed": 8,
+  "stopped_early": true,
+  "stopping_reference": 63213.602598013684,
+  "selected_metrics": {
+    "train": {
+      "loss": 0.050655233873745334,
+      "count": 87370,
+      "rmse": 34710.0150909533,
+      "r2": 0.9493447630887969
+    },
+    "validation": {
+      "loss": 0.16801025698065744,
+      "count": 29057,
+      "rmse": 63213.602598013684,
+      "r2": 0.8489351824159794
+    }
+  },
+  "elapsed_seconds": 19.02937699999893,
+  "test_assisted_stopping": false
+}

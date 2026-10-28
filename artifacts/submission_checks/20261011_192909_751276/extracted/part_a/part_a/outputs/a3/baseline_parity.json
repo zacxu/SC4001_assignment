@@ -1,0 +1,7 @@
+{
+  "initial_baseline_weights_matched": true,
+  "best_epoch_matches_a1": true,
+  "epochs_completed_match_a1": true,
+  "validation_metrics_match_a1": true,
+  "training_metrics_match_a1": true
+}

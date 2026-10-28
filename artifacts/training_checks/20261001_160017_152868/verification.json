@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "device": "cuda",
+  "seed": 42,
+  "kind": "step_3_trainer_verification_not_assignment_results",
+  "housing": {
+    "train_samples": 257,
+    "validation_samples": 65,
+    "epochs_completed": 2,
+    "best_epoch": 1,
+    "restored_validation_metrics_match": true
+  },
+  "xray": {
+    "train_samples": 129,
+    "validation_samples": 65,
+    "epochs_completed": 2,
+    "best_epoch": 2,
+    "restored_validation_metrics_match": true
+  },
+  "test_prediction_performance_evaluated": false,
+  "output": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\training_checks\\20261001_160017_152868"
+}

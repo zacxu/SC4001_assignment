@@ -1,0 +1,624 @@
+{
+  "architecture": "b2",
+  "input_shape": [
+    1,
+    1,
+    64,
+    64
+  ],
+  "output_shape": [
+    1
+  ],
+  "dtype": "float32",
+  "mode": "eval",
+  "profiling_device": "cpu",
+  "torch_version": "2.11.0+cu128",
+  "profiler": "torch.profiler.profile(with_flops=True, record_shapes=True, acc_events=True)",
+  "convention": "one float32 1x1x64x64 image, eval mode; 2 FLOPs per conv/linear MAC plus residual additions",
+  "excluded_operations": [
+    "BatchNorm",
+    "ReLU",
+    "max/average pooling",
+    "bias additions in Linear",
+    "flatten/views",
+    "data normalization/transfers",
+    "sigmoid/threshold",
+    "backward/optimizer"
+  ],
+  "trainable_parameters": 18185,
+  "parameter_breakdown": {
+    "convolution": 17928,
+    "batchnorm_affine": 224,
+    "linear": 33,
+    "other": 0,
+    "total": 18185
+  },
+  "convolution_and_linear_macs": 9732128,
+  "convolution_and_linear_flops": 19464256,
+  "residual_addition_flops": 0,
+  "inference_flops": 19464256,
+  "profiler_flops": 19464256,
+  "shape_formula_matches_profiler": true,
+  "nonzero_profiler_operators": [
+    {
+      "operator": "aten::conv2d",
+      "flops": 19464192,
+      "calls": 6
+    },
+    {
+      "operator": "aten::addmm",
+      "flops": 64,
+      "calls": 1
+    }
+  ],
+  "layers": [
+    {
+      "module": "features.conv1.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        1,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "macs": 294912,
+      "flops": 589824,
+      "in_channels": 1,
+      "out_channels": 8,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.conv1.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv1.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv2.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "macs": 2359296,
+      "flops": 4718592,
+      "in_channels": 8,
+      "out_channels": 8,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.conv2.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv2.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.pool1",
+      "type": "MaxPool2d",
+      "input_shape": [
+        1,
+        8,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        8,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv3.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        8,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 1179648,
+      "flops": 2359296,
+      "in_channels": 8,
+      "out_channels": 16,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.conv3.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv3.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv4.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 2359296,
+      "flops": 4718592,
+      "in_channels": 16,
+      "out_channels": 16,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.conv4.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv4.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.pool2",
+      "type": "MaxPool2d",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv5.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        16,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 1179648,
+      "flops": 2359296,
+      "in_channels": 16,
+      "out_channels": 32,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.conv5.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv5.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv6.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 2359296,
+      "flops": 4718592,
+      "in_channels": 32,
+      "out_channels": 32,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.conv6.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.conv6.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.pool3",
+      "type": "MaxPool2d",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        8,
+        8
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.average_pool",
+      "type": "AvgPool2d",
+      "input_shape": [
+        1,
+        32,
+        8,
+        8
+      ],
+      "output_shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "flatten",
+      "type": "Flatten",
+      "input_shape": [
+        1,
+        32,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "classifier.output",
+      "type": "Linear",
+      "input_shape": [
+        1,
+        32
+      ],
+      "output_shape": [
+        1,
+        1
+      ],
+      "macs": 32,
+      "flops": 64,
+      "in_features": 32,
+      "out_features": 1,
+      "bias": true
+    }
+  ],
+  "residual_additions": [],
+  "uncounted_executed_leaf_modules": [
+    "AvgPool2d",
+    "BatchNorm2d",
+    "Flatten",
+    "MaxPool2d",
+    "ReLU"
+  ],
+  "zero_flop_profiler_operators": [
+    "aten::_batch_norm_impl_index",
+    "aten::_convolution",
+    "aten::_slow_conv2d_forward",
+    "aten::as_strided",
+    "aten::as_strided_",
+    "aten::avg_pool2d",
+    "aten::batch_norm",
+    "aten::clamp_min",
+    "aten::convolution",
+    "aten::copy_",
+    "aten::empty",
+    "aten::empty_like",
+    "aten::expand",
+    "aten::fill_",
+    "aten::flatten",
+    "aten::linear",
+    "aten::max_pool2d",
+    "aten::max_pool2d_with_indices",
+    "aten::mkldnn_convolution",
+    "aten::native_batch_norm",
+    "aten::relu",
+    "aten::resize_",
+    "aten::resolve_conj",
+    "aten::set_",
+    "aten::squeeze",
+    "aten::t",
+    "aten::thnn_conv2d",
+    "aten::transpose",
+    "aten::view",
+    "aten::zero_",
+    "aten::zeros"
+  ],
+  "synthetic_input_only": true,
+  "source": "https://docs.pytorch.org/docs/2.11/profiler.html"
+}

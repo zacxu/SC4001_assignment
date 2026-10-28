@@ -1,0 +1,56 @@
+{
+  "format_version": 1,
+  "architecture": "b2",
+  "protocol": "fresh_combined_train_validation_fixed_selected_epochs",
+  "refit": true,
+  "learning_rate": 0.001,
+  "batch_size": 16,
+  "seed": 42,
+  "selected_epoch_count": 13,
+  "fresh_model": true,
+  "fresh_optimizer": true,
+  "initial_state_sha256": "87089096208e2a7f643443903c0f7fb90ff37f7c6ecde65f49c3f37b089f5f4d",
+  "training_rows": 4708,
+  "validation_rows": 524,
+  "combined_training_rows": 5232,
+  "selection_checkpoint": "runs/batch_016/best_model.pt",
+  "selection_checkpoint_sha256": "5aeddb07d6dc4bf0567ef40b45b088e5a6f5cda189b4c02823caa1ab3e7dfb59",
+  "source_sha256": "55ab6e2c7167c451c3bbaa47727ecf810fc2d6285e0d8090a1078c67cbfa3cd8",
+  "normalization": "reuse_original_training_only_pixel_statistics",
+  "preprocessing": {
+    "format_version": 1,
+    "normalization": "training_pixel_mean_and_population_std_after_dividing_by_255",
+    "mean": 0.5716994212632378,
+    "std": 0.17409753982645407,
+    "std_correction": 0,
+    "reduction_dtype": "float64",
+    "transformation_dtype": "float32",
+    "input_dtype": "uint8",
+    "input_shape": [
+      64,
+      64
+    ],
+    "output_shape": [
+      1,
+      64,
+      64
+    ],
+    "pixel_divisor": 255.0,
+    "fit_partition": "train",
+    "fit_row_count": 4708,
+    "fit_pixel_count": 19283968,
+    "class_mapping": {
+      "0": "healthy",
+      "1": "pneumonia"
+    },
+    "class_mapping_status": "assumed_not_archive_metadata"
+  },
+  "validation_monitor": false,
+  "test_monitor": false,
+  "class_mapping": {
+    "0": "healthy",
+    "1": "pneumonia"
+  },
+  "class_mapping_status": "confirmed_by_instructor_QA",
+  "clarification_source": "Q&A.md"
+}

@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-11",
+  "status": "passed_explanation_revision_current_payloads",
+  "selected_configuration_unchanged": {
+    "hidden_width": 256,
+    "embedding_dimension": 4
+  },
+  "conclusion": "learning histories are consistent with late overfitting; high test error and width relative to sample count do not establish underfitting",
+  "independent_reasoning_review": "a1_reasoning_review agent reread actual PDFs, histories, updated report and explanation; numeric and scientific claims passed; final wording correction incorporated",
+  "visual_review": "Updated Part A page 2 rendered and visually checked; all report pages passed glyph/font/bounds validation",
+  "report_inputs_checked": 78,
+  "numeric_and_model_artifacts_unchanged": 882,
+  "model_retraining": 0,
+  "pages": {
+    "part_a": 5,
+    "part_b": 5
+  },
+  "fresh_isolated_package_tests": {
+    "part_a": 60,
+    "part_b": 64,
+    "shared": 23,
+    "distinct": 101
+  },
+  "submission_files": {
+    "PartA_report_YourName.pdf": {
+      "sha256": "347cdd7232fbc507d5c3c8ad164bc4f896eed69e9ccc7cb48a155408f108d6ad",
+      "bytes": 401434
+    },
+    "PartA_codes_YourName.zip": {
+      "sha256": "c1da2e50ec4bf4ebfe7c18f15e119ae208a43b7054b23acc5cb8fec3b6eae560",
+      "bytes": 21238722
+    },
+    "PartB_report_YourName.pdf": {
+      "sha256": "5570e6fd47508abd3c4d7cd4239c24053eefd44c9bcee2e67acda643680c6997",
+      "bytes": 448545
+    },
+    "PartB_codes_YourName.zip": {
+      "sha256": "52342ccbc32547dfffdaa17510b1f84c2b980830630249fd5c1e4e06b2e39184",
+      "bytes": 81495230
+    }
+  },
+  "package_audit": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261011_192909_751276",
+  "remaining": [
+    "Replace YourName with actual student name",
+    "Upload four files to NTULearn and retain receipt"
+  ],
+  "new_test_set_model_inference": 0,
+  "synthetic_checkpoint_forward_checks": true
+}

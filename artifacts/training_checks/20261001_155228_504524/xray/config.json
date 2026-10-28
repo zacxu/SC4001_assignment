@@ -1,0 +1,27 @@
+{
+  "training": {
+    "learning_rate": 0.001,
+    "max_epochs": 2,
+    "patience": 4,
+    "min_delta": 0.0001,
+    "seed": 42,
+    "device": "cuda",
+    "mode": "selection"
+  },
+  "task": {
+    "threshold": 0.5,
+    "kind": "binary_classification"
+  },
+  "model_class": "torch.nn.modules.container.Sequential",
+  "model_config": {
+    "architecture": "setup_probe_not_B1_B2_B3",
+    "verification_only": true
+  },
+  "batch_size": 64,
+  "trainable_parameters": 97,
+  "test_assisted_stopping": false,
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.11.0+cu128"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "status": "passed",
+  "step": 11,
+  "output_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_b\\outputs\\b2",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060 Ti",
+  "trials_audited": 5,
+  "learning_rate": 0.001,
+  "selected_batch_size": 16,
+  "selected_epoch": 13,
+  "checkpoints": [
+    {
+      "batch_size": 16,
+      "checkpoint": "runs/batch_016/best_model.pt",
+      "checkpoint_sha256": "5aeddb07d6dc4bf0567ef40b45b088e5a6f5cda189b4c02823caa1ab3e7dfb59",
+      "history": {
+        "epochs_completed": 13,
+        "selected_epoch": 13,
+        "minimum_loss_epoch": 9,
+        "patience_exhausted": true,
+        "stopping_and_selection_audited": true
+      },
+      "maximum_restored_metric_differences": {
+        "train": 0.0,
+        "validation": 0.0
+      },
+      "full_train_and_validation_reproduced": true,
+      "initialization_and_first_epoch_order_match": true,
+      "optimizer_steps_per_epoch": 295,
+      "selected_optimizer_and_batchnorm_updates": 3835
+    },
+    {
+      "batch_size": 32,
+      "checkpoint": "runs/batch_032/best_model.pt",
+      "checkpoint_sha256": "eb5b52f51b77263b190e0702b11ccb7668497f601b1e2e3a67cd8008d87dd3bb",
+      "history": {
+        "epochs_completed": 13,
+        "selected_epoch": 13,
+        "minimum_loss_epoch": 9,
+        "patience_exhausted": true,
+        "stopping_and_selection_audited": true
+      },
+      "maximum_restored_metric_differences": {
+        "train": 0.0,
+        "validation": 0.0
+      },
+      "full_train_and_validation_reproduced": true,
+      "initialization_and_first_epoch_order_match": true,
+      "optimizer_steps_per_epoch": 148,
+      "selected_optimizer_and_batchnorm_updates": 1924
+    },
+    {
+      "batch_size": 64,
+      "checkpoint": "runs/batch_064/best_model.pt",
+      "checkpoint_sha256": "11d2b9aaa70d22e374ff470cfebb403ff8a966d2f2fec5f28100c34189de5b9c",
+      "history": {
+        "epochs_completed": 10,
+        "selected_epoch": 6,
+        "minimum_loss_epoch": 6,
+        "patience_exhausted": true,
+        "stopping_and_selection_audited": true
+      },
+      "maximum_restored_metric_differences": {
+        "train": 0.0,
+        "validation": 0.0
+      },
+      "full_train_and_validation_reproduced": true,
+      "initialization_and_first_epoch_order_match": true,
+      "optimizer_steps_per_epoch": 74,
+      "selected_optimizer_and_batchnorm_updates": 444
+    },
+    {
+      "batch_size": 128,
+      "checkpoint": "runs/batch_128/best_model.pt",
+      "checkpoint_sha256": "6c7faa22fc7af656932b98eaac9107d39cdff9ad4f7bd30a3dfd53be0f0ca0af",
+      "history": {
+        "epochs_completed": 9,
+        "selected_epoch": 5,
+        "minimum_loss_epoch": 5,
+        "patience_exhausted": true,
+        "stopping_and_selection_audited": true
+      },
+      "maximum_restored_metric_differences": {
+        "train": 0.0,
+        "validation": 0.0
+      },
+      "full_train_and_validation_reproduced": true,
+      "initialization_and_first_epoch_order_match": true,
+      "optimizer_steps_per_epoch": 37,
+      "selected_optimizer_and_batchnorm_updates": 185
+    },
+    {
+      "batch_size": 256,
+      "checkpoint": "runs/batch_256/best_model.pt",
+      "checkpoint_sha256": "1f460010d5d3c0a17c1610ff0f28f17a93d976cffd71cf11a0f5cdd53e684be9",
+      "history": {
+        "epochs_completed": 20,
+        "selected_epoch": 16,
+        "minimum_loss_epoch": 16,
+        "patience_exhausted": true,
+        "stopping_and_selection_audited": true
+      },
+      "maximum_restored_metric_differences": {
+        "train": 0.0,
+        "validation": 0.0
+      },
+      "full_train_and_validation_reproduced": true,
+      "initialization_and_first_epoch_order_match": true,
+      "optimizer_steps_per_epoch": 19,
+      "selected_optimizer_and_batchnorm_updates": 304
+    }
+  ],
+  "full_training_validation_restoration": true,
+  "b1_frozen_learning_rate_and_lineage_verified": true,
+  "test_metrics_recomputed_from_same_pass_saved_predictions": true,
+  "independent_test_bce_loss": 0.5106607175078967,
+  "independent_test_bce_absolute_difference": 4.017129295874611e-09,
+  "test_prediction_sha256": "6ccf676a0fddc51f2d5ef9a5690e96e816201f61713bf2010395213cf34f5ec6",
+  "additional_test_model_evaluations": 0,
+  "selected_run_test_records": 1,
+  "validation_selection_frozen_before_test": true,
+  "all_previous_output_hashes_unchanged": true,
+  "previous_outputs_checked": 833,
+  "all_supplied_file_hashes_unchanged": true,
+  "data_and_preprocessing_hashes_match": true,
+  "optimizer_and_batchnorm_update_counts_verified": true,
+  "tables_and_figure_files_checked": true
+}

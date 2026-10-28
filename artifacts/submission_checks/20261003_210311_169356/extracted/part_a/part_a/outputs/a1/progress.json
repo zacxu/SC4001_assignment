@@ -1,0 +1,8 @@
+{
+  "stage": "complete",
+  "completed_trials": 25,
+  "E_val": 6,
+  "E_star": 4,
+  "test_rmse_sgd": 96901.63739707983,
+  "test_r2": 0.6760821807005687
+}

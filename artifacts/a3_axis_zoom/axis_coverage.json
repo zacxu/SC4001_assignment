@@ -1,0 +1,32 @@
+{
+  "status": "passed_axis_coverage_and_numeric_preservation",
+  "comparison_y_limits": {
+    "rmse": [
+      90000.0,
+      115000.0
+    ],
+    "r2": [
+      0.5750000000000001,
+      0.7250000000000001
+    ]
+  },
+  "report_y_limits": {
+    "rmse": [
+      90.0,
+      115.0
+    ],
+    "r2": [
+      0.5750000000000001,
+      0.7250000000000001
+    ]
+  },
+  "all_ten_points_and_mean_sd_endpoints_visible": true,
+  "protected_numeric_and_model_artifacts_unchanged": 871,
+  "changed_a3_output_files": [
+    "part_a/outputs/a3/analysis.md",
+    "part_a/outputs/a3/figures/baseline_comparison.pdf",
+    "part_a/outputs/a3/figures/baseline_comparison.png"
+  ],
+  "new_assignment_training_runs": 0,
+  "new_test_set_model_inference": 0
+}

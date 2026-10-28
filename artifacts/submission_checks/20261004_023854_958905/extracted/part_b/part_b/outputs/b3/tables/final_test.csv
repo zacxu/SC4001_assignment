@@ -1,0 +1,2 @@
+model,learning_rate,batch_size,checkpoint_epoch,seed,loss,count,accuracy,classification_error,sensitivity,specificity,tp,tn,fp,fn
+B3 ResNet-like,0.001,16,9,42,0.690534886259299,624,0.8285256410256411,0.17147435897435892,0.9974358974358974,0.5470085470085471,389,128,106,1

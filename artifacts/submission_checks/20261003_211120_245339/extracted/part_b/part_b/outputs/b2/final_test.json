@@ -1,0 +1,23 @@
+{
+  "selected_batch_size": 16,
+  "learning_rate": 0.001,
+  "checkpoint": "runs/batch_016/best_model.pt",
+  "checkpoint_sha256": "5aeddb07d6dc4bf0567ef40b45b088e5a6f5cda189b4c02823caa1ab3e7dfb59",
+  "checkpoint_epoch": 13,
+  "seed": 42,
+  "metrics": {
+    "loss": 0.5106607134907674,
+    "count": 624,
+    "accuracy": 0.8557692307692307,
+    "classification_error": 0.14423076923076927,
+    "sensitivity": 0.9923076923076923,
+    "specificity": 0.6282051282051282,
+    "tp": 387,
+    "tn": 147,
+    "fp": 87,
+    "fn": 3
+  },
+  "test_evaluations": 1,
+  "test_assisted_stopping": false,
+  "prediction_artifact": "final_test_predictions.pt"
+}

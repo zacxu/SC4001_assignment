@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "kind": "setup_only_gpu_scheduling_probe",
+  "resources": {
+    "GPU": 1.0,
+    "accelerator_type:GeForce-RTX-3060-Ti": 1.0,
+    "node:127.0.0.1": 1.0,
+    "CPU": 2.0,
+    "memory": 13272463770.0,
+    "node:__internal_head__": 1.0,
+    "object_store_memory": 5688198758.0
+  },
+  "trials": [
+    {
+      "width": 16,
+      "probe_score": 77.5,
+      "device": "NVIDIA GeForce RTX 3060 Ti",
+      "cuda_available": true
+    },
+    {
+      "width": 32,
+      "probe_score": 325.5,
+      "device": "NVIDIA GeForce RTX 3060 Ti",
+      "cuda_available": true
+    }
+  ]
+}

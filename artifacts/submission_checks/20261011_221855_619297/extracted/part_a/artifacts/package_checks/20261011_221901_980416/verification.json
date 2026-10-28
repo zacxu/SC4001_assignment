@@ -1,0 +1,35 @@
+{
+  "part": "part_a",
+  "status": "passed",
+  "package_files_verified": 528,
+  "dependency_pins_verified": 71,
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "venv": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\.venv",
+  "fresh_dependency_installation": false,
+  "tests_passed": 60,
+  "device": "cuda",
+  "prepared_tensors_compared": [
+    "refit\\datasets.pt",
+    "refit\\preprocessing.pt",
+    "selection\\datasets.pt",
+    "selection\\preprocessing.pt"
+  ],
+  "synthetic_forward_checkpoints": [
+    "a1/refit/best_model.pt",
+    "a3/refit/seed_42/best_model.pt"
+  ],
+  "exports_regenerated": [
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a2_diagnostics"
+  ],
+  "ray_worker": {
+    "module": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261011_221855_619297\\extracted\\part_a\\part_a\\src\\model.py",
+    "finite": true,
+    "device": "NVIDIA GeForce RTX 3060 Ti"
+  },
+  "full_experiment_training_runs": 0,
+  "test_set_model_inference": 0
+}

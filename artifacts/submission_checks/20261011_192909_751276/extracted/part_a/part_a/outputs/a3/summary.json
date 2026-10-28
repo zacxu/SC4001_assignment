@@ -1,0 +1,356 @@
+{
+  "status": "completed",
+  "search_runs": 5,
+  "refit_runs": 5,
+  "selected": {
+    "lambda": 2.0,
+    "seed": 42,
+    "best_epoch": 3,
+    "epochs_completed": 7,
+    "stopped_early": true,
+    "trainable_parameters": 7088,
+    "active_parameters": 7088,
+    "train_rmse": 36881.170379980176,
+    "train_r2": 0.9428094682316913,
+    "validation_rmse": 57905.64638909026,
+    "validation_r2": 0.8732394617180165,
+    "initial_model_sha256": "075ab637791eb3333c934aa32ea39e454ff9eabb87d1f7e47d50b11b38be513b",
+    "baseline_initial_sha256": "ee733aabffd9983487d0f26bc07fc93147fab694f0201d8003119f8818e30434",
+    "train_loader_generator_sha256": "826e5afb4c98a41158e1d33f05560c0c68aaa41eb14cfccffc588e7a520f5d2b",
+    "run_directory": "search/lambda_2",
+    "checkpoint": "search/lambda_2/best_model.pt"
+  },
+  "epoch_budget": 4,
+  "frozen_a1_settings": {
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "learning_rate": 0.01,
+    "batch_size": 512,
+    "E_val": 6,
+    "E_star": 4,
+    "evaluation_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "refit_preprocessing": "refit/preprocessing.pt",
+    "refit_checkpoint": "refit/best_model.pt",
+    "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+    "test_assisted_epoch_budget": true
+  },
+  "variants": {
+    "baseline": {
+      "n_seeds": 5,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "metrics": {
+        "rmse": {
+          "mean": 102427.89592520094,
+          "sample_std": 5289.16917559201
+        },
+        "r2": {
+          "mean": 0.6373108569792936,
+          "sample_std": 0.03742768534137998
+        }
+      },
+      "per_seed": [
+        {
+          "variant": "baseline",
+          "label": "Baseline (ReLU)",
+          "seed": 42,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "ee733aabffd9983487d0f26bc07fc93147fab694f0201d8003119f8818e30434",
+          "train_loader_generator_sha256": "4a3ff10390d6b047cb11f6a142e2d8d665340e4e1b7c9ed7eb58d99c3e09fe13",
+          "rmse": 96901.63739707983,
+          "r2": 0.6760821807005687,
+          "test_count": 26702,
+          "train_rmse": 41239.37012986117,
+          "train_r2": 0.9328840208468957,
+          "fit_seconds": 10.874754199991003,
+          "run_directory": "runs/baseline/seed_42",
+          "checkpoint": "runs/baseline/seed_42/best_model.pt",
+          "test_metrics_file": "runs/baseline/seed_42/test_metrics.json"
+        },
+        {
+          "variant": "baseline",
+          "label": "Baseline (ReLU)",
+          "seed": 43,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "a0fe68139d434c47ef2a1a4d107deb828057760709e139f19a68c3264d4c5393",
+          "train_loader_generator_sha256": "311cfb2ef19fa3802114256cbae07c9e051cb69ced761d1b227d593820d0a22d",
+          "rmse": 102636.98251605647,
+          "r2": 0.6366038183218679,
+          "test_count": 26702,
+          "train_rmse": 41111.916966748984,
+          "train_r2": 0.9332982330533901,
+          "fit_seconds": 11.024217800004408,
+          "run_directory": "runs/baseline/seed_43",
+          "checkpoint": "runs/baseline/seed_43/best_model.pt",
+          "test_metrics_file": "runs/baseline/seed_43/test_metrics.json"
+        },
+        {
+          "variant": "baseline",
+          "label": "Baseline (ReLU)",
+          "seed": 44,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "892004cb2ea4e76c071c7d4c575cbc61f14df7809252e60cdfb2002a021835d1",
+          "train_loader_generator_sha256": "a00e8d0e7e38da675ef74f2d45a952a7cb487e97f8c476ddad288594028171f6",
+          "rmse": 97427.36340748101,
+          "r2": 0.6725579064991521,
+          "test_count": 26702,
+          "train_rmse": 41624.514382815636,
+          "train_r2": 0.931624542823949,
+          "fit_seconds": 11.027123400010169,
+          "run_directory": "runs/baseline/seed_44",
+          "checkpoint": "runs/baseline/seed_44/best_model.pt",
+          "test_metrics_file": "runs/baseline/seed_44/test_metrics.json"
+        },
+        {
+          "variant": "baseline",
+          "label": "Baseline (ReLU)",
+          "seed": 45,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "fe87550ec3103df1e043ce610d92faacfb621eb56a4eeee2a6a126cca1b5e15c",
+          "train_loader_generator_sha256": "8a70ae5671e726737e9cca485356dab51f133d4bba7bd5945e479570bcb2dc26",
+          "rmse": 106344.74298381645,
+          "r2": 0.6098742103570347,
+          "test_count": 26702,
+          "train_rmse": 40923.11344843375,
+          "train_r2": 0.9339094724101746,
+          "fit_seconds": 11.351435899996432,
+          "run_directory": "runs/baseline/seed_45",
+          "checkpoint": "runs/baseline/seed_45/best_model.pt",
+          "test_metrics_file": "runs/baseline/seed_45/test_metrics.json"
+        },
+        {
+          "variant": "baseline",
+          "label": "Baseline (ReLU)",
+          "seed": 46,
+          "hidden_width": 256,
+          "embedding_dimension": 4,
+          "input_width": 22,
+          "trainable_parameters": 7065,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "stopped_early": false,
+          "initial_model_sha256": "6ba5029ac9f9c3d1e0ef7e443635298acd1e4685a3e79a1250b4042c9b12bffc",
+          "train_loader_generator_sha256": "c57e2c897d4f59f40c94a0b17a377ce11750525600e13c9e675b15437505b289",
+          "rmse": 108828.75332157093,
+          "r2": 0.5914361690178445,
+          "test_count": 26702,
+          "train_rmse": 40878.09502001369,
+          "train_r2": 0.9340548012923321,
+          "fit_seconds": 11.196945700008655,
+          "run_directory": "runs/baseline/seed_46",
+          "checkpoint": "runs/baseline/seed_46/best_model.pt",
+          "test_metrics_file": "runs/baseline/seed_46/test_metrics.json"
+        }
+      ]
+    },
+    "wide_deep": {
+      "n_seeds": 5,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "metrics": {
+        "rmse": {
+          "mean": 101413.7411366395,
+          "sample_std": 6407.581902180109
+        },
+        "r2": {
+          "mean": 0.6440811552528931,
+          "sample_std": 0.04490529835207865
+        }
+      },
+      "per_seed": [
+        {
+          "seed": 42,
+          "lambda": 2.0,
+          "trainable_parameters": 7088,
+          "active_parameters": 7088,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "initial_model_sha256": "075ab637791eb3333c934aa32ea39e454ff9eabb87d1f7e47d50b11b38be513b",
+          "baseline_initial_sha256": "ee733aabffd9983487d0f26bc07fc93147fab694f0201d8003119f8818e30434",
+          "train_loader_generator_sha256": "4a3ff10390d6b047cb11f6a142e2d8d665340e4e1b7c9ed7eb58d99c3e09fe13",
+          "rmse": 96419.00808827252,
+          "r2": 0.6793007623974245,
+          "test_count": 26702,
+          "train_rmse": 41631.22935968042,
+          "train_r2": 0.9316024800249147,
+          "run_directory": "refit/seed_42",
+          "checkpoint": "refit/seed_42/best_model.pt",
+          "test_metrics_file": "refit/seed_42/test_metrics.json"
+        },
+        {
+          "seed": 43,
+          "lambda": 2.0,
+          "trainable_parameters": 7088,
+          "active_parameters": 7088,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "initial_model_sha256": "78f60a7a434100ac13c823a1575dea7a0b036f92c595a2bb60263bba6cada8b4",
+          "baseline_initial_sha256": "a0fe68139d434c47ef2a1a4d107deb828057760709e139f19a68c3264d4c5393",
+          "train_loader_generator_sha256": "311cfb2ef19fa3802114256cbae07c9e051cb69ced761d1b227d593820d0a22d",
+          "rmse": 101944.72210017011,
+          "r2": 0.6414893170057689,
+          "test_count": 26702,
+          "train_rmse": 40660.10511766753,
+          "train_r2": 0.9347562555910666,
+          "run_directory": "refit/seed_43",
+          "checkpoint": "refit/seed_43/best_model.pt",
+          "test_metrics_file": "refit/seed_43/test_metrics.json"
+        },
+        {
+          "seed": 44,
+          "lambda": 2.0,
+          "trainable_parameters": 7088,
+          "active_parameters": 7088,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "initial_model_sha256": "5547d1f8d7838ddb37b979e4ca1c1789183868fc573904c7b4211591a5ad8a9d",
+          "baseline_initial_sha256": "892004cb2ea4e76c071c7d4c575cbc61f14df7809252e60cdfb2002a021835d1",
+          "train_loader_generator_sha256": "a00e8d0e7e38da675ef74f2d45a952a7cb487e97f8c476ddad288594028171f6",
+          "rmse": 93845.8289218977,
+          "r2": 0.6961896547925528,
+          "test_count": 26702,
+          "train_rmse": 42476.19666132665,
+          "train_r2": 0.9287978464493615,
+          "run_directory": "refit/seed_44",
+          "checkpoint": "refit/seed_44/best_model.pt",
+          "test_metrics_file": "refit/seed_44/test_metrics.json"
+        },
+        {
+          "seed": 45,
+          "lambda": 2.0,
+          "trainable_parameters": 7088,
+          "active_parameters": 7088,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "initial_model_sha256": "10c32c85cf922a1410e9bb363188cd7036260978340063a9833cb3a24bf02fe7",
+          "baseline_initial_sha256": "fe87550ec3103df1e043ce610d92faacfb621eb56a4eeee2a6a126cca1b5e15c",
+          "train_loader_generator_sha256": "8a70ae5671e726737e9cca485356dab51f133d4bba7bd5945e479570bcb2dc26",
+          "rmse": 109591.21110595259,
+          "r2": 0.5856912919009548,
+          "test_count": 26702,
+          "train_rmse": 41638.18739249157,
+          "train_r2": 0.9315796148841882,
+          "run_directory": "refit/seed_45",
+          "checkpoint": "refit/seed_45/best_model.pt",
+          "test_metrics_file": "refit/seed_45/test_metrics.json"
+        },
+        {
+          "seed": 46,
+          "lambda": 2.0,
+          "trainable_parameters": 7088,
+          "active_parameters": 7088,
+          "epochs_completed": 4,
+          "checkpoint_epoch": 4,
+          "initial_model_sha256": "052de5a101535ddd76be9e33807d66e0f694c80eda2c52541062c0dfb2c3e478",
+          "baseline_initial_sha256": "6ba5029ac9f9c3d1e0ef7e443635298acd1e4685a3e79a1250b4042c9b12bffc",
+          "train_loader_generator_sha256": "c57e2c897d4f59f40c94a0b17a377ce11750525600e13c9e675b15437505b289",
+          "rmse": 105267.93546690457,
+          "r2": 0.617734750167765,
+          "test_count": 26702,
+          "train_rmse": 40776.08918591881,
+          "train_r2": 0.9343835055573212,
+          "run_directory": "refit/seed_46",
+          "checkpoint": "refit/seed_46/best_model.pt",
+          "test_metrics_file": "refit/seed_46/test_metrics.json"
+        }
+      ]
+    }
+  },
+  "paired_differences": {
+    "n_seeds": 5,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "metrics": {
+      "rmse_delta": {
+        "mean": -1014.1547885614389,
+        "sample_std": 2811.4041950105575
+      },
+      "r2_delta": {
+        "mean": 0.006770298273599651,
+        "sample_std": 0.020248031477882077
+      }
+    },
+    "per_seed": [
+      {
+        "seed": 42,
+        "rmse_delta": -482.6293088073144,
+        "r2_delta": 0.003218581696855849
+      },
+      {
+        "seed": 43,
+        "rmse_delta": -692.2604158863542,
+        "r2_delta": 0.0048854986839010905
+      },
+      {
+        "seed": 44,
+        "rmse_delta": -3581.53448558331,
+        "r2_delta": 0.023631748293400645
+      },
+      {
+        "seed": 45,
+        "rmse_delta": 3246.468122136139,
+        "r2_delta": -0.024182918456079894
+      },
+      {
+        "seed": 46,
+        "rmse_delta": -3560.817854666355,
+        "r2_delta": 0.026298581149920564
+      }
+    ]
+  },
+  "test_assisted_epoch_budget": true,
+  "test_monitoring_during_a3": false,
+  "baseline_origin": "A2 fresh fixed-budget five-seed baseline; reused without another test evaluation",
+  "a1_individual_final": {
+    "loss": 0.3705647119992896,
+    "count": 26702,
+    "rmse": 96901.63739707983,
+    "r2": 0.6760821807005687
+  },
+  "elapsed_seconds": 176.5467085999844
+}

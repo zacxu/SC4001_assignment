@@ -1,0 +1,23 @@
+{
+  "variant": "sigmoid",
+  "label": "All inputs (Sigmoid)",
+  "seed": 45,
+  "hidden_width": 256,
+  "embedding_dimension": 4,
+  "input_width": 22,
+  "trainable_parameters": 7065,
+  "epochs_completed": 4,
+  "checkpoint_epoch": 4,
+  "stopped_early": false,
+  "initial_model_sha256": "fe87550ec3103df1e043ce610d92faacfb621eb56a4eeee2a6a126cca1b5e15c",
+  "train_loader_generator_sha256": "8a70ae5671e726737e9cca485356dab51f133d4bba7bd5945e479570bcb2dc26",
+  "rmse": 105653.98310495508,
+  "r2": 0.6149258570016102,
+  "test_count": 26702,
+  "train_rmse": 42170.482742873915,
+  "train_r2": 0.9298190845778403,
+  "fit_seconds": 11.283129700022982,
+  "run_directory": "runs/sigmoid/seed_45",
+  "checkpoint": "runs/sigmoid/seed_45/best_model.pt",
+  "test_metrics_file": "runs/sigmoid/seed_45/test_metrics.json"
+}

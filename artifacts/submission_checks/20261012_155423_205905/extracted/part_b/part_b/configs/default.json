@@ -1,0 +1,47 @@
+{
+  "selection_seed": 42,
+  "evaluation_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "training": {
+    "optimizer": "Adam",
+    "max_epochs": 20,
+    "patience": 4,
+    "min_delta": 0.0001
+  },
+  "device": "cuda",
+  "data_path_from_assignment_root": "chestxray_binary_64.npz",
+  "settings": {
+    "class_mapping_assumption": {
+      "0": "healthy",
+      "1": "pneumonia"
+    },
+    "output": "unrestricted_binary_logit",
+    "loss": "BCEWithLogitsLoss",
+    "probability_threshold": 0.5,
+    "stopping_monitor": "validation_loss",
+    "checkpoint_selection": "validation_error_then_loss_then_earlier_epoch",
+    "learning_rate_grid": [
+      1e-05,
+      0.0001,
+      0.001,
+      0.01,
+      0.1
+    ],
+    "b1_batch_size": 128,
+    "batch_size_grid": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "normalization": "training_pixel_mean_and_population_std_after_dividing_by_255",
+    "class_mapping_confirmation": "Q&A.md",
+    "final_training_protocol": "fresh_combined_train_validation_fixed_selected_epochs"
+  }
+}

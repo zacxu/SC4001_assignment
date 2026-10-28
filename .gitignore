@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+*.pt
+*.pth
+artifacts/ray/
+artifacts/cache/
+part_a/outputs/ray/
+part_b/outputs/ray/
+submission/*.zip

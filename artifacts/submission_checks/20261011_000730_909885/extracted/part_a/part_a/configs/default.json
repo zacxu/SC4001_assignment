@@ -1,0 +1,73 @@
+{
+  "selection_seed": 42,
+  "evaluation_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "training": {
+    "optimizer": "Adam",
+    "max_epochs": 20,
+    "patience": 4,
+    "min_delta": 0.0001
+  },
+  "device": "cuda",
+  "data_path_from_assignment_root": "housing_baseline_data/hdb-price-prediction-assignment-main/hdb_price_prediction.csv",
+  "settings": {
+    "train_years": [
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "validation_year": 2021,
+    "test_year": 2022,
+    "excluded_years": [
+      2023
+    ],
+    "default_embedding_dimension": 8,
+    "default_hidden_width": 64,
+    "learning_rate": 0.01,
+    "batch_size": 512,
+    "selection_monitor": "validation_rmse_sgd",
+    "a1_refit_monitor": "test_rmse_sgd",
+    "a2_a3_refit_epoch_budget": "a1_final_best_checkpoint_epoch",
+    "hidden_width_grid": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "embedding_dimension_grid": [
+      2,
+      4,
+      8,
+      12,
+      16
+    ],
+    "lambda_grid": [
+      0,
+      0.25,
+      0.5,
+      1,
+      2
+    ],
+    "categorical_features": [
+      "month",
+      "town",
+      "flat_model_type",
+      "storey_range"
+    ],
+    "continuous_features": [
+      "dist_to_nearest_stn",
+      "dist_to_dhoby",
+      "degree_centrality",
+      "eigenvector_centrality",
+      "remaining_lease_years",
+      "floor_area_sqm"
+    ]
+  }
+}

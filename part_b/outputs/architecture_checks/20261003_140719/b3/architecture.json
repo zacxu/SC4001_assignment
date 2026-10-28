@@ -1,0 +1,932 @@
+{
+  "architecture": "b3",
+  "model_config": {
+    "format_version": 1,
+    "architecture": "b3",
+    "input_shape": [
+      1,
+      64,
+      64
+    ],
+    "convolution_bias": false,
+    "fully_connected_bias": true,
+    "convolution_postprocessing": [
+      "BatchNorm2d",
+      "ReLU"
+    ],
+    "batchnorm_eps": 1e-05,
+    "batchnorm_momentum": 0.1,
+    "padding": "symmetric_zero_padding_kernel_half_center_aligned_stride_two",
+    "residual_projection_activation": "ReLU",
+    "residual_addition_activation": "ReLU",
+    "hidden_fc_dropout": null,
+    "average_pool_kernel_and_stride": 8,
+    "average_pool_output": [
+      1,
+      1
+    ],
+    "output": "unrestricted_binary_logit",
+    "output_shape": [
+      "N"
+    ],
+    "trainable_parameters": 77169
+  },
+  "parameters": {
+    "conv": 76432,
+    "batchnorm": 672,
+    "fc": 65
+  },
+  "trainable_parameters": 77169,
+  "layers": [
+    {
+      "layer": "features.stem.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        1,
+        64,
+        64
+      ],
+      "output_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "own_trainable_parameters": 144
+    },
+    {
+      "layer": "features.stem.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "output_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "own_trainable_parameters": 32
+    },
+    {
+      "layer": "features.stem.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "output_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.stem",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        1,
+        64,
+        64
+      ],
+      "output_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.pool",
+      "type": "MaxPool2d",
+      "input_shape": [
+        2,
+        16,
+        64,
+        64
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block16.conv1.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 2304
+    },
+    {
+      "layer": "features.block16.conv1.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 32
+    },
+    {
+      "layer": "features.block16.conv1.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block16.conv1",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block16.conv2.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 2304
+    },
+    {
+      "layer": "features.block16.conv2.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 32
+    },
+    {
+      "layer": "features.block16.conv2.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block16.conv2",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block16.shortcut",
+      "type": "Identity",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block16.add_relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block16",
+      "type": "ResidualBlock",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block32.conv1.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 4608
+    },
+    {
+      "layer": "features.block32.conv1.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 64
+    },
+    {
+      "layer": "features.block32.conv1.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block32.conv1",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block32.conv2.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 9216
+    },
+    {
+      "layer": "features.block32.conv2.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 64
+    },
+    {
+      "layer": "features.block32.conv2.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block32.conv2",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block32.shortcut.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 512
+    },
+    {
+      "layer": "features.block32.shortcut.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 64
+    },
+    {
+      "layer": "features.block32.shortcut.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block32.shortcut",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block32.add_relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block32",
+      "type": "ResidualBlock",
+      "input_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block64.conv1.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 18432
+    },
+    {
+      "layer": "features.block64.conv1.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 128
+    },
+    {
+      "layer": "features.block64.conv1.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block64.conv1",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block64.conv2.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 36864
+    },
+    {
+      "layer": "features.block64.conv2.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 128
+    },
+    {
+      "layer": "features.block64.conv2.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block64.conv2",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block64.shortcut.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 2048
+    },
+    {
+      "layer": "features.block64.shortcut.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 128
+    },
+    {
+      "layer": "features.block64.shortcut.relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block64.shortcut",
+      "type": "ConvBNReLU",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block64.add_relu",
+      "type": "ReLU",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.block64",
+      "type": "ResidualBlock",
+      "input_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "features.average_pool",
+      "type": "AvgPool2d",
+      "input_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        2,
+        64,
+        1,
+        1
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "flatten",
+      "type": "Flatten",
+      "input_shape": [
+        2,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        2,
+        64
+      ],
+      "own_trainable_parameters": 0
+    },
+    {
+      "layer": "classifier.output",
+      "type": "Linear",
+      "input_shape": [
+        2,
+        64
+      ],
+      "output_shape": [
+        2,
+        1
+      ],
+      "own_trainable_parameters": 65
+    }
+  ],
+  "residual_additions": [
+    {
+      "block": "features.block16",
+      "main_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "shortcut_shape": [
+        2,
+        16,
+        32,
+        32
+      ],
+      "sum_shape": [
+        2,
+        16,
+        32,
+        32
+      ]
+    },
+    {
+      "block": "features.block32",
+      "main_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "shortcut_shape": [
+        2,
+        32,
+        16,
+        16
+      ],
+      "sum_shape": [
+        2,
+        32,
+        16,
+        16
+      ]
+    },
+    {
+      "block": "features.block64",
+      "main_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "shortcut_shape": [
+        2,
+        64,
+        8,
+        8
+      ],
+      "sum_shape": [
+        2,
+        64,
+        8,
+        8
+      ]
+    }
+  ],
+  "all_convolutions_have_bn_relu_and_no_bias": true,
+  "smoke_train_samples": 129,
+  "smoke_validation_samples": 65,
+  "smoke_epochs": 1,
+  "smoke_batch_size": 128,
+  "smoke_learning_rate": 0.001,
+  "smoke_only_not_a_b1_b2_b3_experiment": true,
+  "all_convolution_weights_and_output_weights_updated": true,
+  "convolution_gradient_norms": {
+    "features.stem.conv.weight": 0.22129596769809723,
+    "features.block16.conv1.conv.weight": 0.40529438853263855,
+    "features.block16.conv2.conv.weight": 0.3243936598300934,
+    "features.block32.conv1.conv.weight": 0.3682907223701477,
+    "features.block32.conv2.conv.weight": 0.47395557165145874,
+    "features.block32.shortcut.conv.weight": 0.12582211196422577,
+    "features.block64.conv1.conv.weight": 0.4028235375881195,
+    "features.block64.conv2.conv.weight": 0.47354868054389954,
+    "features.block64.shortcut.conv.weight": 0.13849951326847076
+  },
+  "batchnorm_training_batches_per_layer": 2,
+  "evaluation_repeat_predictions_exact": true,
+  "single_image_output_shape": [
+    1
+  ],
+  "restored_validation_probe_metrics_match": true,
+  "validation_probe_loss": 0.6970873548434331,
+  "largest_planned_batch_backward_pass": 256,
+  "all_parameters_receive_finite_gradients": true,
+  "average_pooling": "Fixed AvgPool2d windows equivalent to required output on 64x64 inputs",
+  "peak_allocated_gpu_mib_including_fresh_restored_model": 426.25,
+  "checkpoint_sha256": "ddd6e9f2a6f48f89744513663deaa74671ede46f457c0ad314500296c648e007",
+  "test_performance_evaluated": false
+}

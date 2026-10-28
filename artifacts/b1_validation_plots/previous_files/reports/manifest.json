@@ -1,0 +1,902 @@
+{
+  "step": 14,
+  "status": "built",
+  "name": "YourName",
+  "name_placeholder": true,
+  "reports": {
+    "A": "PartA_report_YourName.pdf",
+    "B": "PartB_report_YourName.pdf"
+  },
+  "pages_per_report": 5,
+  "inputs": {
+    "assignment.pdf": "2c6b4529d31352b228a0f78c5b354ddd72edb1bed39d9f9461d6499566dad46f",
+    "assignment_slides.pdf": "2a3f78e1a2328dbab8e4c787ce5c321da4a618c219292098ef85543a79b82398",
+    "Q&A.md": "2fe517870378f29ca4254cf741246121602ff92032de35e6c08008c512b97c4b",
+    "clarifications.md": "a377cd02dde48d0b41540392880d3b00d51701be457e49b84572560e5fad654a",
+    "docs/GENAI_USAGE.md": "def3158613bdfaece01c2dca76a80ed3815347d87b2834477e1ddc3da9df9748",
+    "docs/ASSIGNMENT_DECISIONS.md": "820f5cd552a9cce748d9b060165767fdbcb0b52674d0897450b93256a3a5f8e2",
+    "docs/FINAL_REQUIREMENTS_RECHECK.md": "5f0edb1f764a48e239ed63b47ccbefda0de085439aad84456a281d3a04111941",
+    "docs/FAQ_COMPLIANCE_REVIEW.md": "1f6322da58991a6ef45b5206486c3a0522b0fb4901f567b0ee9ff5b2894c45e7",
+    "scripts/build_reports.py": "09cae5265a2e582e459f55b5b7e92c23655d562ee2f4b1694299cfa3ae5a2c5e",
+    "scripts/report_assets.py": "2aff71c1f65c59175a1bf42967ffd612d67040f904364bedd70d57f9e3a72dc4",
+    "scripts/report_layout.py": "234e7f196f7be023fa1787fe462823ad67508ce9112ead1a54e7d855f95aa4eb",
+    "scripts/verify_reports.py": "4e21e851cbdf2a7b300ec2629af81f03a32a164fc9bf66bea420e8bcce4659a9",
+    "docs/A1_EXPERIMENT.md": "4b06ec1973d0bac25681d7b580cc0b0ba8cdb76bc8f4de27eae89765889b0529",
+    "docs/A2_EXPERIMENT.md": "8fbf91670f27be20d79e7c4aa32b826c8ec7955e50a7839595480782245cbc0e",
+    "docs/A3_EXPERIMENT.md": "3b9aba6fa44c4328018e37dac0448486066d997b9d2aa6dd187da6a1317e76e0",
+    "docs/A4_EXPERIMENT.md": "21de8d874deec8441df9050d732151a912e9c27d9146d07cb589d3ead6f32203",
+    "docs/B1_EXPERIMENT.md": "242fff9c592e8a32909b1e4c8e83683a342bec6cbd707d32204b483326e4316d",
+    "docs/B2_EXPERIMENT.md": "86f25db0b1a2fcb2ad0d13babb92afe326d44fad7a6f4776eec8f71afb54f730",
+    "docs/B3_EXPERIMENT.md": "ee060b78cd4f26b1798774bdfc15960efd3446f394ab26245b1396ddfbf33f25",
+    "docs/B4_EXPERIMENT.md": "fd65550ec78958bdc34b733098f5ec30a170b985d859028f54902bd09a5d39c3",
+    "part_a/outputs/a1/tables/grid_results.csv": "9a246439ebd687a0b44d41b0054af27d2ad4a717693e90e6b8da6747da7514c8",
+    "part_a/outputs/a1/grid/h256_d04/training/history.csv": "203cd577e6ceea61ca603b911253054004006f11ded7771c48892ac5fe9623ec",
+    "part_a/outputs/a1/refit/history.csv": "4c775a6d5b293fbc220579d25df0cfe798b8cffff2e159c97e4fb7cbcd549119",
+    "part_a/outputs/a2/tables/per_seed_results.csv": "a853addd02eae4671858525440bc37011db583383bec2cdde149b93f9e41de5a",
+    "part_a/outputs/a2/tables/summary_metrics.csv": "747f6184ea089f6213c977f0c997503bc6fa7ab684b1d383230a8f25fc22da41",
+    "part_a/outputs/a3/tables/lambda_search.csv": "6ef328a5cc2db83ae1630937e72bf832e6c9ec32c6e45d02ec69df02029246c1",
+    "part_a/outputs/a3/tables/per_seed_comparison.csv": "77779f1ca5d1bb8ac2f4f164f15e782fdc7f3e6d419af0bf484703ec7f771a14",
+    "part_a/outputs/a3/tables/summary_metrics.csv": "cf3bd44e7225a3d18f074840c9e47bc132d1971d2c7bc6a02b2bf88d61afd825",
+    "part_a/outputs/a3/search/lambda_0/history.csv": "65951206dc646059ae210a3657246eaf940f303aea94d2611c9f59dc41beab26",
+    "part_a/outputs/a3/search/lambda_2/history.csv": "f0da81817d0441ac2987e79f9db2a446eb7d7a64e02f9b04965193ac46b0232e",
+    "part_a/outputs/a4/tables/global_importance.csv": "7ba20f212a56864bf7cb15fb3a80bd66e9726d045d68adf0fa6c092da8b68f7a",
+    "part_b/outputs/b1/tables/learning_curves.csv": "c548bcb93e5a905a5a60672cdf0ddf557b8b43116f3303839997c4baeb52708d",
+    "part_b/outputs/b1/tables/learning_rate_selection.csv": "9a66713df2459bcb636f1005c4b7b7c468b44d68467ce8e38d99af9d6b82e5c9",
+    "part_b/outputs/b2/tables/learning_curves.csv": "a0a8359c7f33f885cd86c615425adb072cae3d40bfe060dd954697b4e0f7d93a",
+    "part_b/outputs/b2/tables/batch_size_selection.csv": "d742a3abd872674d0d7e317f925826739ab238dbdd70956f9eca846c384861cc",
+    "part_b/outputs/b3/tables/learning_curves.csv": "609129234fbcb664e4188a4e41043d902afc799f2ac8628cf5cb5f96b3312bcb",
+    "part_b/outputs/b3/tables/architecture_comparison.csv": "f064c132cb76a18d9d6dd6ec61b5208349cb4a37c2673796397614748ad01db7",
+    "part_b/outputs/b4/tables/geometric_diagnostics.csv": "32cc580c414243ac4627e6b455addca8966b9ca14607588d003a9f763620dc9f",
+    "part_b/outputs/b4/tables/sample_predictions_and_maps.csv": "59e0fe44bd878d7546b439c5624073a83b9ca7d2bc4a684d947cae90e23de696",
+    "part_a/outputs/a1/refit/internal_test_monitor.jsonl": "a18fdab881b1e477fb4c85f2255c3171a0708ec23b15506e996bc44d1ea92019",
+    "part_a/outputs/a2/diagnostics/runs/baseline/seed_42/history.csv": "629f4328f95333db2d017cc90d5ee60e2e65486285d098956a1b7ee2120a9329",
+    "part_a/outputs/a2/diagnostics/runs/continuous_only/seed_42/history.csv": "0037839ab37d471e2196dcda694e4c95537fd28f3c394c986cf590597d5e2ed4",
+    "part_a/outputs/a2/diagnostics/runs/sigmoid/seed_42/history.csv": "2481b2de96e24bf4df36a1478016aaa78a56e27d7abb20e0c7b4565f0d730429",
+    "part_a/outputs/a2/diagnostics/verification.json": "035df804d52e2929d441d8eea42ab2bcaa63db3c12fae07038e839d9518269bb",
+    "part_a/outputs/a1/status.json": "2b50fb2db9be92947ed89b5fe100662e4ae2c5f0486f57aba96f67c6ca98e1cc",
+    "part_a/outputs/a1/verification.json": "a299ef50069f80b683f31602057d08735f290f120a2ee4a3a9f384fecfb50988",
+    "part_a/outputs/a1/summary.json": "5213dac34cad179bbdb1ae8f4324c308cb2b333e32f56af8709ebd5926622703",
+    "part_a/outputs/a2/status.json": "fbe7d3e366536c0edc46fab6ffea7a9495b08485549e36be40c4a967594fb19b",
+    "part_a/outputs/a2/verification.json": "afaae9dad41670bfc87468e974e782d7da9bc86b3d8ece0c6bfd03f86a3c41bc",
+    "part_a/outputs/a2/summary.json": "14450152839d9bc1ae938131ac9afca946b0ca2911e01112fbde267d5fc84d4f",
+    "part_a/outputs/a3/status.json": "aff6991a52b6e8432ec574d3606fdf14edf4e3fc2cfeff4b440321ee22abf049",
+    "part_a/outputs/a3/verification.json": "b9777dfe086157cc9260e7fca36c1f89d0eeb2a1f6568a3cd34f75df578e3769",
+    "part_a/outputs/a3/summary.json": "673160e6219155763020b834092c142d9729608b6092c205e8e23f96cc1e3fcf",
+    "part_a/outputs/a4/status.json": "93f0ef13d41e59c4bd9b61e69dbf7aa68232a34ef63881c01f2ff825d2563658",
+    "part_a/outputs/a4/verification.json": "586fc24c8cf0cd40b7795eb5a4c1a1815e7269509d708293d417fe8d560684be",
+    "part_a/outputs/a4/summary.json": "b20acc958e5140c8778a9c074e37dda5808248ddd2df7c268c147d86847ceb18",
+    "part_b/outputs/b1/status.json": "15f5a88fe12ec5919f25bf54ce69ea1309f5351a3d74c12d2d0e41073a17cea8",
+    "part_b/outputs/b1/verification.json": "3adad3d776235298ad0b85da05d5dcef20044e57cc047ea6ab1512c301b4f97e",
+    "part_b/outputs/b1/summary.json": "5d85b075aae627c7bd6240d204e508e07fb7cae4b3e50aac0c504d5238f38092",
+    "part_b/outputs/b2/status.json": "15f5a88fe12ec5919f25bf54ce69ea1309f5351a3d74c12d2d0e41073a17cea8",
+    "part_b/outputs/b2/verification.json": "519bebfa9985d8d5384edc8a09dcd785661f04eeb75cca3e76c48fbc37a6b16d",
+    "part_b/outputs/b2/summary.json": "0f2b3f552bf6b1028cfd8ddd7580263d505e625ed85b1f90a54d7d010cb97aa8",
+    "part_b/outputs/b3/status.json": "15f5a88fe12ec5919f25bf54ce69ea1309f5351a3d74c12d2d0e41073a17cea8",
+    "part_b/outputs/b3/verification.json": "57c3b5ec7484d2e8d0a5760f054f579f67a66385545759286f10cced98450d6a",
+    "part_b/outputs/b3/summary.json": "cfa3906947fe142d24559a5bc33c812d242f2c32113ec15394d87fb448b75637",
+    "part_b/outputs/b4/status.json": "3c7bb535908b418c219073e4302a32307253f95a440b4171aad9144b2696a1c8",
+    "part_b/outputs/b4/verification.json": "0cc501d8211baa9413d0ea82c9ddf6d82d1d7eaf7281d11cdc3971a0869082bc",
+    "part_b/outputs/b4/summary.json": "e6321ec591d5a736ff38ebd9201489827debade349b478be35de456af2cf2ea1",
+    "part_b/outputs/b1/final_test.json": "c83ee4d56e64a7763ba411fa1e01211194febdc8856aa093cfe6c6e906fe09e2",
+    "part_b/outputs/b1/refit/best_model.pt": "8d9aec883331c64122f74c69c48a51c1457f2eafcc36eb661533bd94c3b4d5da",
+    "part_b/outputs/b1/refit_protocol.json": "634a5fc46db24ba0f4aac944ed800ef850ce243b3fc5e5a6536f3655bb8a5046",
+    "part_b/outputs/b2/final_test.json": "947c8a12c0a0ff872c1cae03754adb8b54780c9dfac5b8d1d00944807a2e1b58",
+    "part_b/outputs/b2/refit/best_model.pt": "4aff841d7de79c114f83e205cd02e63d9b4fb90ecb96856f395a9d7ec39d1715",
+    "part_b/outputs/b2/refit_protocol.json": "ebeca3427a1c03cc84cb94f56d338a7dbf08bedf5ab01604df0e476983a31d97",
+    "part_b/outputs/b3/final_test.json": "fafc276d36ba3af4263887c8e751d8f697520b3a2048f416527e6b6893fe4391",
+    "part_b/outputs/b3/refit/best_model.pt": "7d2567d04391fe1032f24b964133826791480c2d1d0590e2d26a955b5d265ec1",
+    "part_b/outputs/b3/refit_protocol.json": "967a431e083a50a4da0e4b55edae98132013704ef260840624b9e8a32f034fdc",
+    "part_b/outputs/b4/gradcam.pt": "774e0983b597c6bd23e7d04a858cd0d7c689a2b9b593da6709270899ba2f3c4f"
+  },
+  "layout": {
+    "A": [
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 81,
+        "bottom": 100.03
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 100.03,
+        "bottom": 170.08
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 170.08,
+        "bottom": 189.11
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 189.11,
+        "bottom": 271.97
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 271.97,
+        "bottom": 291.0
+      },
+      {
+        "page": 1,
+        "kind": "figure: a1_baseline_diagram",
+        "top": 291.0,
+        "bottom": 393.36
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 393.36,
+        "bottom": 410.85
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 410.85,
+        "bottom": 441.25
+      },
+      {
+        "page": 1,
+        "kind": "figure: a1_grid",
+        "top": 441.25,
+        "bottom": 591.13
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 591.13,
+        "bottom": 608.62
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 608.62,
+        "bottom": 653.05
+      },
+      {
+        "page": 2,
+        "kind": "figure: a1_selected_curves, a1_refit_training",
+        "top": 58,
+        "bottom": 239.56
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 239.56,
+        "bottom": 267.54
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 267.54,
+        "bottom": 286.57
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 286.57,
+        "bottom": 343.81
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 343.81,
+        "bottom": 401.05
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 401.05,
+        "bottom": 458.29
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 458.29,
+        "bottom": 477.32
+      },
+      {
+        "page": 2,
+        "kind": "table header",
+        "top": 477.32,
+        "bottom": 497.11
+      },
+      {
+        "page": 2,
+        "kind": "table row",
+        "top": 497.11,
+        "bottom": 516.9
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 523.9,
+        "bottom": 581.14
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 581.14,
+        "bottom": 600.17
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 600.17,
+        "bottom": 683.03
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 683.03,
+        "bottom": 696.16
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 696.16,
+        "bottom": 709.28
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 58,
+        "bottom": 137.2
+      },
+      {
+        "page": 3,
+        "kind": "table header",
+        "top": 137.2,
+        "bottom": 156.99
+      },
+      {
+        "page": 3,
+        "kind": "table row",
+        "top": 156.99,
+        "bottom": 176.78
+      },
+      {
+        "page": 3,
+        "kind": "table row",
+        "top": 176.78,
+        "bottom": 196.56
+      },
+      {
+        "page": 3,
+        "kind": "table row",
+        "top": 196.56,
+        "bottom": 216.35
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 223.35,
+        "bottom": 242.38
+      },
+      {
+        "page": 3,
+        "kind": "figure: a2_categorical",
+        "top": 242.38,
+        "bottom": 392.98
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 392.98,
+        "bottom": 420.97
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 420.97,
+        "bottom": 475.77
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 475.77,
+        "bottom": 494.8
+      },
+      {
+        "page": 3,
+        "kind": "figure: a2_activation",
+        "top": 494.8,
+        "bottom": 645.4
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 645.4,
+        "bottom": 673.38
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 673.38,
+        "bottom": 740.38
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 58,
+        "bottom": 128.05
+      },
+      {
+        "page": 4,
+        "kind": "table header",
+        "top": 128.05,
+        "bottom": 147.84
+      },
+      {
+        "page": 4,
+        "kind": "table row",
+        "top": 147.84,
+        "bottom": 167.63
+      },
+      {
+        "page": 4,
+        "kind": "table row",
+        "top": 167.63,
+        "bottom": 187.41
+      },
+      {
+        "page": 4,
+        "kind": "table row",
+        "top": 187.41,
+        "bottom": 207.2
+      },
+      {
+        "page": 4,
+        "kind": "table row",
+        "top": 207.2,
+        "bottom": 226.99
+      },
+      {
+        "page": 4,
+        "kind": "table row",
+        "top": 226.99,
+        "bottom": 246.78
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 253.78,
+        "bottom": 311.02
+      },
+      {
+        "page": 4,
+        "kind": "table header",
+        "top": 311.02,
+        "bottom": 330.81
+      },
+      {
+        "page": 4,
+        "kind": "table row",
+        "top": 330.81,
+        "bottom": 350.59
+      },
+      {
+        "page": 4,
+        "kind": "table row",
+        "top": 350.59,
+        "bottom": 370.38
+      },
+      {
+        "page": 4,
+        "kind": "figure: a3_learning_curves",
+        "top": 377.38,
+        "bottom": 527.98
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 527.98,
+        "bottom": 555.97
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 555.97,
+        "bottom": 613.21
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 613.21,
+        "bottom": 696.07
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 58,
+        "bottom": 128.05
+      },
+      {
+        "page": 5,
+        "kind": "figure: a4_baseline",
+        "top": 128.05,
+        "bottom": 313.21
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 313.21,
+        "bottom": 330.7
+      },
+      {
+        "page": 5,
+        "kind": "figure: a4_wide_deep",
+        "top": 330.7,
+        "bottom": 515.86
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 515.86,
+        "bottom": 533.35
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 533.35,
+        "bottom": 590.59
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 590.59,
+        "bottom": 660.64
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 660.64,
+        "bottom": 673.77
+      }
+    ],
+    "B": [
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 81,
+        "bottom": 100.03
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 100.03,
+        "bottom": 182.89
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 182.89,
+        "bottom": 201.92
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 201.92,
+        "bottom": 284.78
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 284.78,
+        "bottom": 351.78
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 351.78,
+        "bottom": 418.78
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 418.78,
+        "bottom": 437.81
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 437.81,
+        "bottom": 482.24
+      },
+      {
+        "page": 1,
+        "kind": "table header",
+        "top": 482.24,
+        "bottom": 502.03
+      },
+      {
+        "page": 1,
+        "kind": "table row",
+        "top": 502.03,
+        "bottom": 521.82
+      },
+      {
+        "page": 1,
+        "kind": "table row",
+        "top": 521.82,
+        "bottom": 541.6
+      },
+      {
+        "page": 1,
+        "kind": "table row",
+        "top": 541.6,
+        "bottom": 561.39
+      },
+      {
+        "page": 1,
+        "kind": "table row",
+        "top": 561.39,
+        "bottom": 581.18
+      },
+      {
+        "page": 1,
+        "kind": "table row",
+        "top": 581.18,
+        "bottom": 600.97
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 607.97,
+        "bottom": 652.4
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 652.4,
+        "bottom": 671.43
+      },
+      {
+        "page": 1,
+        "kind": "text",
+        "top": 671.43,
+        "bottom": 728.67
+      },
+      {
+        "page": 2,
+        "kind": "figure: b1_loss, b1_accuracy",
+        "top": 58,
+        "bottom": 284.2
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 284.2,
+        "bottom": 312.18
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 312.18,
+        "bottom": 395.04
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 395.04,
+        "bottom": 414.07
+      },
+      {
+        "page": 2,
+        "kind": "table header",
+        "top": 414.07,
+        "bottom": 433.86
+      },
+      {
+        "page": 2,
+        "kind": "table row",
+        "top": 433.86,
+        "bottom": 453.65
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 460.65,
+        "bottom": 517.89
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 517.89,
+        "bottom": 536.92
+      },
+      {
+        "page": 2,
+        "kind": "table header",
+        "top": 536.92,
+        "bottom": 556.71
+      },
+      {
+        "page": 2,
+        "kind": "table row",
+        "top": 556.71,
+        "bottom": 576.5
+      },
+      {
+        "page": 2,
+        "kind": "table row",
+        "top": 576.5,
+        "bottom": 596.28
+      },
+      {
+        "page": 2,
+        "kind": "table row",
+        "top": 596.28,
+        "bottom": 616.07
+      },
+      {
+        "page": 2,
+        "kind": "table row",
+        "top": 616.07,
+        "bottom": 635.86
+      },
+      {
+        "page": 2,
+        "kind": "table row",
+        "top": 635.86,
+        "bottom": 655.65
+      },
+      {
+        "page": 2,
+        "kind": "text",
+        "top": 662.65,
+        "bottom": 694.27
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 58,
+        "bottom": 102.43
+      },
+      {
+        "page": 3,
+        "kind": "figure: b2_loss, b2_accuracy",
+        "top": 102.43,
+        "bottom": 328.63
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 328.63,
+        "bottom": 356.61
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 356.61,
+        "bottom": 439.47
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 439.47,
+        "bottom": 458.5
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 458.5,
+        "bottom": 528.55
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 528.55,
+        "bottom": 547.58
+      },
+      {
+        "page": 3,
+        "kind": "table header",
+        "top": 547.58,
+        "bottom": 567.37
+      },
+      {
+        "page": 3,
+        "kind": "table row",
+        "top": 567.37,
+        "bottom": 587.16
+      },
+      {
+        "page": 3,
+        "kind": "text",
+        "top": 594.16,
+        "bottom": 651.4
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 58,
+        "bottom": 115.24
+      },
+      {
+        "page": 4,
+        "kind": "figure: b3_loss, b3_accuracy",
+        "top": 115.24,
+        "bottom": 260.08
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 260.08,
+        "bottom": 288.06
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 288.06,
+        "bottom": 345.3
+      },
+      {
+        "page": 4,
+        "kind": "table header",
+        "top": 345.3,
+        "bottom": 364.74
+      },
+      {
+        "page": 4,
+        "kind": "table row",
+        "top": 364.74,
+        "bottom": 384.18
+      },
+      {
+        "page": 4,
+        "kind": "table row",
+        "top": 384.18,
+        "bottom": 403.62
+      },
+      {
+        "page": 4,
+        "kind": "table row",
+        "top": 403.62,
+        "bottom": 423.06
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 430.06,
+        "bottom": 484.86
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 484.86,
+        "bottom": 542.1
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 542.1,
+        "bottom": 584.7
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 584.7,
+        "bottom": 597.83
+      },
+      {
+        "page": 4,
+        "kind": "text",
+        "top": 597.83,
+        "bottom": 610.96
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 58,
+        "bottom": 137.2
+      },
+      {
+        "page": 5,
+        "kind": "figure: b4_grid",
+        "top": 137.2,
+        "bottom": 568.6
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 568.6,
+        "bottom": 596.58
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 596.58,
+        "bottom": 651.38
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 651.38,
+        "bottom": 681.3
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 681.3,
+        "bottom": 747.08
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 747.08,
+        "bottom": 760.2
+      },
+      {
+        "page": 5,
+        "kind": "text",
+        "top": 760.2,
+        "bottom": 773.33
+      }
+    ]
+  },
+  "source_experiments_reused": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "new_training_runs": 0,
+  "new_model_inference": 0,
+  "requirements_revision": "2026-10-10 instructor Q&A",
+  "part_b_final_protocol": "fresh train+validation refits, fixed selected epoch counts, one test pass per final refit",
+  "a2_diagnostics": "original-split seed42, four epochs, train/validation RMSE and R2; distinct from five-seed combined refits",
+  "a1_refit_curve_values": [
+    {
+      "epoch": 1,
+      "train_rmse_sgd": 45851.27220347453,
+      "test_rmse_sgd": 106988.99009493724
+    },
+    {
+      "epoch": 2,
+      "train_rmse_sgd": 43715.67039821496,
+      "test_rmse_sgd": 112693.04936132765
+    },
+    {
+      "epoch": 3,
+      "train_rmse_sgd": 41449.34978833368,
+      "test_rmse_sgd": 103321.11997400191
+    },
+    {
+      "epoch": 4,
+      "train_rmse_sgd": 41239.37012986117,
+      "test_rmse_sgd": 96901.63739707983
+    },
+    {
+      "epoch": 5,
+      "train_rmse_sgd": 39951.38978761673,
+      "test_rmse_sgd": 100720.52938419592
+    },
+    {
+      "epoch": 6,
+      "train_rmse_sgd": 39752.93808273504,
+      "test_rmse_sgd": 97204.88064339165
+    },
+    {
+      "epoch": 7,
+      "train_rmse_sgd": 39397.39687222472,
+      "test_rmse_sgd": 100214.68766854182
+    },
+    {
+      "epoch": 8,
+      "train_rmse_sgd": 39074.751059341645,
+      "test_rmse_sgd": 99668.21172439789
+    }
+  ],
+  "test_epoch_plot_scope": "A1 train/test RMSE explicitly required in brief; Q&A no-test epoch answer applies A2/A3",
+  "builder": "scripts/build_reports.py",
+  "python_executable": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\.venv\\Scripts\\python.exe",
+  "fonts": "Windows Arial regular/bold embedded; plot text embedded as TrueType"
+}

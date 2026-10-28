@@ -1,0 +1,105 @@
+{
+  "status": "passed_current_report_and_submission",
+  "timestamp": "2026-10-12T07:56:00.426921+00:00",
+  "b2_validation_only_loss_and_accuracy": true,
+  "batch_sizes": [
+    {
+      "batch_size": 16,
+      "epochs_completed": 13,
+      "checkpoint_epoch": 13,
+      "minimum_validation_accuracy": 0.8320610687022901,
+      "maximum_validation_accuracy": 0.9790076335877864,
+      "maximum_validation_loss": 0.3596424099825721
+    },
+    {
+      "batch_size": 32,
+      "epochs_completed": 13,
+      "checkpoint_epoch": 13,
+      "minimum_validation_accuracy": 0.7366412213740458,
+      "maximum_validation_accuracy": 0.9713740458015268,
+      "maximum_validation_loss": 0.7610556860916488
+    },
+    {
+      "batch_size": 64,
+      "epochs_completed": 10,
+      "checkpoint_epoch": 6,
+      "minimum_validation_accuracy": 0.8129770992366412,
+      "maximum_validation_accuracy": 0.9713740458015268,
+      "maximum_validation_loss": 0.495359332051896
+    },
+    {
+      "batch_size": 128,
+      "epochs_completed": 9,
+      "checkpoint_epoch": 5,
+      "minimum_validation_accuracy": 0.7423664122137404,
+      "maximum_validation_accuracy": 0.9522900763358778,
+      "maximum_validation_loss": 0.6666444769797434
+    },
+    {
+      "batch_size": 256,
+      "epochs_completed": 20,
+      "checkpoint_epoch": 16,
+      "minimum_validation_accuracy": 0.7423664122137404,
+      "maximum_validation_accuracy": 0.9713740458015268,
+      "maximum_validation_loss": 0.6212736832276555
+    }
+  ],
+  "all_five_series_and_checkpoint_stars_visually_reviewed": true,
+  "actual_stopping_lengths_retained": true,
+  "changed_part_b_output_files": [
+    "part_b/outputs/b2/analysis.md",
+    "part_b/outputs/b2/figures/validation_accuracy.pdf",
+    "part_b/outputs/b2/figures/validation_accuracy.png",
+    "part_b/outputs/b2/figures/validation_loss.pdf",
+    "part_b/outputs/b2/figures/validation_loss.png"
+  ],
+  "b1_b3_experiment_outputs_unchanged": true,
+  "protected_numeric_and_model_artifacts_unchanged": 871,
+  "new_assignment_training_runs": 0,
+  "new_test_set_model_inference": 0,
+  "figure_hashes": {
+    "part_b/outputs/b2/figures/validation_loss.png": "ca0bd3ca75b27aeaa0780e83409a2dccd8a5143c81963c4ee544ee983c6da908",
+    "part_b/outputs/b2/figures/validation_loss.pdf": "0221542ae20dca93cfa0334823e49ea1955056099c558d12dc32b988bdd7fc06",
+    "part_b/outputs/b2/figures/validation_accuracy.png": "224cca879c856f8dac5a8b3fe55cc2f1950beefcbf570fc536b5916f1ea7bddf",
+    "part_b/outputs/b2/figures/validation_accuracy.pdf": "9c69696861749a1330236eacc9431df25d5db51f17c292b161046d3d9a21d1c0",
+    "reports/assets/b2_loss.png": "d0274abe0b384bf804c1e43afbd9283cad7c2af1ddb60b5cf29a762fece4fc21",
+    "reports/assets/b2_loss.pdf": "1043acfa3fae971e5f23011c39c669a7671a4b2a32ff4609e6fabe08b41b2ab2",
+    "reports/assets/b2_accuracy.png": "c0386dd8c0779ef4d1ff10ef1d1d6565aae03b1d1d28f9106a2153c4434c5f4b",
+    "reports/assets/b2_accuracy.pdf": "53ccd6ca6279806a1136685200b1944a24252ef3b32715f92863408c18653da4"
+  },
+  "report_inputs_checked": 78,
+  "protected_pre_FAQ_files_unchanged": 870,
+  "reports_byte_identical_to_submission": true,
+  "report_pages": {
+    "PartA_report_YourName.pdf": 5,
+    "PartB_report_YourName.pdf": 5
+  },
+  "package_entries": {
+    "PartA_codes_YourName.zip": 529,
+    "PartB_codes_YourName.zip": 228
+  },
+  "fresh_extracted_package_tests": {
+    "part_a": 60,
+    "part_b": 64
+  },
+  "package_audit": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261012_155423_205905",
+  "visual_review": "Independent review of four B2 PNGs and parent review of final Part B page 3 passed; readable labels, legends and checkpoints, no clipping",
+  "submission_files": {
+    "PartA_report_YourName.pdf": {
+      "sha256": "37bee3c5f7bd561954977f998325526e58f1888ac0a6b5bc327d201fba7242ff",
+      "bytes": 402315
+    },
+    "PartA_codes_YourName.zip": {
+      "sha256": "6750a8b387bce14471404a2181b3a0358a72199f7be7fe1487981883dccf19f2",
+      "bytes": 21327680
+    },
+    "PartB_report_YourName.pdf": {
+      "sha256": "b2e1aa7f83365075c027e673f4d80a3052ea8b8a037a30e7c030cf8b148729b5",
+      "bytes": 449336
+    },
+    "PartB_codes_YourName.zip": {
+      "sha256": "2ee2eea4293de0bd1fb6c604e3762fcf5e07e03e079df264618b8c30d0ad8614",
+      "bytes": 81107978
+    }
+  }
+}

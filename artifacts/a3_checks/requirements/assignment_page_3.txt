@@ -1,0 +1,47 @@
+ 
+Question A1 (13 marks) 
+ 
+Draw a block diagram of the baseline model and report the number of trainable parameters in it. 
+ 
+Perform hyperparameter optimisation on the baseline by using grid search with the Ray library. 
+Optimise the hidden-layer width over {16, 32, 64, 128, 256} and the same embedding dimension over {2, 
+4, 8, 12, 16} for all four categorical features.  
+ 
+Select the configuration with the lowest best validation RMSE and report the optimal parameter values. 
+For the selected configuration, show the plots of training and validation RMSE curves on the same axes. 
+ 
+Retrain the model selected on combined train and validation sets and evaluate the performance on the 
+test set. Plot the training and testing RMSE curves on the same axes. Report final RMSE and R². 
+ 
+Using the evidences from the hyperparameter-search results and learning curves, discuss and justify the 
+selected model configuration, including whether the model exhibits underfitting or overfitting. 
+ 
+Question A2 (13 marks) 
+ 
+Perform two ablation experiments below on the selected architecture from A1. Train the baseline and 
+both ablations on the combined training and validation partitions of five distinct seeds of your choice. 
+Use the same preprocessing, hyperparameters and number of epochs selected in A1 for all runs. Evaluate 
+each trained model once on the test set and report the mean and standard deviation of test RMSE and R² 
+across the five seeds. 
+ 
+a) Remove all four categorical embedding tables and use only the six continuous features as input. 
+Adjust the first linear layer’s input dimension accordingly and keep the hidden-layer width 
+unchanged. 
+ 
+b) Retain both the categorical and continuous inputs, but replace the hidden ReLU activation with a 
+Sigmoid activation. 
+ 
+Discuss and explain your conclusions from the ablation experiments, supporting with evidences from the 
+results and plots of RMSE and R2. 
+ 
+Question A3 (13 marks) 
+ 
+Evaluate the wide-and-deep architecture in Figure A against the baseline. Both branches receive 
+the same concatenated embeddings and all the features. The linear branch has a single linear layer 
+with one output and the MLP branch uses the selected architecture in Part A1. The final prediction 
+is obtained by a linear sum of the outputs of the two branches: 
+ 
+output = MLP output + 𝜆 × linear output 
+ 
+ 
+ 

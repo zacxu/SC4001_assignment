@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "step": 12,
+  "output_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_b\\outputs\\b3",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060 Ti",
+  "learning_rate": 0.001,
+  "batch_size": 16,
+  "selected_epoch": 9,
+  "history": {
+    "epochs_completed": 13,
+    "selected_epoch": 9,
+    "minimum_loss_epoch": 9,
+    "patience_exhausted": true,
+    "stopping_and_selection_audited": true
+  },
+  "maximum_restored_metric_differences": {
+    "train": 0.0,
+    "validation": 0.0
+  },
+  "full_training_validation_restoration": true,
+  "b1_b2_frozen_hyperparameters_and_lineage_verified": true,
+  "optimizer_and_all_nine_batchnorm_counters_verified": true,
+  "test_metrics_recomputed_from_same_pass_saved_predictions": true,
+  "independent_test_bce_loss": 0.6905348870003889,
+  "independent_test_bce_absolute_difference": 7.410898561488466e-10,
+  "test_prediction_sha256": "5096d0c0b941d53a58e9e7391d72dbe5939ea0abbc81952645fe0fd77f921d4c",
+  "additional_test_model_evaluations": 0,
+  "b1_b2_additional_test_model_evaluations": 0,
+  "selected_run_test_records": 1,
+  "validation_selection_frozen_before_test": true,
+  "complexity": {
+    "b1": {
+      "parameters": 99569,
+      "inference_flops": 39063616,
+      "residual_addition_flops": 0,
+      "profiler_and_independent_shape_formulas_agree": true,
+      "checkpoint_state_unchanged": true,
+      "synthetic_input_only": true
+    },
+    "b2": {
+      "parameters": 18185,
+      "inference_flops": 19464256,
+      "residual_addition_flops": 0,
+      "profiler_and_independent_shape_formulas_agree": true,
+      "checkpoint_state_unchanged": true,
+      "synthetic_input_only": true
+    },
+    "b3": {
+      "parameters": 77169,
+      "inference_flops": 25325696,
+      "residual_addition_flops": 28672,
+      "profiler_and_independent_shape_formulas_agree": true,
+      "checkpoint_state_unchanged": true,
+      "synthetic_input_only": true
+    }
+  },
+  "flops_convention": "one float32 1x1x64x64 image, eval mode; 2 FLOPs per conv/linear MAC plus residual additions",
+  "complexity_profiles_use_synthetic_images_only": true,
+  "all_comparison_rows_match_saved_test_results": true,
+  "all_previous_output_hashes_unchanged": true,
+  "previous_outputs_checked": 884,
+  "all_supplied_file_hashes_unchanged": true,
+  "data_and_preprocessing_hashes_match": true,
+  "tables_and_figure_files_checked": true
+}

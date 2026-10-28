@@ -1,0 +1,2 @@
+model,learning_rate,batch_size,seed,checkpoint_epoch,trainable_parameters,loss,count,accuracy,classification_error,sensitivity,specificity,tp,tn,fp,fn
+B2 VGG-like,0.001,16,42,13,18185,0.5401553111389662,624,0.8525641025641025,0.14743589743589747,1.0,0.6068376068376068,390,142,92,0

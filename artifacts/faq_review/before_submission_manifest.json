@@ -1,0 +1,33 @@
+{
+  "step": 15,
+  "status": "verified_pending_author_and_portal",
+  "name": "YourName",
+  "name_placeholder": true,
+  "submission_files": [
+    "PartA_report_YourName.pdf",
+    "PartA_codes_YourName.zip",
+    "PartB_report_YourName.pdf",
+    "PartB_codes_YourName.zip"
+  ],
+  "files": {
+    "PartA_report_YourName.pdf": {
+      "sha256": "6398ede732fa8c1022b10f290c1b66ba90d5967b34eb1c12f37bc57410cfde8a",
+      "bytes": 386854
+    },
+    "PartA_codes_YourName.zip": {
+      "sha256": "7a5d71eafd3471eb29d32ee210e710584ce05003bbd1f532a98912261b252e39",
+      "bytes": 19954815
+    },
+    "PartB_report_YourName.pdf": {
+      "sha256": "c7661fa709e6c6503b16aeebbf9708950459d19a257355df510e4f49156ce2d5",
+      "bytes": 439610
+    },
+    "PartB_codes_YourName.zip": {
+      "sha256": "fbecf71679d9725142d80d88fb7317c35b04bb7e6cf7748c2590cdc9c9adc9c4",
+      "bytes": 78393819
+    }
+  },
+  "ntulearn_submitted": false,
+  "submission_receipt": null,
+  "verification": "artifacts\\submission_checks\\20261004_023854_958905\\verification.json"
+}

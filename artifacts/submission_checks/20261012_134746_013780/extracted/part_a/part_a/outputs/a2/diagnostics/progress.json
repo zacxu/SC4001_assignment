@@ -1,0 +1,8 @@
+{
+  "variant": "sigmoid",
+  "epoch": 4,
+  "completed_runs": 2,
+  "total_runs": 3,
+  "train_rmse": 34780.0247084009,
+  "validation_rmse": 68030.75179675239
+}

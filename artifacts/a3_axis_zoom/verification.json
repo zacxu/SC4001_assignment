@@ -1,0 +1,72 @@
+{
+  "status": "passed_current_report_and_submission",
+  "comparison_y_limits": {
+    "rmse": [
+      90000.0,
+      115000.0
+    ],
+    "r2": [
+      0.5750000000000001,
+      0.7250000000000001
+    ]
+  },
+  "report_y_limits": {
+    "rmse": [
+      90.0,
+      115.0
+    ],
+    "r2": [
+      0.5750000000000001,
+      0.7250000000000001
+    ]
+  },
+  "all_ten_points_and_mean_sd_endpoints_visible": true,
+  "protected_numeric_and_model_artifacts_unchanged": 871,
+  "changed_a3_output_files": [
+    "part_a/outputs/a3/analysis.md",
+    "part_a/outputs/a3/figures/baseline_comparison.pdf",
+    "part_a/outputs/a3/figures/baseline_comparison.png"
+  ],
+  "new_assignment_training_runs": 0,
+  "new_test_set_model_inference": 0,
+  "date": "2026-10-11",
+  "comparison_figure_hashes": {
+    "part_a/outputs/a3/figures/baseline_comparison.png": "21fbbd0bdb311a2abab026ce0e749c7c0319587075a46bad86aff2b5931feaf9",
+    "part_a/outputs/a3/figures/baseline_comparison.pdf": "918da7fd4dada1ad4f4fc099c4b9886b22421a1fe3322489a6a5cf45ac74c13f"
+  },
+  "report_asset_hashes": {
+    "reports/assets/a3_comparison.png": "f4c50047cddba6ee33cd5d1beba9d4fb45f24b7125d642203d1a71aacf3dd8f6",
+    "reports/assets/a3_comparison.pdf": "b8d6307ad18c398ac86f15ddb7cad8438a925ea0e69c12c216ac2d2d19333083"
+  },
+  "report_inputs_checked": 78,
+  "protected_pre_FAQ_files_unchanged": 874,
+  "reports_byte_identical_to_submission": true,
+  "pages": {
+    "part_a": 5,
+    "part_b": 5
+  },
+  "fresh_extracted_package_tests": {
+    "part_a": 60,
+    "part_b": 64
+  },
+  "package_audit": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\artifacts\\submission_checks\\20261011_234755_174752",
+  "visual_review": "Independent standalone/reportasset PNG review and parent finalreportpage4 review passed; all points/SDendpoints visible; zoom labels/legends readable",
+  "submission_files": {
+    "PartA_report_YourName.pdf": {
+      "sha256": "35cc4c1ed1cf5176b524bc91793f844cb707332f220069dc5b0bdb29c766d6b3",
+      "bytes": 402315
+    },
+    "PartA_codes_YourName.zip": {
+      "sha256": "6750a8b387bce14471404a2181b3a0358a72199f7be7fe1487981883dccf19f2",
+      "bytes": 21327680
+    },
+    "PartB_report_YourName.pdf": {
+      "sha256": "8fedd2013c3d9b79b0e69392ca0d5b6198910ec87d7947b0d2bfde60fc06dcb0",
+      "bytes": 448545
+    },
+    "PartB_codes_YourName.zip": {
+      "sha256": "52342ccbc32547dfffdaa17510b1f84c2b980830630249fd5c1e4e06b2e39184",
+      "bytes": 81495230
+    }
+  }
+}

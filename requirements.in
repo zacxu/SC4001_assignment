@@ -1,0 +1,10 @@
+# Direct dependencies from the supplied lock for Python 3.12 on Windows.
+# CUDA-enabled PyTorch is installed separately from the official wheel index.
+captum==0.9.0
+ipykernel==7.3.0
+matplotlib==3.11.1
+numpy==2.5.2
+pandas==3.0.5
+ray[tune]==2.58.0
+# Document inspection utility used to verify assignment text/figures.
+PyMuPDF==1.28.2

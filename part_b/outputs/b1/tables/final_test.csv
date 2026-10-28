@@ -1,0 +1,2 @@
+model,learning_rate,batch_size,seed,checkpoint_epoch,trainable_parameters,loss,count,accuracy,classification_error,sensitivity,specificity,tp,tn,fp,fn
+B1 AlexNet-like,0.001,128,42,9,99569,0.3556382480340126,624,0.907051282051282,0.09294871794871795,0.9769230769230769,0.7905982905982906,381,185,49,9

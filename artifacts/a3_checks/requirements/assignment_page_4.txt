@@ -1,0 +1,30 @@
+ 
+ 
+ 
+ 
+Figure A. Wide and deep architecture 
+ 
+Find the optimal value of parameter λ in {0, 0.25, 0.5, 1, 2}, keeping the selected A1 
+hyperparameters fixed. 
+ 
+Evaluate the selected wide-and-deep configuration on five different seeds. Report the mean and sample 
+standard deviation of test RMSE and R², with relevant plots, and compare against the A1 baseline 
+results. 
+ 
+Explain the mechanism by which the change could affect optimisation or generalisation, and determine 
+whether the evidence is consistent with that mechanism. Discuss at least one limitation or confound in 
+the comparison. 
+ 
+ 
+Question A4 (6 marks) 
+Use Captum’s FeatureAblation method on the test set to explain the final baseline model from A1 and 
+the wide-and-deep model from A3. Use the same seed to train both models. 
+- 
+For each model, compute the FeatureAblation attribution of each of the ten original input 
+features for every test sample. Then compute the global feature importance score for each 
+feature as the mean absolute attribution across all test samples. 
+- 
+Present the ten resulting feature importance scores in Singapore dollars in a labelled bar plot, 
+ordered from highest to lowest. 
+Report the three most important features for each model. Discuss and compare the results, and identify 
+one limitation of the analysis. 

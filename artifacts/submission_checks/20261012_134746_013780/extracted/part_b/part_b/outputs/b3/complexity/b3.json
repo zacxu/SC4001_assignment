@@ -1,0 +1,905 @@
+{
+  "architecture": "b3",
+  "input_shape": [
+    1,
+    1,
+    64,
+    64
+  ],
+  "output_shape": [
+    1
+  ],
+  "dtype": "float32",
+  "mode": "eval",
+  "profiling_device": "cpu",
+  "torch_version": "2.11.0+cu128",
+  "profiler": "torch.profiler.profile(with_flops=True, record_shapes=True, acc_events=True)",
+  "convention": "one float32 1x1x64x64 image, eval mode; 2 FLOPs per conv/linear MAC plus residual additions",
+  "excluded_operations": [
+    "BatchNorm",
+    "ReLU",
+    "max/average pooling",
+    "bias additions in Linear",
+    "flatten/views",
+    "data normalization/transfers",
+    "sigmoid/threshold",
+    "backward/optimizer"
+  ],
+  "trainable_parameters": 77169,
+  "parameter_breakdown": {
+    "convolution": 76432,
+    "batchnorm_affine": 672,
+    "linear": 65,
+    "other": 0,
+    "total": 77169
+  },
+  "convolution_and_linear_macs": 12648512,
+  "convolution_and_linear_flops": 25297024,
+  "residual_addition_flops": 28672,
+  "inference_flops": 25325696,
+  "profiler_flops": 25325696,
+  "shape_formula_matches_profiler": true,
+  "nonzero_profiler_operators": [
+    {
+      "operator": "aten::conv2d",
+      "flops": 25296896,
+      "calls": 9
+    },
+    {
+      "operator": "aten::add",
+      "flops": 28672,
+      "calls": 3
+    },
+    {
+      "operator": "aten::addmm",
+      "flops": 128,
+      "calls": 1
+    }
+  ],
+  "layers": [
+    {
+      "module": "features.stem.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        1,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        16,
+        64,
+        64
+      ],
+      "macs": 589824,
+      "flops": 1179648,
+      "in_channels": 1,
+      "out_channels": 16,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.stem.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        16,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        16,
+        64,
+        64
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.stem.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        16,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        16,
+        64,
+        64
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.pool",
+      "type": "MaxPool2d",
+      "input_shape": [
+        1,
+        16,
+        64,
+        64
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block16.conv1.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 2359296,
+      "flops": 4718592,
+      "in_channels": 16,
+      "out_channels": 16,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.block16.conv1.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block16.conv1.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block16.conv2.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 2359296,
+      "flops": 4718592,
+      "in_channels": 16,
+      "out_channels": 16,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.block16.conv2.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block16.conv2.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block16.shortcut",
+      "type": "Identity",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block16.add_relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block32.conv1.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 1179648,
+      "flops": 2359296,
+      "in_channels": 16,
+      "out_channels": 32,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.block32.conv1.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block32.conv1.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block32.conv2.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 2359296,
+      "flops": 4718592,
+      "in_channels": 32,
+      "out_channels": 32,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.block32.conv2.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block32.conv2.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block32.shortcut.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 131072,
+      "flops": 262144,
+      "in_channels": 16,
+      "out_channels": 32,
+      "groups": 1,
+      "kernel_size": [
+        1,
+        1
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.block32.shortcut.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block32.shortcut.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block32.add_relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block64.conv1.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "macs": 1179648,
+      "flops": 2359296,
+      "in_channels": 32,
+      "out_channels": 64,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.block64.conv1.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block64.conv1.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block64.conv2.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "macs": 2359296,
+      "flops": 4718592,
+      "in_channels": 64,
+      "out_channels": 64,
+      "groups": 1,
+      "kernel_size": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.block64.conv2.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block64.conv2.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block64.shortcut.conv",
+      "type": "Conv2d",
+      "input_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "macs": 131072,
+      "flops": 262144,
+      "in_channels": 32,
+      "out_channels": 64,
+      "groups": 1,
+      "kernel_size": [
+        1,
+        1
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "bias": false
+    },
+    {
+      "module": "features.block64.shortcut.bn",
+      "type": "BatchNorm2d",
+      "input_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block64.shortcut.relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.block64.add_relu",
+      "type": "ReLU",
+      "input_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "features.average_pool",
+      "type": "AvgPool2d",
+      "input_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "output_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "flatten",
+      "type": "Flatten",
+      "input_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64
+      ],
+      "macs": 0,
+      "flops": 0
+    },
+    {
+      "module": "classifier.output",
+      "type": "Linear",
+      "input_shape": [
+        1,
+        64
+      ],
+      "output_shape": [
+        1,
+        1
+      ],
+      "macs": 64,
+      "flops": 128,
+      "in_features": 64,
+      "out_features": 1,
+      "bias": true
+    }
+  ],
+  "residual_additions": [
+    {
+      "module": "features.block16",
+      "output_shape": [
+        1,
+        16,
+        32,
+        32
+      ],
+      "flops": 16384
+    },
+    {
+      "module": "features.block32",
+      "output_shape": [
+        1,
+        32,
+        16,
+        16
+      ],
+      "flops": 8192
+    },
+    {
+      "module": "features.block64",
+      "output_shape": [
+        1,
+        64,
+        8,
+        8
+      ],
+      "flops": 4096
+    }
+  ],
+  "uncounted_executed_leaf_modules": [
+    "AvgPool2d",
+    "BatchNorm2d",
+    "Flatten",
+    "Identity",
+    "MaxPool2d",
+    "ReLU"
+  ],
+  "zero_flop_profiler_operators": [
+    "aten::_batch_norm_impl_index",
+    "aten::_convolution",
+    "aten::_slow_conv2d_forward",
+    "aten::as_strided",
+    "aten::avg_pool2d",
+    "aten::batch_norm",
+    "aten::clamp_min",
+    "aten::convolution",
+    "aten::copy_",
+    "aten::empty",
+    "aten::empty_like",
+    "aten::expand",
+    "aten::fill_",
+    "aten::flatten",
+    "aten::linear",
+    "aten::max_pool2d",
+    "aten::max_pool2d_with_indices",
+    "aten::native_batch_norm",
+    "aten::relu",
+    "aten::resize_",
+    "aten::resolve_conj",
+    "aten::set_",
+    "aten::squeeze",
+    "aten::t",
+    "aten::thnn_conv2d",
+    "aten::transpose",
+    "aten::view",
+    "aten::zero_",
+    "aten::zeros"
+  ],
+  "synthetic_input_only": true,
+  "source": "https://docs.pytorch.org/docs/2.11/profiler.html"
+}

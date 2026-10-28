@@ -1,0 +1,48 @@
+No broken requirements found.
+...........................B2 refit epoch 1/2: train loss 0.686398, accuracy 57.1429%
+B2 refit epoch 2/2: train loss 0.686102, accuracy 57.1429%
+.....................................
+----------------------------------------------------------------------
+Ran 64 tests in 2.430s
+
+OK
+Saved X-ray data: C:\Users\Admin\Desktop\SC4001 assignment\artifacts\submission_checks\20261011_000730_909885\extracted\part_b\artifacts\package_checks\20261011_000820_472289\prepared
+Training pixel mean=0.5716994212632378; population std=0.1740975398264541
+train: 4708 rows; label counts={0: 1214, 1: 3494}; normalized shape=[4708, 1, 64, 64]
+validation: 524 rows; label counts={0: 135, 1: 389}; normalized shape=[524, 1, 64, 64]
+test: 624 rows; label counts={0: 234, 1: 390}; normalized shape=[624, 1, 64, 64]
+Exact-image overlap: [{'splits': ['train', 'validation'], 'shared_unique_images': 8, 'rows_in_first': 10, 'rows_in_second': 8}, {'splits': ['train', 'test'], 'shared_unique_images': 0, 'rows_in_first': 0, 'rows_in_second': 0}, {'splits': ['validation', 'test'], 'shared_unique_images': 0, 'rows_in_first': 0, 'rows_in_second': 0}]
+Preserved all source rows; label semantics assumed; no test performance evaluated.
+Rebuilt B1 report assets from saved results: C:\Users\Admin\Desktop\SC4001 assignment\artifacts\submission_checks\20261011_000730_909885\extracted\part_b\part_b\outputs\b1
+Rebuilt B2 report assets: C:\Users\Admin\Desktop\SC4001 assignment\artifacts\submission_checks\20261011_000730_909885\extracted\part_b\part_b\outputs\b2
+Rebuilt B3 assets: C:\Users\Admin\Desktop\SC4001 assignment\artifacts\submission_checks\20261011_000730_909885\extracted\part_b\part_b\outputs\b3
+Rebuilt B4 display assets: C:\Users\Admin\Desktop\SC4001 assignment\artifacts\submission_checks\20261011_000730_909885\extracted\part_b\part_b\outputs\b4
+{
+  "part": "part_b",
+  "status": "passed",
+  "package_files_verified": 227,
+  "dependency_pins_verified": 71,
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "venv": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\.venv",
+  "fresh_dependency_installation": false,
+  "tests_passed": 64,
+  "device": "cuda",
+  "prepared_tensors_compared": [
+    "datasets.pt",
+    "preprocessing.pt"
+  ],
+  "synthetic_forward_checkpoints": [
+    "part_b\\outputs\\b1\\refit\\best_model.pt",
+    "part_b\\outputs\\b2\\refit\\best_model.pt",
+    "part_b\\outputs\\b3\\refit\\best_model.pt"
+  ],
+  "exports_regenerated": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+  ],
+  "ray_worker": null,
+  "full_experiment_training_runs": 0,
+  "test_set_model_inference": 0
+}

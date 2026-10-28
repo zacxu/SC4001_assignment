@@ -1,0 +1,60 @@
+{
+  "created_at_singapore": "2026-10-03T12:26:52.111826+08:00",
+  "a1_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\a1",
+  "prepared_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\data",
+  "frozen_a1_settings": {
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "learning_rate": 0.01,
+    "batch_size": 512,
+    "E_val": 6,
+    "E_star": 4,
+    "evaluation_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "refit_preprocessing": "refit/preprocessing.pt",
+    "refit_checkpoint": "refit/best_model.pt",
+    "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+    "test_assisted_epoch_budget": true
+  },
+  "a1_preprocessing_sha256": "d68dc54a1b704675c335451c3bcca039efd6519224ae458567fadb9857b16305",
+  "a1_frozen_settings_sha256": "5bf6ae9b5c3d8c93bd747d2318b1b2a04e97f3cf16d24ecf710df8609afcf3ed",
+  "prepared_refit_tensors_sha256": "1f14d421c16051b010c354cd7525a933a39713529e350b4fc63bd0b29f0f9903",
+  "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+  "variants": [
+    "baseline",
+    "continuous_only",
+    "sigmoid"
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "training": {
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "batch_size": 512,
+    "mode": "fixed_refit",
+    "epochs": 4,
+    "monitoring_loaders": null
+  },
+  "training_rows": 116427,
+  "test_rows": 26702,
+  "protocol": "Fresh combined-data runs; exactly E* epochs; one final test evaluation each.",
+  "loader_workers": 0,
+  "torch_cpu_threads": 4,
+  "device": "cuda",
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "device": "NVIDIA GeForce RTX 3060 Ti"
+  }
+}

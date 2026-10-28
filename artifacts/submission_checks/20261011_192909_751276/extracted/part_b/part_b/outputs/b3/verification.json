@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "protocol": "fresh_combined_train_validation_fixed_selected_epochs",
+  "epochs": 9,
+  "combined_training_rows": 5232,
+  "test_rows": 624,
+  "test_evaluations": 1,
+  "saved_prediction_metrics_match": true,
+  "new_model_inference": 0,
+  "selection_checkpoint_unchanged": true,
+  "fresh_final_checkpoint_sha256": "7d2567d04391fe1032f24b964133826791480c2d1d0590e2d26a955b5d265ec1",
+  "architecture": "b3",
+  "selection_runs_checked": 1
+}

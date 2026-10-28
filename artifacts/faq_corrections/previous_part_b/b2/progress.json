@@ -1,0 +1,7 @@
+{
+  "stage": "completed",
+  "completed_trials": 5,
+  "total_trials": 5,
+  "selected_batch_size": 16,
+  "learning_rate": 0.001
+}

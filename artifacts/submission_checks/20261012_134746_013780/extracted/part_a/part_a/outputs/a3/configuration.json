@@ -1,0 +1,68 @@
+{
+  "created_at_singapore": "2026-10-03T13:03:56.704106+08:00",
+  "prepared_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\data",
+  "a1_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\a1",
+  "a2_directory": "C:\\Users\\Admin\\Desktop\\SC4001 assignment\\part_a\\outputs\\a2",
+  "frozen_a1_settings": {
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "learning_rate": 0.01,
+    "batch_size": 512,
+    "E_val": 6,
+    "E_star": 4,
+    "evaluation_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "refit_preprocessing": "refit/preprocessing.pt",
+    "refit_checkpoint": "refit/best_model.pt",
+    "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+    "test_assisted_epoch_budget": true
+  },
+  "lambda_grid": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "selection_seed": 42,
+  "tie_break_rule": "lowest best validation RMSE, then smaller lambda",
+  "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+  "input_hashes": {
+    "a1_frozen": "5bf6ae9b5c3d8c93bd747d2318b1b2a04e97f3cf16d24ecf710df8609afcf3ed",
+    "a1_refit_preprocessing": "d68dc54a1b704675c335451c3bcca039efd6519224ae458567fadb9857b16305",
+    "a2_summary": "14450152839d9bc1ae938131ac9afca946b0ca2911e01112fbde267d5fc84d4f",
+    "selection_data": "fe8ee6ded39593841d71437c0823d4f4db8184479b3d671420d75948d9131026",
+    "refit_data": "1f14d421c16051b010c354cd7525a933a39713529e350b4fc63bd0b29f0f9903"
+  },
+  "training": {
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "weight_decay": 0.0,
+    "batch_size": 512,
+    "selection_max_epochs": 20,
+    "patience": 4,
+    "min_delta": 0.0001,
+    "refit_mode": "fixed_refit",
+    "refit_epochs": 4
+  },
+  "rows": {
+    "selection_train": 87370,
+    "validation": 29057,
+    "refit_train": 116427,
+    "test": 26702
+  },
+  "device": "cuda",
+  "loader_workers": 0,
+  "torch_cpu_threads": 4,
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "device": "NVIDIA GeForce RTX 3060 Ti"
+  }
+}

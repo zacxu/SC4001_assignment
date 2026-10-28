@@ -1,0 +1,267 @@
+PAGE 1
+                         Programming Assignment
+
+                  SC4001 Neural Networks and Deep Learning
+
+                            Deadline: October 12, 2026
+
+
+●   This assignment is to be done individually. You may discuss the questions with others but your
+    submission must be your own unique work.
+●  Complete both parts A and B; and submit your solutions to Part A and Part B separately: reports
+    in .pdf files and codes in .zip files as follows:
+                     PartA_report_YourName.pdf, PartA_codes_YourName.zip
+                     PartB_report_YourName.pdf, PartB_codes_YourName.zip
+    via NTULearn before the deadline.
+●  You will be using 3-way data split method for parameter estimation and model evaluation. Use
+    the Adam optimizer for training and early stopping to terminate training throughout the
+    assignment. Train each model for a maximum of 20 epochs with a patience of 4 epochs and a
+   minimum improvement of 1e-4.
+●  Codes need to be in python (.py) or python notebooks (.ipynb), tidied, properly labelled, and ready
+    to run. Students are responsible for ensuring that their codes run from the beginning to end. A
+   README file must include environments, dependencies, seeds, and commands to run the codes.
+●  The assessment is based on the reports submitted and the codes will be used only for verification
+    purposes. The reports must be concise, include answers only to the questions asked, and less than
+   6 pages each. 10 marks of the assignment are reserved for the presentation of the solutions.
+●  Late submissions will be penalized: 5% for each day up to three days.
+●  Generative AI Declaration must be included at the beginning of your report. If any GenAI tools
+     (e.g., ChatGPT, GitHub Copilot, Claude, Gemini) were used at any stage for code generation,
+    debugging, writing, or interpretation, state which tool(s), for what purpose, and how the output
+   was verified. Undisclosed use of GenAI will be treated as an academic integrity violation.
+●  You are requested to post general queries on the assignment on the Discussion Board. Please
+    email any questions specific to you to cx4042@e.ntu.edu.sg.
+●  TAs for this assignment are Ms. Yige Yan, Mr. Ajith Santhisenan, Mr. Deepank Girish, and Ms. Tiara
+    Natasha.
+
+PAGE 2
+Part A: Regression Problem
+
+In this part, you will develop deep neural networks for predicting Singapore HDB resale prices. A complete
+PyTorch baseline baseline.py that runs end-to-end, has been provided. We will use publicly available data
+on HDB flat prices in Singapore, obtained from data.gov.sg. The original dataset is combined with other
+datasets to include more informative features and they are given in the ‘hdb_price_prediction.csv’ file.
+Open housing_baseline_data.zip and follow the README instructions to extract the source and data files.
+
+Use the data gathered from 2017-2020 for training, in 2021 for validation and model selection, and in
+2022 for final testing.
+
+ Feature            Type             Explanation
+ month                Categorical (Int)  Which month the resale transaction was performed.
+ year                  Categorical (Int)  Which year the resale transaction was performed. Used for the data
+                                                      split, not as a model input.
+ town                  Categorical (Str)  An area zoned for public housing. Generally, a town consists of a self-
+                                               sufficient group of HDB flats with amenities and a town centre for
+                                          that town. Each town has a population of around 50,000 - 250,000.
+ full_address           Categorical (Str)  Address of the flat. Not used for modelling as other metrics derived
+                                    from it are used instead (dist_to_nearest_stn, dist_to_dhoby).
+ nearest_stn           Categorical (Str)   Closest MRT station to the flat. Not used for modelling as other
+                                         metrics derived from it are used instead (degree_centrality,
+                                            eigenvector_centrality).
+ dist_to_nearest_stn   Numeric          Distance from the flat to the nearest MRT station, in kilometres. Flats
+                                      near stations tend to fetch higher prices.
+ dist_to_dhoby       Numeric          Distance from the flat to Dhoby Ghaut MRT station, in kilometres.
+                                 Dhoby Ghaut is chosen as it is centrally located. Flats in the Central
+                                         region are typically more costly.
+ degree_centrality    Numeric       A metric (computed for the MRT station closest to the flat) that
+                                        represents the degree of the node, i.e., how many edges are
+                                     connected to the node. (Rationale: flats near ‘interchange’ stations -
+                                            stations with more than 1 MRT line - offer more transport options
+                                   and thus have higher value. Stations in the central areas tend to
+                                    have > 1 MRT line too).
+ eigenvector_central   Numeric       A more global metric than degree_centrality as it captures
+  ity                                 neighbourhood information. When the eigenvector centrality of a
+                                  node is high, the nodes adjacent to it are likely to have high values
+                                           too.
+ flat_model_type      Categorical (Str)  Type of flat. See this reference for more details. You’re not expected
+                                         to understand all flat types.
+ remaining_lease_ye   Numeric       HDB flats are originally sold by HDB with a 99-year lease. Generally,
+ ars                                   with other variables held constant, flats with higher remaining lease
+                                                  will fetch a higher value. The original data was stored in years and
+                                  months – this was turned into a scalar by converting it into months
+                                   and dividing by 12.
+ floor_area_sqm      Numeric           Size of the flat in square meters. Bigger flats generally fetch higher
+                                              prices.
+ storey_range          Categorical (Str)  Which floor the flat is at. For the same HDB block, flats on higher
+                                             floors typically fetch higher prices.
+ resale_price         Numeric           Flat prices in Singapore Dollars. Target to predict.
+
+PAGE 3
+Question A1 (13 marks)
+
+Draw a block diagram of the baseline model and report the number of trainable parameters in it.
+
+Perform hyperparameter optimisation on the baseline by using grid search with the Ray library.
+Optimise the hidden-layer width over {16, 32, 64, 128, 256} and the same embedding dimension over {2,
+4, 8, 12, 16} for all four categorical features.
+
+Select the configuration with the lowest best validation RMSE and report the optimal parameter values.
+For the selected configuration, show the plots of training and validation RMSE curves on the same axes.
+
+Retrain the model selected on combined train and validation sets and evaluate the performance on the
+test set. Plot the training and testing RMSE curves on the same axes. Report final RMSE and R².
+
+Using the evidences from the hyperparameter-search results and learning curves, discuss and justify the
+selected model configuration, including whether the model exhibits underfitting or overfitting.
+
+Question A2 (13 marks)
+
+Perform two ablation experiments below on the selected architecture from A1. Train the baseline and
+both ablations on the combined training and validation partitions of five distinct seeds of your choice.
+Use the same preprocessing, hyperparameters and number of epochs selected in A1 for all runs. Evaluate
+each trained model once on the test set and report the mean and standard deviation of test RMSE and R²
+across the five seeds.
+
+a)  Remove all four categorical embedding tables and use only the six continuous features as input.
+    Adjust the first linear layer’s input dimension accordingly and keep the hidden-layer width
+   unchanged.
+
+b)  Retain both the categorical and continuous inputs, but replace the hidden ReLU activation with a
+    Sigmoid activation.
+
+Discuss and explain your conclusions from the ablation experiments, supporting with evidences from the
+results and plots of RMSE and R2.
+
+
+Question A3 (13 marks)
+
+ Evaluate the wide-and-deep architecture in Figure A against the baseline. Both branches receive
+ the same concatenated embeddings and all the features. The linear branch has a single linear layer
+ with one output and the MLP branch uses the selected architecture in Part A1. The final prediction
+  is obtained by a linear sum of the outputs of the two branches:
+
+                          output = MLP output + 𝜆 × linear output
+
+PAGE 4
+                               Figure A. Wide and deep architecture
+
+ Find the optimal value of parameter λ in {0, 0.25, 0.5, 1, 2}, keeping the selected A1
+ hyperparameters fixed.
+
+Evaluate the selected wide-and-deep configuration on five different seeds. Report the mean and sample
+standard deviation of test RMSE and R², with relevant plots, and compare against the A1 baseline
+results.
+
+Explain the mechanism by which the change could affect optimisation or generalisation, and determine
+whether the evidence is consistent with that mechanism. Discuss at least one limitation or confound in
+the comparison.
+
+
+Question A4 (6 marks)
+
+Use Captum’s FeatureAblation method on the test set to explain the final baseline model from A1 and
+the wide-and-deep model from A3. Use the same seed to train both models.
+
+     -   For each model, compute the FeatureAblation attribution of each of the ten original input
+        features for every test sample. Then compute the global feature importance score for each
+        feature as the mean absolute attribution across all test samples.
+     -   Present the ten resulting feature importance scores in Singapore dollars in a labelled bar plot,
+       ordered from highest to lowest.
+
+Report the three most important features for each model. Discuss and compare the results, and identify
+one limitation of the analysis.
+
+PAGE 5
+  Part B: Classification Problem
+
+  In this part, we try to classify chest X-ray images from healthy subjects and pneumonia patients. The
+  dataset is provided in chestxray_binary_64.npz. The dataset is already partitioned into training,
+  validation, and test partitions.
+
+ The grey-level image intensities are to be scaled to [0, 1] and then normalized using the mean and
+  standard deviation evaluated on the training set.
+
+  Parts B1–B3 involve building the CNN architectures shown in Figure B. Use batch normalization and
+ ReLU activation after each convolutional layer. Use the bias in the fully connected layers, but do not use
+  bias in convolutional layers.
+
+
+        input                                 input                                input
+
+   5×5 conv, 16                   3×3 conv, 8                   3×3 conv, 16
+
+                                                      max pool, /2                                3×3 conv, 8   max pool, /2
+                                                            3×3 conv, 16
+                            max pool, /2
+   5×5 conv, 32
+                                                            3×3 conv, 16
+                                3×3 conv, 16
+   max pool, /2                                   +
+                                3×3 conv, 16
+                                                           3×3 conv, 32, /2   3×3 conv, 64
+                                                                                   1×1 conv, 32, /2
+                            max pool, /2                   3×3 conv, 32
+   max pool, /2
+                                3×3 conv, 32               +
+avg pool, output 4×4
+                                                           3×3 conv, 64, /2                                3×3 conv, 32
+                                                                                   1×1 conv, 64, /2
+         fc, 64                                                  3×3 conv, 64
+                            max pool, /2
+                                            +
+         fc, 32                   avg pool, output 1×1
+                                                            avg pool, output 1×1
+
+          fc, 1                                        fc, 1                                                                                                    fc, 1
+
+        (B1)                        (B2)                          (B3)
+
+  Figure B. (B1) AlexNet like architecture, (B2) VGG like architecture, and (B3). ResNet like architecture. All
+  the layers use ReLU activation function including after residual addition ⊕. All convolutional layers use
+ BatchNorm and SAME padding. Layers indicating /2 have a stride of two and all other layers have stride
+  of 1. Dropout = 0.5 is applied only in the hidden fully-connected (fc) layers in B1 architecture.
+
+PAGE 6
+Question B1 (13 marks)
+
+Implement and train an AlexNet-like architecture shown in Figure B1. Use a batch size of 128 and train
+the network with learning rates from {1e-5, 1e-4, 1e-3, 1e-2, 1e-1}.
+
+Plot validation (i) loss and (ii) accuracy against epochs for the five learning rates in two separate figures.
+
+Present a table containing the learning rate, best epoch, validation loss, validation classification error (1 −
+accuracy), sensitivity, and specificity.
+
+Select the optimal learning rate based on the lowest validation classification error. Support your decision
+using the reported results, explain what the curves show about convergence, and discuss why sensitivity
+and specificity are also needed to interpret model performance.
+
+Evaluate the final model once on the test set and report its accuracy, sensitivity, and specificity.
+
+
+Question B2 (13 marks)
+In this question, you will determine the optimal batch size for a VGG-like architecture shown in Figure B2.
+Use the best learning rate found in Part B1 and train the network with batch sizes from {16, 32, 64, 128,
+256}.
+
+Plot validation (i) loss and (ii) accuracy against epochs for the five batch sizes in two separate figures.
+
+Present a table containing the batch size, best epoch, validation loss, validation classification error (1 −
+accuracy), sensitivity, and specificity.
+
+Select the optimal batch size based on the lowest validation classification error. Explain the reasons for
+your selection using the reported results.
+
+Evaluate the final model once on the test set and report its accuracy, sensitivity, and specificity.
+
+
+Question B3 (13 marks)
+In this question, you will build for a compact ResNet-like architecture shown in Figure B3. Use the best
+learning rate obtained in part B1 and batch size in part B2 to train the network.
+
+Report the accuracy, sensitivity, and specificity of the model.
+
+Compare the architectures developed in B1-B3 in a table containing accuracies, sensitivities,
+specificities, classification error, number of learnable parameters, and floating-point operations. State
+the pros and cons of different architectures.
+
+
+Question B4 (6 marks)
+In pneumonia cases, chest X-rays show abnormal white and cloudy patches. In this question, we explore
+if XAI methods can identify these patches by using Grad-CAM technique. Grad-GAM is available in
+Captum package in Pytorch.
+
+PAGE 7
+Select randomly FIVE representative X-rays from pneumonia patients. Implement Grad-CAM on
+architectures developed in B1-B3.
+
+Overlay Grad-CAM heatmaps on X-ray images and compare the results.

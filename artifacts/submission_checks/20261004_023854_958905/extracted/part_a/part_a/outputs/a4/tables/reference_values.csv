@@ -1,0 +1,11 @@
+feature,kind,reference_raw,reference_encoded,training_mode_count,rule
+month,categorical,7,7.0,11520.0,2017-2021 training mode; smallest encoded ID breaks ties
+town,categorical,SENGKANG,21.0,9853.0,2017-2021 training mode; smallest encoded ID breaks ties
+flat_model_type,categorical,"4 ROOM, Model A",19.0,28725.0,2017-2021 training mode; smallest encoded ID breaks ties
+storey_range,categorical,04 TO 06,2.0,26932.0,2017-2021 training mode; smallest encoded ID breaks ties
+dist_to_nearest_stn,continuous,0.8154776096343994,0.0,,saved 2017-2021 training mean (standardized zero)
+dist_to_dhoby,continuous,11.163990020751953,0.0,,saved 2017-2021 training mean (standardized zero)
+degree_centrality,continuous,0.0174986831843853,0.0,,saved 2017-2021 training mean (standardized zero)
+eigenvector_centrality,continuous,0.00660629291087389,0.0,,saved 2017-2021 training mean (standardized zero)
+remaining_lease_years,continuous,74.89581298828125,0.0,,saved 2017-2021 training mean (standardized zero)
+floor_area_sqm,continuous,97.8547134399414,0.0,,saved 2017-2021 training mean (standardized zero)

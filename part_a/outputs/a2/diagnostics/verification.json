@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "training_runs": 3,
+  "epochs_per_run": 4,
+  "training_rows_per_epoch": 87370,
+  "validation_rows_per_epoch": 29057,
+  "test_forward_passes": 0,
+  "test_metrics_files": 0,
+  "preprocessing_fit_years": [
+    2017,
+    2018,
+    2019,
+    2020
+  ],
+  "artifact_sha256": {
+    "configuration.json": "2dbebd6a75c239fe43030c95ee911d5871778e31712945ef492708369217226f",
+    "preprocessing.pt": "cbf236667dc98201a529f75e7266356fc386d36937bf0d06d83e35289caec151",
+    "runs/baseline/seed_42/history.csv": "629f4328f95333db2d017cc90d5ee60e2e65486285d098956a1b7ee2120a9329",
+    "runs/baseline/seed_42/history.jsonl": "e1abbb43c78da21f4cdc5208f9c1e6402d70f12c7784f1c0a71b24e0f09cf20b",
+    "runs/baseline/seed_42/best_model.pt": "e6a750397a0b6e0b436a0e0aacd7a22a04efb8ea69d52c7aebd76a77563218b8",
+    "runs/baseline/seed_42/preprocessing.pt": "cbf236667dc98201a529f75e7266356fc386d36937bf0d06d83e35289caec151",
+    "runs/continuous_only/seed_42/history.csv": "0037839ab37d471e2196dcda694e4c95537fd28f3c394c986cf590597d5e2ed4",
+    "runs/continuous_only/seed_42/history.jsonl": "9865ffcae929599577ca4643c55c3677d2bd508ada987253e9a52a4e83262c28",
+    "runs/continuous_only/seed_42/best_model.pt": "710d3bc2dabf3bbf40258ac3e29c8ffd99ca7d6f30037f35461f2b170d9ffea8",
+    "runs/continuous_only/seed_42/preprocessing.pt": "cbf236667dc98201a529f75e7266356fc386d36937bf0d06d83e35289caec151",
+    "runs/sigmoid/seed_42/history.csv": "2481b2de96e24bf4df36a1478016aaa78a56e27d7abb20e0c7b4565f0d730429",
+    "runs/sigmoid/seed_42/history.jsonl": "03eab9146d70c1b9c89205e24e1ada02eefde5fc240859373d0afb7e8878ad61",
+    "runs/sigmoid/seed_42/best_model.pt": "8507ea8605ebf4712f7f94f0d83b9a50cb91372fbbb6557ddcd37a358e93a531",
+    "runs/sigmoid/seed_42/preprocessing.pt": "cbf236667dc98201a529f75e7266356fc386d36937bf0d06d83e35289caec151",
+    "figures/categorical_epoch_curves.png": "749f413a3833977befcb48158b33b27cd640484aa051c3997e41cf9814c81c5e",
+    "figures/categorical_epoch_curves.pdf": "1c173a21c862660db654c1922d67d34b6185eb8919a5c51d45d13fdb5f640974",
+    "figures/activation_epoch_curves.png": "2ad40c4878948982cad07cb9d7b5eb3c463311651793dcf21cfd73c7aca33963",
+    "figures/activation_epoch_curves.pdf": "d291b3e497f01dafc763ec8ed4192388a64f49f9334f7090530b72282e90a9e4"
+  },
+  "validation_checkpoint_role": "diagnostic evidence only; never used in final five-seed results"
+}

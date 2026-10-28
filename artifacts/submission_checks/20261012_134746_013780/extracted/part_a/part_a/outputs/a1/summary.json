@@ -1,0 +1,80 @@
+{
+  "status": "completed",
+  "default_baseline": {
+    "hidden_width": 64,
+    "embedding_dimension": 8,
+    "input_width": 38,
+    "trainable_parameters": 3505,
+    "best_epoch": 4,
+    "epochs_completed": 8,
+    "stopped_early": true,
+    "train_rmse": 34973.84526498537,
+    "train_r2": 0.9485717774743812,
+    "validation_rmse": 62109.01420186397,
+    "validation_r2": 0.8541684408023031,
+    "elapsed_seconds": 17.937956300000224,
+    "peak_allocated_gpu_mib": 65.65771484375,
+    "device": "NVIDIA GeForce RTX 3060 Ti",
+    "run_directory": "grid\\h064_d08\\training",
+    "checkpoint": "grid\\h064_d08\\training\\best_model.pt",
+    "ray_checkpoint_registered": true
+  },
+  "selected": {
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "input_width": 22,
+    "trainable_parameters": 7065,
+    "best_epoch": 6,
+    "epochs_completed": 10,
+    "stopped_early": true,
+    "train_rmse": 34372.576805355966,
+    "train_r2": 0.950324879644564,
+    "validation_rmse": 58627.1026186996,
+    "validation_r2": 0.8700611226499008,
+    "elapsed_seconds": 24.24640349999754,
+    "peak_allocated_gpu_mib": 67.1650390625,
+    "device": "NVIDIA GeForce RTX 3060 Ti",
+    "run_directory": "grid\\h256_d04\\training",
+    "checkpoint": "grid\\h256_d04\\training\\best_model.pt",
+    "ray_checkpoint_registered": true
+  },
+  "E_val": 6,
+  "E_star": 4,
+  "refit_epochs_completed": 8,
+  "refit_stopped_early": true,
+  "refit_checkpoint": "refit/best_model.pt",
+  "refit_model_config": {
+    "architecture": "four_embedding_mlp",
+    "hidden_width": 256,
+    "embedding_dimension": 4,
+    "cardinalities": [
+      13,
+      27,
+      44,
+      18
+    ],
+    "continuous_features": 6,
+    "input_width": 22,
+    "normalization": "LayerNorm",
+    "activation": "ReLU",
+    "output": "standardized_price",
+    "trainable_parameters": 7065
+  },
+  "final_test_metrics": {
+    "loss": 0.3705647119992896,
+    "count": 26702,
+    "rmse": 96901.63739707983,
+    "r2": 0.6760821807005687
+  },
+  "refit_selected_train_metrics": {
+    "loss": 0.06711596936481247,
+    "count": 116427,
+    "rmse": 41239.37012986117,
+    "r2": 0.9328840208468957
+  },
+  "test_assisted_stopping": true,
+  "test_independence_limitation": "The 2022 test partition selects the A1 stopping checkpoint; its score is not an untouched holdout estimate. The A2/A3 epoch budget inherits this test-assisted selection.",
+  "source_sha256": "6879f9f0484d390150a4ccf10d5f1f53894de62fb3a2e308d305a0145a53e42c",
+  "seed": 42,
+  "elapsed_seconds": 736.3288777999987
+}

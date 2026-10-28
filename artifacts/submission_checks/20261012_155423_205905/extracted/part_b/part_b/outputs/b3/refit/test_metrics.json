@@ -1,0 +1,17 @@
+{
+  "checkpoint_epoch": 9,
+  "seed": 42,
+  "test_assisted_stopping": false,
+  "metrics": {
+    "loss": 0.8239933579969101,
+    "count": 624,
+    "accuracy": 0.8108974358974359,
+    "classification_error": 0.1891025641025641,
+    "sensitivity": 1.0,
+    "specificity": 0.49572649572649574,
+    "tp": 390,
+    "tn": 116,
+    "fp": 118,
+    "fn": 0
+  }
+}

@@ -1,0 +1,4 @@
+{"epoch": 1, "train_loss_online": 0.13813867010898348, "train_loss": 0.08278975804998007, "train_count": 116427, "train_rmse": 45802.31073675548, "train_r2": 0.9172102328385955, "epoch_seconds": 2.749499300000025, "checkpoint_selected": false}
+{"epoch": 2, "train_loss_online": 0.07816613593681908, "train_loss": 0.07432729098847465, "train_count": 116427, "train_rmse": 43398.35124414661, "train_r2": 0.9256727021424725, "epoch_seconds": 2.618109300005017, "checkpoint_selected": false}
+{"epoch": 3, "train_loss_online": 0.07149716641383741, "train_loss": 0.06745587983842874, "train_count": 116427, "train_rmse": 41343.666532967385, "train_r2": 0.9325441123172202, "epoch_seconds": 2.7961035999760497, "checkpoint_selected": false}
+{"epoch": 4, "train_loss_online": 0.06761080032718776, "train_loss": 0.06837545091694852, "train_count": 116427, "train_rmse": 41624.514382815636, "train_r2": 0.931624542823949, "epoch_seconds": 2.8391354999912437, "checkpoint_selected": true}

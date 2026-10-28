@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "step": 13,
+  "python_venv_isolated": true,
+  "python_sources_parsed": 5,
+  "discovered_tests": 96,
+  "local_markdown_links_checked": 206,
+  "comparison_pdf_pages": 1,
+  "pdf_contains_five_ids_and_fifteen_model_titles": true,
+  "png_dimensions": [
+    2483,
+    3167
+  ],
+  "attribution_artifact_hash_unchanged_after_export": true,
+  "previous_outputs_unchanged": 922,
+  "supplied_files_unchanged": 12,
+  "genai_log_contiguous_data_rows": 13,
+  "next_step": 14
+}

@@ -1,0 +1,577 @@
+{
+  "format_version": 1,
+  "source_name": "chestxray_binary_64.npz",
+  "source_sha256": "55ab6e2c7167c451c3bbaa47727ecf810fc2d6285e0d8090a1078c67cbfa3cd8",
+  "preprocessing": {
+    "format_version": 1,
+    "normalization": "training_pixel_mean_and_population_std_after_dividing_by_255",
+    "mean": 0.5716994212632378,
+    "std": 0.17409753982645407,
+    "std_correction": 0,
+    "reduction_dtype": "float64",
+    "transformation_dtype": "float32",
+    "input_dtype": "uint8",
+    "input_shape": [
+      64,
+      64
+    ],
+    "output_shape": [
+      1,
+      64,
+      64
+    ],
+    "pixel_divisor": 255.0,
+    "fit_partition": "train",
+    "fit_row_count": 4708,
+    "fit_pixel_count": 19283968,
+    "class_mapping": {
+      "0": "healthy",
+      "1": "pneumonia"
+    },
+    "class_mapping_status": "assumed_not_archive_metadata"
+  },
+  "partitions": {
+    "train": {
+      "rows": 4708,
+      "npz_prefix": "train",
+      "class_counts": {
+        "0": 1214,
+        "1": 3494
+      },
+      "positive_fraction": 0.7421410365335599,
+      "raw_dtype": "uint8",
+      "raw_shape": [
+        4708,
+        64,
+        64
+      ],
+      "raw_pixel_min": 0,
+      "raw_pixel_max": 255,
+      "normalized_shape": [
+        4708,
+        1,
+        64,
+        64
+      ],
+      "normalized_dtype": "float32",
+      "normalized_pixel_mean": -1.1488688371942971e-07,
+      "normalized_pixel_population_std": 1.0000000183060078,
+      "source_row_order_preserved": true
+    },
+    "validation": {
+      "rows": 524,
+      "npz_prefix": "val",
+      "class_counts": {
+        "0": 135,
+        "1": 389
+      },
+      "positive_fraction": 0.7423664122137404,
+      "raw_dtype": "uint8",
+      "raw_shape": [
+        524,
+        64,
+        64
+      ],
+      "raw_pixel_min": 0,
+      "raw_pixel_max": 255,
+      "normalized_shape": [
+        524,
+        1,
+        64,
+        64
+      ],
+      "normalized_dtype": "float32",
+      "normalized_pixel_mean": -0.015728716647941413,
+      "normalized_pixel_population_std": 1.0034279260568695,
+      "source_row_order_preserved": true
+    },
+    "test": {
+      "rows": 624,
+      "npz_prefix": "test",
+      "class_counts": {
+        "0": 234,
+        "1": 390
+      },
+      "positive_fraction": 0.625,
+      "raw_dtype": "uint8",
+      "raw_shape": [
+        624,
+        64,
+        64
+      ],
+      "raw_pixel_min": 0,
+      "raw_pixel_max": 255,
+      "normalized_shape": [
+        624,
+        1,
+        64,
+        64
+      ],
+      "normalized_dtype": "float32",
+      "normalized_pixel_mean": -0.045668987925107166,
+      "normalized_pixel_population_std": 1.0073932815551692,
+      "source_row_order_preserved": true
+    }
+  },
+  "duplicates": {
+    "method": "SHA256 of exact uint8 64x64 pixel bytes; no perceptual matching",
+    "within_split_extra_copies": {
+      "train": 18,
+      "validation": 0,
+      "test": 3
+    },
+    "cross_split": [
+      {
+        "splits": [
+          "train",
+          "validation"
+        ],
+        "shared_unique_images": 8,
+        "rows_in_first": 10,
+        "rows_in_second": 8
+      },
+      {
+        "splits": [
+          "train",
+          "test"
+        ],
+        "shared_unique_images": 0,
+        "rows_in_first": 0,
+        "rows_in_second": 0
+      },
+      {
+        "splits": [
+          "validation",
+          "test"
+        ],
+        "shared_unique_images": 0,
+        "rows_in_first": 0,
+        "rows_in_second": 0
+      }
+    ],
+    "conflicting_label_groups": 0,
+    "repeated_image_groups": [
+      {
+        "pixel_sha256": "df9063a0c19e5e8179b5d4e0b21fa36f1c2424f09a253851cc5f42ab5b51a0eb",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 29,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 3365,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "3d00bfe9df4b79ea966edcccf542c4da746582d32ba08263b2720751620aee5c",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 97,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 4422,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "721e6e1d89724f308699f69eb9a91d6c5adabcf7b7ecb29f3ac97e199e73e82f",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 226,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 1366,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "5790dcb551a925bae75947973c61aac091da25c3e378e96bddd8857104c9843f",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 289,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 3170,
+            "label": 1
+          },
+          {
+            "split": "validation",
+            "row_id": 172,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "faae9e4a99b22cd112b1b26253c78e7562310a76b5ccdf3105377aea493a8f10",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 662,
+            "label": 1
+          },
+          {
+            "split": "validation",
+            "row_id": 236,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "dd83d36dbf68f0eb26210bb2edd8bc33c35b448f25f9bfb809f3957ac75d1338",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 779,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 3781,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "442da0592ba7fdb0d1bc16b708872074b38dbdc85127c69d4c2467e1123f0b4b",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 782,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 2322,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "46b725e65c2c7c4ce7ae32b3eb37056a1803db5fda9cac59939578fc4e91b6be",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 998,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 3655,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "357e0e5f15ec584de0c28d53bf0c3172ab9b3f0de35a74ce08565275eb8cbe90",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 1138,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 4293,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "551465cd964627315b1ab006b75cc7ce8f1a711c834c4b40a82511c9e6ea395b",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 1295,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 4122,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "62e754d34711b8314a90da7a7d65295d0de212bf1da44ee3a4bcb8fb83b08de8",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 1327,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 2254,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "f53ce23efdc8c1313d39311fe6e9889c8736c673710c4e1d6cdc547843d17a9a",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 1440,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 3874,
+            "label": 1
+          },
+          {
+            "split": "validation",
+            "row_id": 253,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "d24663f31092349963328fae017e37b2e2e1d10221c20bc2bc053ed040605f07",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 1690,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 4590,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "84dfaf81fdfb331a63a180f730bede30af4db41684b0b8309a4ebc3e942cf06d",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 1834,
+            "label": 1
+          },
+          {
+            "split": "validation",
+            "row_id": 473,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "aa038ec3f336d3c027f2e1c05ec3bb2f7a326f55241a82ef7a232e5a0600841f",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 1862,
+            "label": 0
+          },
+          {
+            "split": "train",
+            "row_id": 4204,
+            "label": 0
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "76ce615f4e96366531392506cc103bca6860e1fce6ee01e91ebad7a87c5d34c8",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 2041,
+            "label": 1
+          },
+          {
+            "split": "validation",
+            "row_id": 61,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "56fb5c16e9b763e26960e552eff3599b59039a8b098154904d8cd25078480b76",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 2747,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 3240,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "f24f0afef1a3fb836cd360dfc666882517523f1c4a7b131b5ebc380bb50f4f76",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 3130,
+            "label": 1
+          },
+          {
+            "split": "validation",
+            "row_id": 302,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "11af4419ed4dcff30f82d357cab4ba4c089aaa108494bef43ada23f4b01f0f6d",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 3223,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 3561,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "d7e1bbc2fb5795be88b1ae70dd8d7db7cd0585fd531177eb0c740291b47f5ae3",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 3348,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 3521,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "c6dadb779ab51f1786303b17713f677f53dd9f88b693517d38bd854c1b719f1d",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 3722,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 3817,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "7c5f01a32eb7f384ef1fcb6a4bf58acf8f94c4dd666b0d5e0e7333fb70c9e122",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 4036,
+            "label": 1
+          },
+          {
+            "split": "validation",
+            "row_id": 244,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "07a58a6cbe8c1f6a956dec304685aac65e9ddaa63ecf335882aa0e69524277d4",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 4094,
+            "label": 1
+          },
+          {
+            "split": "train",
+            "row_id": 4512,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "f0d37b5c0f1d8a8fee048da9f0069d94578286de55001996792abbf17e12a5dd",
+        "rows": [
+          {
+            "split": "train",
+            "row_id": 4193,
+            "label": 1
+          },
+          {
+            "split": "validation",
+            "row_id": 105,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "2d51a6c3b15ef7d2004ead0ed12ad98ef5062d6ffc18f5933cf127ca21739afb",
+        "rows": [
+          {
+            "split": "test",
+            "row_id": 170,
+            "label": 1
+          },
+          {
+            "split": "test",
+            "row_id": 311,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "d09b5b6d12fb5fde86ab1b79060004fc55550828546b365a6491afd0b43a1f4f",
+        "rows": [
+          {
+            "split": "test",
+            "row_id": 302,
+            "label": 1
+          },
+          {
+            "split": "test",
+            "row_id": 401,
+            "label": 1
+          }
+        ]
+      },
+      {
+        "pixel_sha256": "a3321943e9bdc8d1741d8f4263b82f9e7b477380b9801e3aaeca4fad595105cf",
+        "rows": [
+          {
+            "split": "test",
+            "row_id": 440,
+            "label": 1
+          },
+          {
+            "split": "test",
+            "row_id": 538,
+            "label": 1
+          }
+        ]
+      }
+    ],
+    "action": "Preserve supplied rows and partitions; disclose training-validation overlap",
+    "patient_identity": "No patient identifiers are supplied; patient overlap cannot be checked"
+  },
+  "augmentation": null,
+  "class_weighting": null,
+  "partitioning": "Supplied train/val/test membership and order preserved",
+  "test_performance_evaluated": false
+}
